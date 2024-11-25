@@ -1,5 +1,8 @@
-import { header } from "./src/js/header";
+
+import { menu } from "./src/js/menu";
+import { intro } from "./src/js/intro";
 
 window.addEventListener('load',function(){
-    header()
+    menu()
+    intro()
 })

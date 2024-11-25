@@ -1,4 +1,4 @@
-export function menu(params){
+export function menu(){
     const headerToggle = document.getElementById('headerToggle')
     const headerNav = document.querySelector('.header_nav')  
     
