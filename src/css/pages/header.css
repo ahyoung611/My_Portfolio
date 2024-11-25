@@ -1,0 +1,125 @@
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+}
+#header .header_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#header .header_inner .header_logo {
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+#header .header_inner .header_logo em {
+  text-transform: capitalize;
+  font-size: 13px;
+  display: block;
+  color: var(--mainColor100-color);
+}
+#header .header_inner .header_logo li {
+  display: none;
+}
+#header .header_inner .header_logo li.intro_logo {
+  display: block;
+}
+#header .header_inner .header_nav li {
+  display: inline-block;
+}
+#header .header_inner .header_nav li a {
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 14px;
+  position: relative;
+}
+#header .header_inner .header_nav li a::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  transition: 0.35s;
+  transform: scaleX(0);
+}
+#header .header_inner .header_nav li a:hover::before {
+  transform: scaleX(1);
+}
+#header .header_inner .header_nav li a.on::before {
+  transform: scaleX(1);
+}
+#header .header_inner .header_nav_mobile {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+#header .header_inner .header_nav_mobile span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--white);
+  position: relative;
+  margin-top: 20px;
+}
+#header .header_inner .header_nav_mobile span::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: var(--white);
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+#header .header_inner .header_nav_mobile span::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: var(--white);
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  #header .header_inner .header_nav {
+    display: none;
+  }
+  #header .header_inner .header_nav.show {
+    display: block;
+  }
+  #header .header_inner .header_nav.show ul {
+    position: absolute;
+    right: 0;
+    top: 68px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #f00;
+    z-index: 999;
+    min-width: 150px;
+    padding: 20px 10px;
+  }
+  #header .header_inner .header_nav.show ul + #header .header_inner .header_nav_mobile span::before {
+    width: 20px;
+  }
+  #header .header_inner .header_nav.show ul + #header .header_inner .header_nav_mobile span::after {
+    width: 20px;
+  }
+  #header .header_inner .header_nav.show ul li {
+    display: block;
+    text-align: right;
+  }
+  #header .header_inner .header_nav.show ul li a {
+    display: inline-block;
+    padding: 10px;
+  }
+  #header .header_inner .header_nav_mobile {
+    display: block;
+  }
+}
