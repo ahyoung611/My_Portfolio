@@ -1,4 +1,3 @@
-alert()
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -10,17 +9,17 @@ export function bgColor(){
     let color = item.getAttribute('data-bg')
     ScrollTrigger.create({
         trigger:item,
-        start:"top 50%",
-        end:"bottom 5%",
-        markers:true, //스크롤 틔리거 마커 표시
+        start:"top .1%",
+        end:"bottom 80%",
+        // markers:true, //스크롤 틔리거 마커 표시
 
         onEnter:()=>gsap.to('body',{
-            backgroundColor:color,
-            duration:1.5
+            background:color,
+            duration:1
         }),
         onEnterBack:()=>gsap.to('body',{
-            backgroundColor:color,
-            duration:1.5
+            background:color,
+            duration:1
         })
 
     })

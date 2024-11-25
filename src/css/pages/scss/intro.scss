@@ -17,10 +17,12 @@
         position: relative;
         font-style: italic;
         font-weight: 700;
-        color: var(--subColor200-color);
+        color: var(--subColor100-color);
+        font-family: var(--mainEng-font);
 
         em {
-            color: var(--white);
+            color: var(--mainColor100-color);
+            font-weight: 800;
         }
     }
 
@@ -43,10 +45,13 @@
     p {
         font-size: 1.3rem;
         line-height: 1.5;
-        color: var(--subColor200-color);
+        color: var(--subColor100-color);
+        font-family: var(--mainKorM-font);
+        letter-spacing: 1px;
 
         em {
-            color: var(--white);
+            color: var(--mainColor100-color);
+            font-family: var(--mainKorSB-font);
         }
     }
 }

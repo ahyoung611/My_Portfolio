@@ -38,7 +38,7 @@
 
         .uxui_poster-title {
             position: absolute;
-       
+
             font-family: var(--mainEng-font);
             text-transform: capitalize;
             white-space: nowrap;
@@ -69,7 +69,7 @@
     .uxui_poster {
         width: 350px;
         height: 450px;
-        top:10%;
+        top: 10%;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -85,7 +85,7 @@
 
     .uxui_poster-title {
         font-size: 4rem;
-        top:40%;
+        top: 40%;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -110,31 +110,27 @@
         font-size: 5em;
     }
 
-    .uxui_poster-box:nth-child(even){
+    .uxui_poster-box:nth-child(odd) {
         .uxui_poster {
-            top:10%;
+            top: 10%;
             left: 20%;
-            // transform: translateY(-50%);
         }
 
         .uxui_poster-title {
-            top:40%;
+            top: 40%;
             left: 15%;
-            // transform: translateY(-50%);
         }
     }
 
-    .uxui_poster-box:nth-child(odd){
+    .uxui_poster-box:nth-child(even) {
         .uxui_poster {
-            top:10%;
+            top: 10%;
             right: 20%;
-            // transform: translateY(-50%);
         }
 
         .uxui_poster-title {
             top: 40%;
             right: 15%;
-            // transform: translateY(-50%);
         }
     }
 }
@@ -158,7 +154,7 @@
         font-size: 6rem;
     }
 
-    .uxui_poster-box:nth-child(even){
+    .uxui_poster-box:nth-child(odd) {
         .uxui_poster {
             top: 50%;
             left: 20%;
@@ -172,7 +168,7 @@
         }
     }
 
-    .uxui_poster-box:nth-child(odd){
+    .uxui_poster-box:nth-child(even) {
         .uxui_poster {
             top: 50%;
             right: 30%;

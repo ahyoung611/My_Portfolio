@@ -92,19 +92,19 @@
   .uxui_poster-title {
     font-size: 5em;
   }
-  .uxui_poster-box:nth-child(even) .uxui_poster {
+  .uxui_poster-box:nth-child(odd) .uxui_poster {
     top: 10%;
     left: 20%;
   }
-  .uxui_poster-box:nth-child(even) .uxui_poster-title {
+  .uxui_poster-box:nth-child(odd) .uxui_poster-title {
     top: 40%;
     left: 15%;
   }
-  .uxui_poster-box:nth-child(odd) .uxui_poster {
+  .uxui_poster-box:nth-child(even) .uxui_poster {
     top: 10%;
     right: 20%;
   }
-  .uxui_poster-box:nth-child(odd) .uxui_poster-title {
+  .uxui_poster-box:nth-child(even) .uxui_poster-title {
     top: 40%;
     right: 15%;
   }
@@ -124,22 +124,22 @@
   .uxui_poster-title {
     font-size: 6rem;
   }
-  .uxui_poster-box:nth-child(even) .uxui_poster {
+  .uxui_poster-box:nth-child(odd) .uxui_poster {
     top: 50%;
     left: 20%;
     transform: translateY(-50%);
   }
-  .uxui_poster-box:nth-child(even) .uxui_poster-title {
+  .uxui_poster-box:nth-child(odd) .uxui_poster-title {
     top: 50%;
     left: 15%;
     transform: translateY(-50%);
   }
-  .uxui_poster-box:nth-child(odd) .uxui_poster {
+  .uxui_poster-box:nth-child(even) .uxui_poster {
     top: 50%;
     right: 30%;
     transform: translateY(-50%);
   }
-  .uxui_poster-box:nth-child(odd) .uxui_poster-title {
+  .uxui_poster-box:nth-child(even) .uxui_poster-title {
     top: 50%;
     right: 25%;
     transform: translateY(-50%);
