@@ -6,6 +6,7 @@ import { work } from "./src/js/work";
 import { uxui } from "./src/js/uxui";
 import { about } from "./src/js/about";
 import { bgColor } from "./src/js/bgColor";
+import { cursor } from "./src/js/cursor";
 
 window.addEventListener('load',function(){
     menu()
@@ -15,4 +16,7 @@ window.addEventListener('load',function(){
     uxui()
     about()
     bgColor()
+    cursor()
 })
+
+

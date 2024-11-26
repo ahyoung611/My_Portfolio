@@ -7,14 +7,14 @@ export function work() {
         loop: true, // 루프 비활성화
 
         breakpoints: {
-            1024: {
+            1300: {
                 slidesPerView: 5,
-                spaceBetween: 92,
+                spaceBetween: 114,
                 centeredSlides: true,
                 initialSlide: 2, // 첫 로드 시 가운데 슬라이드 (3번 슬라이드가 중앙)
 
             },
-            768: {
+            1000: {
                 slidesPerView: 3,
                 spaceBetween: 92,
                 centeredSlides: true,

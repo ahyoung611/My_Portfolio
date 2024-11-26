@@ -2,13 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid #f00;
-}
-#about .jellyfish_five {
-  position: absolute;
-  left: 5%;
-  top: 5%;
-  z-index: 99;
 }
 #about .about_left {
   position: relative;
@@ -47,10 +40,11 @@
 #about .about_right .aboutSwiper::after {
   content: "";
   width: 1px;
-  height: 700px;
+  height: 500px;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background: repeating-linear-gradient(to bottom, transparent 0, transparent 5px, rgba(4, 107, 169, 0.5) 0px, rgba(4, 107, 169, 0.5) 15px);
 }
 #about .about_right .aboutSwiper .swiper-slide {
@@ -108,10 +102,7 @@
 }
 #about .about_right .swiper-button-prev {
   position: absolute;
-  top: 40%;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
   transform: rotate(90deg);
 }
@@ -121,10 +112,7 @@
 }
 #about .about_right .swiper-button-next {
   position: absolute;
-  top: 60%;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  width: 50px;
-  height: 50px;
   border-radius: 50%;
   transform: rotate(90deg);
 }
@@ -134,60 +122,55 @@
 }
 
 @media (max-width: 767px) {
-  #about {
-    height: 100vh;
-    flex-direction: column;
-  }
   #about .about_left {
-    width: 100%;
-    height: 50vh;
-  }
-  #about .about_left .about_photo {
-    width: 250px;
-    height: 300px;
+    display: none;
   }
   #about .about_right {
-    width: 90%;
-    height: 50vh;
+    width: 95%;
+    height: 100vh;
   }
   #about .about_right #aboutSwiper-box {
     width: 100%;
-    margin-left: 80px;
-    height: 45vh;
-  }
-  #about .about_right .swiper-button-next {
-    left: 0;
+    margin-left: 50px;
+    height: 100%;
   }
   #about .about_right .swiper-button-prev {
+    top: 45%;
     left: 0;
+    width: 35px;
+    height: 35px;
+  }
+  #about .about_right .swiper-button-next {
+    top: 57%;
+    left: 0;
+    width: 35px;
+    height: 35px;
   }
   #about .about_right .about_line {
-    width: 75vw;
+    width: 84vw;
     overflow: hidden;
   }
   #about .about_right .about_title {
     left: 29vw;
-    top: 15%;
+    top: 35%;
     font-size: var(--font-size-EngT1-M);
   }
   #about .about_right .about_title span {
     display: none;
   }
   #about .about_right .about_sub-title {
-    left: 29vw;
-    top: 40%;
+    width: 60%;
+    left: 27vw;
+    top: 48%;
   }
   #about .about_right .about_sub-title li {
-    padding: 10px 0;
-    white-space: nowrap;
+    padding: 10px;
     display: flex;
     flex-direction: column;
   }
-  #about .about_right .about_sub-title li span {
-    padding: 10px 30px;
-  }
   #about .about_right .about_sub-title.Iam li {
     padding: 20px 0;
+    white-space: wrap;
   }
   #about .about_right .about_sub-title.Iam .num {
     position: relative;
@@ -195,9 +178,9 @@
   #about .about_right .about_sub-title.Iam .num h2 {
     position: absolute;
     top: -35px;
-    left: -20px;
+    left: -15px;
     font-family: var(--mainNum-font);
-    font-size: var(--font-size-Num1-M);
+    font-size: var(--font-size-Num1-P);
     font-style: italic;
     font-weight: 700;
     opacity: 0.3;
@@ -209,11 +192,27 @@
     line-height: 1.5;
   }
   #about .about_right .about_sub-title.Iam .num h3 span {
-    font-family: var(--mainKorSB-font);
+    font-family: var(--mainEng-font);
+    font-size: var(--font-size-KorST2);
+    font-weight: 700;
     text-transform: capitalize;
   }
+  #about .about_right .about_sub-title.Iam .num p {
+    padding-left: 20px;
+    font-family: var(--mainKorL-font);
+    font-size: var(--font-size-KorST4);
+    line-height: 1.5;
+  }
+  #about .about_right .about_sub-title.education span {
+    padding-left: 20px;
+    line-height: 1.5;
+  }
+  #about .about_right .about_sub-title.career li {
+    white-space: nowrap;
+  }
   #about .about_right .about_sub-title.career li span {
-    padding: 10px 90px;
+    padding: 0 90px;
+    line-height: 1.5;
   }
   #about .about_right .about_sub-title.license {
     left: 25vw;
@@ -246,16 +245,21 @@
     flex-direction: column;
   }
   #about .about_left {
-    width: 100%;
-    height: 50vh;
-  }
-  #about .about_left .about_photo {
-    width: 250px;
-    height: 300px;
+    display: none;
   }
   #about .about_right {
     width: 90%;
-    height: 50vh;
+    height: 100vh;
+  }
+  #about .about_right .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    top: 40%;
+  }
+  #about .about_right .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    top: 60%;
   }
   #about .about_right #aboutSwiper-box {
     width: 80%;
@@ -277,13 +281,13 @@
   }
   #about .about_right .about_title {
     left: 200px;
-    top: 15%;
+    top: 35%;
     font-size: var(--font-size-EngT1-P);
     white-space: nowrap;
   }
   #about .about_right .about_sub-title {
     left: 200px;
-    top: 40%;
+    top: 48%;
   }
   #about .about_right .about_sub-title li {
     padding: 10px 0;
@@ -321,6 +325,9 @@
   #about .about_right .about_sub-title.Iam .num p {
     padding-left: 20px;
   }
+  #about .about_right .about_sub-title.career span {
+    padding-left: 15px;
+  }
   #about .about_right .about_sub-title.license li em {
     display: inline-block;
     width: 80px;
@@ -352,6 +359,7 @@
     flex-direction: row;
   }
   #about .about_left {
+    display: block;
     width: 45vw;
   }
   #about .about_left .about_photo {
@@ -360,13 +368,21 @@
   }
   #about .about_right {
     width: 45%;
-    height: 80vh;
+    height: 100vh;
+  }
+  #about .about_right .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+  #about .about_right .swiper-button-next {
+    width: 50px;
+    height: 50px;
   }
   #about .about_right .about_title {
-    top: 28%;
+    top: 35%;
   }
   #about .about_right .about_sub-title {
-    top: 45%;
+    top: 48%;
   }
   #about .about_right .about_sub-title li {
     white-space: nowrap;

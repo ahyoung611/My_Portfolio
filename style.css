@@ -12,12 +12,14 @@
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
 @import url(./src/css/pages/footer.css);
+@import url(./src/css/pages/title.css);
+@import url(./src/css/pages/cursor.css);
 
-section{
+section {
     height: 100vh;
     position: relative;
     overflow: hidden;
-    border: 1px solid #f00;
+    /* border: 1px solid #000; */
 }
 
 section::after{
@@ -30,26 +32,3 @@ section::after{
     background: url(/src/assets/images/light-bg.png) no-repeat center center;
     background-size: cover;
 }
-
-section .title{
-    position: absolute;
-    left: 50px;
-    top: 50px;
-    opacity: .3;
-}
-
-section .title h2{
-    font-family: var( --mainEng-font);
-    font-size: 80px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-section .title p{
-    font-family: var( --mainKorL-font);
-    font-size: var( --font-size-KorST1);
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-top: 20px;
-}
-
