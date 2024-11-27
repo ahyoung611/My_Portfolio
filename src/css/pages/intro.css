@@ -1,8 +1,9 @@
-#intro {
+#intro .intro_box {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
 }
 #intro h2 {

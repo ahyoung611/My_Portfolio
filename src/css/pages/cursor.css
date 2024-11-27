@@ -2,6 +2,7 @@
   position: absolute;
   pointer-events: none;
   z-index: 99;
+  border: 1px solid #000;
 }
 
 @media (max-width: 767px) {
