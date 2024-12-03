@@ -1,0 +1,58 @@
+.path-box {
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+}
+
+.path {
+    fill: none;
+    stroke: rgba(0,0,0,0);
+    // stroke-miterlimit: 10;
+    stroke-width: 5px;
+    // stroke-dasharray: 12;
+}
+
+.jellyfish1 {
+    border: 1px solid rgba(0,0,0,0);
+    height: 80px;
+    width: 80px;
+    background-image: url(/src/assets/images/jellyfish1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.jellyfish {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    animation: bounce-top 1s infinite;
+    
+
+}
+
+@keyframes bounce-top {
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+ 
+    }
+
+    40% {
+        transform: translateY(-25px);
+        animation-timing-function: ease-in;
+    }
+
+    65% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in;
+    }
+
+
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+}

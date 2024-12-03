@@ -5,28 +5,36 @@
 /* font-family: "EB Garamond", serif; */
 
 @font-face {
-    font-family: 'Pretendard-L';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+    font-family: 'Pretendard-Thin';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Pretendard-Light";
+    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff")
+      format("woff");
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Pretendard-M';
+    font-family: 'Pretendard-Medium';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Pretendard-SB';
+    font-family: 'Pretendard-SemiBold';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Pretendard-B';
+    font-family: 'Pretendard-Bold';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;

@@ -1,11 +1,13 @@
 :root {
     --mainEng-font: "Playfair Display";
-    --mainKorL-font: 'Pretendard-L';
+    /* --mainEng-font: "Poppins"; */
+    --mainKorT-font: 'Pretendard-Thin';
     --mainNum-font: "EB Garamond";
 
-    --mainKorM-font: 'Pretendard-M';
-    --mainKorSB-font: 'Pretendard-SB';
-    --mainKorB-font: 'Pretendard-B';
+    --mainKorL-font: 'Pretendard-Light';
+    --mainKorM-font: 'Pretendard-Medium';
+    --mainKorSB-font: 'Pretendard-SemiBold';
+    --mainKorB-font: 'Pretendard-Bold';
 
     --mainColor100-color: #003058;
     --mainColor200-color: #046BA9;

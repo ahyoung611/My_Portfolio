@@ -4,6 +4,7 @@
   top: 0;
   z-index: 999;
   width: 100%;
+  font-family: var(--mainEng-font);
 }
 #header .header_inner {
   display: flex;
@@ -12,6 +13,8 @@
   padding: 1rem;
 }
 #header .header_inner .header_logo {
+  font-family: var(--mainEng-font);
+  font-weight: 500;
   font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
@@ -31,6 +34,8 @@
 }
 #header .header_inner .header_nav li {
   display: inline-block;
+  font-family: var(--mainEng-font);
+  font-weight: 500;
 }
 #header .header_inner .header_nav li a {
   text-transform: uppercase;

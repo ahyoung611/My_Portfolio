@@ -1,31 +1,36 @@
 #intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
 
-    .intro_box {
-        height: 100%;
+    .stage {
+        height: 150px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
+        visibility: hidden;
+        // border: 1px solid #000;
     }
 
     h2 {
-        font-size: 5rem;
-        position: relative;
-        font-style: italic;
-        font-weight: 700;
-        color: var(--subColor100-color);
         font-family: var(--mainEng-font);
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #fff;    
+    
+    }
 
-        em {
-            color: var(--mainColor100-color);
-            font-weight: 800;
-        }
+    h2 span {
+        display: inline-block; /* SplitText가 생성한 텍스트 조각의 기본 스타일 */
+        color: inherit; /* 부모 요소의 color를 상속 */
     }
 
     .dots {
         width: 50px;
-        padding: 40px;
+        margin: auto;
+        padding-bottom: 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,30 +45,53 @@
 
 
     p {
-        font-size: 1.3rem;
         line-height: 1.5;
         color: var(--subColor100-color);
         font-family: var(--mainKorM-font);
-        letter-spacing: 1px;
+        letter-spacing: 1.2px;
 
         em {
             color: var(--mainColor100-color);
-            font-family: var(--mainKorSB-font);
+            font-family: var(--mainKorB-font);
         }
     }
 }
 
 
 @media (max-width:767px) {
-    #intro h2 {
-        font-size: 3.5rem;
+    #intro {
+        h2 {
+            font-size: 2.5rem;
+        }
+        p{
+            font-size: 1rem;
+        }
     }
 
 }
 
 @media (min-width:768px) {
-    #intro h2 {
-        font-size: 4rem;
+    #intro{
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        p{
+            font-size: 1.3rem;
+        }
+    }
+
+}
+
+@media (min-width:1024px) {
+    #intro{
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        p{
+            font-size: 1.3rem;
+        }
     }
 
 }

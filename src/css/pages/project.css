@@ -7,6 +7,7 @@
   overflow: visible;
 }
 #project .projectSwiper .swiper-slide {
+  position: relative;
   height: 100%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -17,36 +18,32 @@
   height: 100%;
   object-fit: cover;
 }
-#project .swiper-button-prev {
-  color: var(--white);
-  padding: 0 20px;
-}
-#project .swiper-button-next {
-  color: var(--white);
-  padding: 0 20px;
-}
-#project .project_title {
+#project .projectSwiper .swiper-slide .project_title {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   position: absolute;
-  top: -23%;
-  left: -29%;
+  top: -10%;
 }
-#project .project_title h2 {
+#project .projectSwiper .swiper-slide .project_title .num {
   font-family: var(--mainNum-font);
-  font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   opacity: 0.4;
+  font-size: 22px;
 }
-#project .project_title p {
+#project .projectSwiper .swiper-slide .project_title p {
+  opacity: 0;
   font-family: var(--mainEng-font);
   text-transform: capitalize;
-  font-style: italic;
-  font-weight: 700;
-  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: 0.35s;
 }
-#project .project_detail {
+#project .projectSwiper .swiper-slide:hover .project_title p {
+  opacity: 1;
+}
+#project .projectSwiper .swiper-slide .project_detail {
   position: absolute;
   bottom: -50px;
   left: -50px;
@@ -60,11 +57,19 @@
   text-align: center;
   border-radius: 50%;
 }
-#project .project_date {
+#project .projectSwiper .swiper-slide .project_date {
   position: absolute;
   right: 5px;
   bottom: -25px;
   font-size: var(--font-size-EngST1-P);
+}
+#project .swiper-button-prev {
+  color: var(--white);
+  padding: 0 20px;
+}
+#project .swiper-button-next {
+  color: var(--white);
+  padding: 0 20px;
 }
 
 @media (max-width: 767px) {
@@ -82,9 +87,19 @@
   .projectSwiper {
     width: 70%;
   }
+  .projectSwiper .swiper-slide:nth-child(odd) {
+    top: 0;
+    transition: 0.35s;
+  }
   .projectSwiper .swiper-slide:nth-child(even) {
-    position: relative;
     top: 100px;
+    transition: 0.35s;
+  }
+  .projectSwiper .swiper-slide:hover.swiper-slide:nth-child(odd) {
+    top: 50px;
+  }
+  .projectSwiper .swiper-slide:hover.swiper-slide:nth-child(even) {
+    top: 150px;
   }
   .project_title h2 {
     font-size: var(--font-size-Num1-P);

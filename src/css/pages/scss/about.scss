@@ -1,7 +1,10 @@
 #about {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+    .about_box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     .about_left {
         position: relative;
@@ -210,7 +213,7 @@
                     padding: 10px;
                     display: flex;
                     flex-direction: column;
-        
+
                 }
 
 
@@ -258,8 +261,8 @@
                     }
                 }
 
-                &.education{
-                    span{
+                &.education {
+                    span {
                         padding-left: 20px;
                         line-height: 1.5;
                     }
@@ -269,6 +272,7 @@
                 &.career {
                     li {
                         white-space: nowrap;
+
                         span {
                             padding: 0 90px;
                             line-height: 1.5;
@@ -421,8 +425,8 @@
                     }
                 }
 
-                &.career{
-                    span{
+                &.career {
+                    span {
                         padding-left: 15px;
                     }
                 }

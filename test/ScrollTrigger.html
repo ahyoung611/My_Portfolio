@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ <link rel="stylesheet" href="./ScrollTrigger.css">
+</head>
+<body>
+  <p>Add a <code>data-speed</code> attribute to any element. 1 = normal scroll speed, 0 = no movement, 0.5 = half-speed, etc.</p>
+
+<div class="box-container">
+	<div class="box box-1" data-speed="0.25">0.25</div>
+	<div class="box box-2" data-speed="0.4">0.4</div>
+	<div class="box box-3" data-speed="0">0</div>
+	<div class="box box-4" data-speed="1">1</div>
+	<div class="box box-4" data-speed="1.2">2</div>
+ 
+	<div class="box box-5" data-speed="0.75">0.75</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script src="./splitText.js"></script>
+<script src="./ScrollSmoother.min.js"></script>
+<script>
+ 
+  gsap.set(".box", {backgroundColor: "rgb(random(0,190), random(0,190), random(0,190)"});
+
+  // apply parallax effect to any element with a data-speed attribute
+  gsap.utils.toArray("[data-speed]").forEach(el => {
+    gsap.to(el, {
+      y: function() {return (1 - parseFloat(el.getAttribute("data-speed"))) * (ScrollTrigger.maxScroll(window) - (this.scrollTrigger ? this.scrollTrigger.start : 0))},
+      ease: "none",
+      scrollTrigger: {
+        trigger: el,
+        start: "top center",
+        end: "max",
+        invalidateOnRefresh: true,
+        scrub: true
+      }
+    });
+  });
+
+</script>
+</body>
+</html>
