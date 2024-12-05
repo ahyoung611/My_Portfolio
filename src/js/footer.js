@@ -1,3 +1,5 @@
+import gsap from 'gsap';
+
 export function footer() {
     //footer-desc
     const duration = 1.5

@@ -1,14 +1,11 @@
 #uxui {
 
-
-
   .uxui__wrap {
     display: flex;
     align-items: center;
     width: 200%;
     gap: 100px;
     margin-top: 180px;
-    align-items: center;
     padding-left: 120px;
   }
 
@@ -35,7 +32,7 @@
         }
 
         img {
-          transform: scale(1.2);
+          transform: scale(1.1);
         }
 
         .num {
@@ -58,10 +55,10 @@
           position: absolute;
           left: 0;
           top: 0;
-          background-color: rgba(0, 0, 0, .5);
+          background-color: rgba(0, 0, 0, .7);
+          // background-color: rgba(0, 48, 88,.7);
           transition: .5s;
         }
-
       }
 
       img {
@@ -95,7 +92,6 @@
         gap: 10px;
         text-align: center;
         white-space: nowrap;
-        // background-color: rgba(0,0,0,.5);
         font-family: var(--mainEng-font);
         text-transform: capitalize;
         color: #fff;
@@ -103,9 +99,32 @@
         opacity: 0;
         z-index: 50;
 
+        .date {
+          font-size: 18px;
+        }
+
+        .desc {
+          font-size: 18px;
+        }
+
         .item_title {
-          font-size: var(--font-size-EngT1-P);
+          position: relative;
+          font-size: 2rem;
           font-weight: 500;
+          text-transform: uppercase;
+          line-height: 1.2;
+          margin-bottom: 50px;
+
+          &::after {
+            content: "";
+            width: 30px;
+            height: 1px;
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
+          }
         }
       }
 

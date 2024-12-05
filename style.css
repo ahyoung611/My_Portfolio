@@ -17,6 +17,8 @@
 @import url(./src/css/pages/path.css);
 @import url(./src/css/pages/bubble.css);
 
+@import '@splidejs/splide/css';
+
 
 section {
     position: relative;

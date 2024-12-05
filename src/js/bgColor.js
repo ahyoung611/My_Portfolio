@@ -11,7 +11,7 @@ export function bgColor(){
         trigger:item,
         start:"top .1%",
         end:"bottom 80%",
-        // markers:true, //스크롤 틔리거 마커 표시
+        markers:true, //스크롤 틔리거 마커 표시
 
         onEnter:()=>gsap.to('body',{
             background:color,

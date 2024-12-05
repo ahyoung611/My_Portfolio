@@ -9,10 +9,10 @@ import{ uxui } from "./src/js/uxui.js"
 import{ about } from "./src/js/about.js"
 import{ footer } from "./src/js/footer.js"
 import{ bgColor } from "./src/js/bgColor.js"
-// import{ path } from "./src/js/path.js"
+import{ path } from "./src/js/path.js"
 import{ vsplide } from "./src/js/vsplide.js"
 
-window.addEventListener('load',function(){
+window.addEventListener('DOMContentLoaded',function(){
     menu()
     header()
     home()
@@ -23,7 +23,7 @@ window.addEventListener('load',function(){
     about()
     footer()
     bgColor()
-    // path()
+    path()
     vsplide()
 
 })
