@@ -1,21 +1,55 @@
 .title {
-    font-size: 3vw;
+    display: inline-block;
+    font-size: 5vw;
     line-height: 1.6;
     font-family: var(--mainEng-font);
     font-weight: 600;
     text-transform: uppercase;
     color: var(--subColor100-color);
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+
+    
+
+
+    em {
+        display: block;
+        font-family: var(--mainKorT-font);
+        font-weight: 200;
+        letter-spacing: 1px;
+        font-size: 22px;
+        -webkit-text-stroke: 0px #fff;
+        color: rgb(255, 255, 255);
+      }
+  }
+  
+  .project_title{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+  }
+  
+  .work_title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    white-space: nowrap;
+    
+  }
+  
+  .uxui_title{
     position: sticky;
-    top: 100px;
-    padding: 2%;
-}
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    text-align: center;
+  }
 
-.title em {
-    display: block;
-    font-family: var(--mainKorT-font);
-    letter-spacing: 1px;
-    font-size: 22px;
-   
-}
-
-// 'Pretendard-Thin'
+  .footer_title{
+    position: absolute;
+  }

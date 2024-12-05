@@ -6,12 +6,13 @@
 @import url(./src/css/base/vars.css);
 
 @import url(./src/css/pages/header.css);
-@import url(./src/css/pages/intro.css);
+@import url(./src/css/pages/home.css);
 @import url(./src/css/pages/project.css);
 @import url(./src/css/pages/work.css);
 @import url(./src/css/pages/uxui.css);
 @import url(./src/css/pages/about.css);
 @import url(./src/css/pages/footer.css);
+
 @import url(./src/css/pages/title.css);
 @import url(./src/css/pages/path.css);
 @import url(./src/css/pages/bubble.css);
@@ -20,16 +21,7 @@
 section {
     position: relative;
     overflow: hidden;
-    border: 1px solid #000;
     min-height: 100vh;
     contain: paint;
-  
-}
 
-/* .wrap{
-    background: url(./src/assets/bg-img/background.jpg) no-repeat center top;
-    background-size: cover;
- 
-    border: 1px solid #ff0;
-    z-index: 10;
-} */
+}

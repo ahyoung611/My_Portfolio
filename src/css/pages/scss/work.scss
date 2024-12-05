@@ -1,114 +1,51 @@
 #work {
+    display: flex;
 
-    .work__wrap {
+    .container {
+        position: absolute;
+        left: 55%;
         display: flex;
-        width: 200%;
-        gap: 100px;
-        margin-top: 250px;
-        align-items: flex-start;
-        padding: 0 100px;
-        border: 1px solid #bb2020;
-    
-    }
+        width: 40%;
+        height: 100vh;
+        justify-content: space-between;
+        /* 컨테이너 높이를 화면 높이로 설정 */
 
-    article.work__item {
-        position: relative;
-        max-width: 300px;
-        flex-shrink: 0;
-        // width: 28vw;
-        // aspect-ratio: 1/1.2;
-        color: #000;
-        cursor: pointer;
-
-        
-
-        &:hover {
-            a {
-                &::after {
-                    opacity: 1;
-                }
-            }
-
-            .desc-box {
-                opacity: 1;
-            }
-
-            img {
-                transform: scale(1.2);
-            }
-
-            .num {
-
-                em {
-                    color: rgba(255, 255, 255, 1);
-                }
-            }
-        }
-
-        a {
-            display: inline-block;
-            border-radius: 20px;
-            overflow: hidden;
-
-            &::after {
-                opacity: 0;
-                content: '';
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                top: 0;
-                background-color: rgba(0, 0, 0, .5);
-                transition: .5s;
-                border-radius: 20px;
-            }
-
-        }
-
-        img {
-            width: 100%;
-            transition: .35s;
-        }
-
-        .num {
-            position: absolute;
-            right: 10px;
-            top: -20px;
-            font-family: var(--mainNum-font);
-            font-size: 38px;
-            color: rgba(255, 255, 255, .5);
-            font-weight: 600;
-            z-index: 99;
-        }
-
-        .desc-box {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
+        .splide-wrapper {
+            width: 45%;
             height: 100%;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 10px;
-            text-align: center;
-            white-space: nowrap;
-            // background-color: rgba(0,0,0,.5);
-            font-family: var(--mainEng-font);
-            text-transform: capitalize;
-            color: #fff;
-            transition: .5s;
-            opacity: 0;
-            z-index: 50;
-
-            .item_title {
-                font-size: var(--font-size-EngT1-P);
-                font-weight: 500;
-            }
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, .5);
         }
-
+    
+        .splide__slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+        }
+    
+        .splide__slide img {
+            display: inline-block;
+            width: 90%;
+        }
+    
+        .splide__track {
+            overflow: visible;
+            padding: 20px 0;
+        }
+    
+        .splide {
+            height: 30%;
+            /* 슬라이더 전체 높이 */
+        }
     }
+
+    .work_left{
+        position: relative;
+        width: 55%;
+        height: 100vh;
+    }
+
+  
 }

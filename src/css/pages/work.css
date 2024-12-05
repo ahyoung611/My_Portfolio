@@ -1,85 +1,43 @@
-#work .work__wrap {
+@charset "UTF-8";
+#work {
   display: flex;
-  width: 200%;
-  gap: 100px;
-  margin-top: 250px;
-  align-items: flex-start;
-  padding: 0 100px;
-  border: 1px solid #bb2020;
 }
-#work article.work__item {
-  position: relative;
-  max-width: 300px;
-  flex-shrink: 0;
-  color: #000;
+#work .container {
+  position: absolute;
+  left: 55%;
+  display: flex;
+  width: 40%;
+  height: 100vh;
+  justify-content: space-between;
+  /* 컨테이너 높이를 화면 높이로 설정 */
+}
+#work .container .splide-wrapper {
+  width: 45%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#work .container .splide__slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   cursor: pointer;
 }
-#work article.work__item:hover a::after {
-  opacity: 1;
-}
-#work article.work__item:hover .desc-box {
-  opacity: 1;
-}
-#work article.work__item:hover img {
-  transform: scale(1.2);
-}
-#work article.work__item:hover .num em {
-  color: rgb(255, 255, 255);
-}
-#work article.work__item a {
+#work .container .splide__slide img {
   display: inline-block;
-  border-radius: 20px;
-  overflow: hidden;
+  width: 90%;
 }
-#work article.work__item a::after {
-  opacity: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-  border-radius: 20px;
+#work .container .splide__track {
+  overflow: visible;
+  padding: 20px 0;
 }
-#work article.work__item img {
-  width: 100%;
-  transition: 0.35s;
+#work .container .splide {
+  height: 30%;
+  /* 슬라이더 전체 높이 */
 }
-#work article.work__item .num {
-  position: absolute;
-  right: 10px;
-  top: -20px;
-  font-family: var(--mainNum-font);
-  font-size: 38px;
-  color: rgba(255, 255, 255, 0.5);
-  font-weight: 600;
-  z-index: 99;
-}
-#work article.work__item .desc-box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  white-space: nowrap;
-  font-family: var(--mainEng-font);
-  text-transform: capitalize;
-  color: #fff;
-  transition: 0.5s;
-  opacity: 0;
-  z-index: 50;
-}
-#work article.work__item .desc-box .item_title {
-  font-size: var(--font-size-EngT1-P);
-  font-weight: 500;
+#work .work_left {
+  position: relative;
+  width: 55%;
+  height: 100vh;
 }

@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 
-export function intro() {
+export function home() {
     gsap.registerPlugin(SplitText);
 
     // 단계적으로 애니메이션을 실행하기 위한 타임라인 생성
@@ -54,15 +54,15 @@ export function intro() {
         scale: 0,          // 점이 작게 시작
         opacity: 0,        // 애니메이션 시작 시 완전히 투명
         stagger: 0.2,      // 점 간격 순차적으로 등장
-        duration: 0.5,     // 각 애니메이션 지속 시간
+        duration: 0.3,     // 각 애니메이션 지속 시간
     });
     
 
     // 3. p 태그 애니메이션
-    tl.from('.intro_title p', {
+    tl.from('.home_title p', {
         opacity: 0,
         y: 50, // 아래에서 위로 슬라이드
-        duration: 0.8,
+        duration: 0.5,
     });
 
     // Dot 크기와 투명도 설정 (CSS 초기화)

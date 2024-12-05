@@ -5,6 +5,7 @@
     z-index: 999;
     width: 100%;
     font-family: var(--mainEng-font);
+    background-color: rgba(255,255,255,.1);
 
     .header_inner {
         display: flex;
@@ -37,6 +38,7 @@
         }
 
         .header_nav {
+            margin-right: 50px;
             li {
                 display: inline-block;
                 font-family: var(--mainEng-font);
@@ -72,7 +74,8 @@
         }
 
         .header_nav_mobile {
-            display: none;
+            // display: none;
+            opacity: 0;
             width: 40px;
             height: 40px;
             cursor: pointer;
@@ -121,8 +124,7 @@
                 position: absolute;
                 right: 0;
                 top: 68px;
-                background: rgba(255, 255, 255, .1);
-                border: 1px solid #f00;
+                background: var(--mainColor100-color);
                 z-index: 999;
                 min-width: 150px;
                 padding: 20px 10px;
@@ -153,7 +155,7 @@
 
 
     #header .header_inner .header_nav_mobile {
-        display: block;
+        opacity: 1;
     }
 
 

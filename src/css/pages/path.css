@@ -13,8 +13,8 @@
 
 .jellyfish1 {
   border: 1px solid rgba(0, 0, 0, 0);
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   background-image: url(/src/assets/images/jellyfish1.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -23,9 +23,27 @@
 
 .jellyfish {
   position: absolute;
-  right: 100px;
-  top: 100px;
   animation: bounce-top 1s infinite;
+}
+
+.jellyfish2 {
+  right: 20%;
+  top: 20%;
+}
+
+.jellyfish3 {
+  left: 35%;
+  bottom: 5%;
+}
+
+.jellyfish4 {
+  left: 5%;
+  top: 5%;
+}
+
+.jellyfish5 {
+  left: 40%;
+  top: 68%;
 }
 
 @keyframes bounce-top {

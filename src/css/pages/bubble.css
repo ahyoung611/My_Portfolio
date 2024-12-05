@@ -18,6 +18,10 @@
   border-radius: 50%;
 }
 
+footer .bubble_cont {
+  height: 50vh;
+}
+
 /* bubble keyframes */
 @-webkit-keyframes animateBubble {
   0% {

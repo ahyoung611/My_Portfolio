@@ -1,159 +1,113 @@
 #project {
+    display: flex;
+    justify-content: space-between;
 
-    .projectSwiper {
-        position: absolute;
-        left: 50%;
-        top: 30%;
-        transform: translateX(-50%);
-        height: 400px;
-        overflow: visible;
+    .tabs {
+        position: relative;
+        width: 33.333%;
 
+        .tab-menu {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translateX(-50%);
 
-        .swiper-slide {
-            position: relative;
-            height: 100%;
-            text-align: center;
-            background-color: rgba(255, 255, 255, .5);
-
-            img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .project_title {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                position: absolute;
-                top: -10%;
-
-                .num {
-                    font-family: var(--mainNum-font);
-                    font-weight: 600;
-                    opacity: .4;
-                    font-size: 22px;
-                }
-
-                p {
-                    opacity: 0;
-                    font-family: var(--mainEng-font);
+            li {
+                a {
+                    display: block;
+                    width: 200px;
+                    padding: 20px;
+                    font-size: 38px;
+                    // color: rgba(255, 255, 255, .5);
+                    -webkit-text-stroke: .5px #ffffff;
+                    color: transparent;
+                    letter-spacing: 1px;
+                    transition: 0.5s;
                     text-transform: capitalize;
-                    font-size: 24px;
-                    font-weight: 600;
-                    padding: 5px 0;
-                    transition: .35s;
-                }
-            }
+                    cursor: pointer;
+                    white-space: nowrap;
 
-            &:hover{
-                .project_title{
-                    p{
-                        opacity: 1;
+                    &.on {
+                        font-size: 48px;
+                        color: #ffffff;
+                        font-weight: bold;
                     }
                 }
             }
+        }
+    }
 
-            .project_detail {
-                position: absolute;
-                bottom: -50px;
-                left: -50px;
+    .hSwiper {
+        position: relative;
+        width: 33.333%;
+        height: 100vh;
+        overflow: hidden;
+
+        .project {
+            position: absolute;
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 450px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    #vslide{
+        width: 33.333%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .vSwiper {
+            height: 50vh;
+            overflow: hidden;
+    
+            .swiper-slide {
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                font-family: var(--mainEng-font);
-                background-color: var(--mainColor100-color);
-                width: 100px;
-                height: 100px;
-                text-align: center;
-                border-radius: 50%;
-            }
-
-            .project_date {
-                position: absolute;
-                right: 5px;
-                bottom: -25px;
-                font-size: var(--font-size-EngST1-P);
-            }
-        }
-    }
-
-    .swiper-button-prev {
-        color: var(--white);
-        padding: 0 20px;
-    }
-
-    .swiper-button-next {
-        color: var(--white);
-        padding: 0 20px;
-    }
-
-
-}
-
-@media (max-width:767px) {
-    .projectSwiper {
-        width: 60%;
-    }
-
-    .project_title {
-
-        h2 {
-            font-size: var(--font-size-Num1-M);
-        }
-
-        P {
-            font-size: var(--font-size-EngT1-M);
-        }
-    }
-
-
-}
-
-@media (min-width:768px) {
-    .projectSwiper {
-        width: 70%;
-
-        .swiper-slide:nth-child(odd) {
-            top: 0;
-            transition: .35s;
-        }
-
-        .swiper-slide:nth-child(even) {
-            top: 100px;
-            transition: .35s;
-        }
-
-        .swiper-slide:hover {
-
-            &.swiper-slide:nth-child(odd) {
-                top: 50px;
-            }
-
-            &.swiper-slide:nth-child(even) {
-                top: 150px;
+                flex-direction: column;
+    
+                h2 {
+                    font-family: NotoSansKR-Medium;
+                    font-size: 52px;
+                    font-weight: 500;
+                    line-height: 54px;
+                    letter-spacing: 1px;
+                    text-transform: capitalize;
+                    margin-top: 100px;
+                    -webkit-text-stroke: 1px #fff;
+                    color: transparent;
+                }
+    
+                .project_desc {
+    
+                    li {
+                        display: inline-block;
+                        font-size: 24px;
+                        font-weight: 600;
+                        padding: 10px 0;
+                    }
+                }
+    
+                h3 {
+                    font-size: 28px;
+                    font-weight: 500;
+                    line-height: 54px;
+                    letter-spacing: 1px;
+                }
+    
+                p {
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 1.5;
+                }
             }
         }
     }
 
-    .project_title {
-
-        h2 {
-            font-size: var(--font-size-Num1-P);
-        }
-
-        P {
-
-            font-size: var(--font-size-EngT1-P);
-        }
-    }
-
-
-}
-
-@media (min-width:1024px) {
-    .projectSwiper {
-        width: 80%;
-    }
 }

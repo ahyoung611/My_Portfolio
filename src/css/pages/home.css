@@ -1,29 +1,29 @@
 @charset "UTF-8";
-#intro {
+#home {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-#intro .stage {
+#home .stage {
   height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
 }
-#intro h2 {
+#home h2 {
   font-family: var(--mainEng-font);
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 1px;
   color: #fff;
 }
-#intro h2 span {
+#home h2 span {
   display: inline-block; /* SplitText가 생성한 텍스트 조각의 기본 스타일 */
   color: inherit; /* 부모 요소의 color를 상속 */
 }
-#intro .dots {
+#home .dots {
   width: 50px;
   margin: auto;
   padding-bottom: 60px;
@@ -32,43 +32,43 @@
   align-items: center;
   justify-content: center;
 }
-#intro .dots .dot {
+#home .dots .dot {
   background-color: var(--subColor200-color);
   border-radius: 50%;
   margin: 10px auto;
 }
-#intro p {
+#home p {
   line-height: 1.5;
   color: var(--subColor100-color);
   font-family: var(--mainKorM-font);
   letter-spacing: 1.2px;
 }
-#intro p em {
+#home p em {
   color: var(--mainColor100-color);
   font-family: var(--mainKorB-font);
 }
 
 @media (max-width: 767px) {
-  #intro h2 {
+  #home h2 {
     font-size: 2.5rem;
   }
-  #intro p {
+  #home p {
     font-size: 1rem;
   }
 }
 @media (min-width: 768px) {
-  #intro h2 {
+  #home h2 {
     font-size: 2.5rem;
   }
-  #intro p {
+  #home p {
     font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) {
-  #intro h2 {
+  #home h2 {
     font-size: 3.5rem;
   }
-  #intro p {
+  #home p {
     font-size: 1.3rem;
   }
 }
