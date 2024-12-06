@@ -16,15 +16,15 @@ export function wsplide() {
     },
   }).mount({ AutoScroll });
 
-  new Splide('#splide2', {
-    direction: 'rtl',
-    type: "loop",
-    autoWidth: true,
-    focus: 'center',
-    gap: 30,
-    autoScroll: {
-      speed: 5,
+  // new Splide('#splide2', {
+  //   direction: 'rtl',
+  //   type: "loop",
+  //   autoWidth: true,
+  //   focus: 'center',
+  //   gap: 30,
+  //   autoScroll: {
+  //     speed: 5,
 
-    },
-  }).mount({ AutoScroll });
+  //   },
+  // }).mount({ AutoScroll });
 }
