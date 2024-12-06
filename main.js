@@ -11,6 +11,7 @@ import{ footer } from "./src/js/footer.js"
 import{ bgColor } from "./src/js/bgColor.js"
 import{ path } from "./src/js/path.js"
 import{ vsplide } from "./src/js/vsplide.js"
+import{ wsplide } from "./src/js/wsplide.js"
 
 window.addEventListener('DOMContentLoaded',function(){
     menu()
@@ -25,5 +26,5 @@ window.addEventListener('DOMContentLoaded',function(){
     bgColor()
     path()
     vsplide()
-
+    wsplide()
 })

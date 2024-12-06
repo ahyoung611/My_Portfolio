@@ -1,41 +1,52 @@
+@charset "UTF-8";
 #footer {
   position: relative;
   overflow: hidden;
   height: 50vh;
   background: linear-gradient(to bottom, #4385AF, #024A7B, #003058);
+  border: 1px solid #f00;
 }
 #footer .stage {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+}
+#footer .stage .textField {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 2rem;
-  text-align: center;
-  white-space: nowrap;
+  /* 깜빡임 효과 */
 }
-#footer .stage .desc {
-  perspective: 400px;
+#footer .stage .textField .big {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
 }
-#footer .stage .desc div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+#footer .stage .textField .cusor {
+  width: 3px;
+  height: 1.5rem;
+  background: rgb(255, 255, 255);
+  position: relative;
+  left: 10px;
+  top: -3px;
+  opacity: 1;
+  animation: blink 1s step-end infinite; /* 깜빡이는 애니메이션 */
 }
-#footer .splide {
-  position: absolute;
-  top: 0;
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+#footer .wsplide .splide__track {
   border: 1px solid #000;
 }
-#footer .footer__splide__track .splide__list {
+#footer .wsplide .splide__track .splide__list {
   display: flex;
 }
-#footer .footer__splide__track .splide__list img {
+#footer .wsplide .splide__track .splide__list img {
   width: 4vw;
 }
-#footer .footer__splide__track .splide__list .splide__slide {
+#footer .wsplide .splide__track .splide__list .splide__slide {
   color: #fff;
   padding: 10px;
   font-size: 2vw;
@@ -44,6 +55,6 @@
   flex-shrink: 0;
   padding: 10px 20px;
 }
-#footer .footer__splide__track .splide__list .splide__slide.is-active {
+#footer .wsplide .splide__track .splide__list .splide__slide.is-active {
   color: rgb(255, 196, 0);
 }

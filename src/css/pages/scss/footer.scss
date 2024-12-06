@@ -2,61 +2,100 @@
     position: relative;
     overflow: hidden;
     height: 50vh;
-    background: linear-gradient(to bottom,#4385AF, #024A7B, #003058);
+    background: linear-gradient(to bottom, #4385AF, #024A7B, #003058);
+    border: 1px solid #f00;
+
+    // .stage {
+    //     width: 100%;
+    //     height: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     flex-direction: column;
+    //     font-size: 2rem;
+    //     text-align: center;
+    //     white-space: nowrap;
+    //     border: 1px solid #000;
+
+    //     .desc {
+    //         perspective: 400px;
+
+    //         div {
+    //             position: absolute;
+    //             top: 50%;
+    //             left: 50%;
+    //             transform: translate(-50%, -50%);
+    //         }
+    //     }
+    // }
 
     .stage {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        font-size: 2rem;
-        text-align: center;
-        white-space: nowrap;
 
-        .desc {
-            perspective: 400px;
+        .textField {
+            display: flex;
+            justify-content: center;
 
-            div {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
+            .big {
+                font-size: 1.5rem;
+                color: rgb(255, 255, 255);
+                // text-decoration: underline;
+            }
+
+            .cusor {
+                width: 3px;
+                height: 1.5rem;
+                background: rgb(255, 255, 255);
+                position: relative;
+                left: 10px;
+                top: -3px;
+                opacity: 1;
+                animation: blink 1s step-end infinite; /* 깜빡이는 애니메이션 */
+            }
+
+            /* 깜빡임 효과 */
+            @keyframes blink {
+                50% {
+                    opacity: 0;
+                }
             }
         }
+
     }
 
-    .splide {
-        position: absolute;
-        top: 0;
-        border: 1px solid #000;
-    }
-
-    .footer__splide__track {
-
-        .splide__list {
-            display: flex;
-
-            img {
-                width: 4vw;
-            }
-
-            .splide__slide {
-                color: #fff;
-                padding: 10px;
-                font-size: 2vw;
+    .wsplide {
+        .splide__track {
+            border: 1px solid #000;
+    
+            .splide__list {
                 display: flex;
-                align-items: center;
-                flex-shrink: 0;
-                padding: 10px 20px;
-
-                &.is-active {
-                    color: rgb(255, 196, 0);
+    
+                img {
+                    width: 4vw;
+                }
+    
+                .splide__slide {
+                    color: #fff;
+                    padding: 10px;
+                    font-size: 2vw;
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+                    padding: 10px 20px;
+    
+                    &.is-active {
+                        color: rgb(255, 196, 0);
+                    }
                 }
             }
         }
     }
+
+    
 
 
 }
