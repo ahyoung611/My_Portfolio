@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger,ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export function header() {
     // smooth scroll ---------------------------------------------------------------
@@ -37,7 +37,6 @@ export function header() {
                 duration: 1,
                 scrollTo: {
                     y: elem,
-                    offsetY: 50
                 },
                 overwite: 'auto'
 
