@@ -6,21 +6,20 @@ export function project() {
         pagination: {
             el: ".swiper-pagination",
         },
-    
-        navigation: {
-            nextEl: ".next2",
-            prevEl: ".prev2",
+        autoplay: {
+            delay: 3000, // 3초마다 슬라이드 전환
+            disableOnInteraction: false, // 사용자 상호작용 이후에도 자동 재생 유지
         },
+        speed: 800, // 슬라이드 전환 애니메이션 속도 (0.8초)
     });
     
     var vswiper = new Swiper(".vSwiper", {
         direction: "vertical",
-    
-        navigation: {
-            nextEl: ".next2",
-            prevEl: ".prev2",
+        autoplay: {
+            delay: 3000, // 3초마다 슬라이드
+            disableOnInteraction: false,
         },
-    
+        speed: 800, // 슬라이드 전환 애니메이션 속도 (0.8초)
     });
     
     const sElems = document.querySelectorAll('#project .tab-menu li a')
