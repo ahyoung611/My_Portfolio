@@ -1,6 +1,4 @@
 import { gsap } from "gsap";
-import { SplitText } from "gsap/splitText";
-
 export function home() {
     gsap.registerPlugin(SplitText);
 

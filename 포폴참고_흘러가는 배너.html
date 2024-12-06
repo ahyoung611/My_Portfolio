@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        section {
+            height: 100vh;
+            border: 1px solid #000;
+            contain: paint;
+        }
+
+        .splide__track {
+            background-color: #cbe7ff;
+            transform: rotate(2deg);
+            margin-top: 100px;
+        }
+
+        .splide__list {
+            display: flex;
+        }
+
+        img {
+            width: 4vw;
+        }
+
+        .splide__slide {
+            /* color: #fff; */
+            padding: 10px;
+            font-size: 4vw;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            padding: 10px 20px;
+        }
+
+        .splide__slide.is-active {
+            color: rgb(255, 196, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="splide" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">열정과 도전 <img src="./img/jellyfish-3-svgrepo-com.svg" alt=""></li>
+                    <li class="splide__slide"> 호기심 <img src="./img/sea-2-svgrepo-com.svg" alt=""></li>
+                    <li class="splide__slide">성장 <img src="./img/sea-turtle-svgrepo-com.svg" alt=""></li>
+                    <li class="splide__slide">성취감 <img src="./img/sea-star-svgrepo-com.svg" alt=""></li>
+                    <li class="splide__slide">준비된 인재 <img src="./img/sea-svgrepo-com.svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/js/splide.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script>
+        const splide = new Splide('.splide', {
+            type: 'loop',
+            drag: false,
+            focus: 'center',
+            gap: 30,
+            autoWidth: true,
+            arrows: false,
+            pagination: false,
+            autoScroll: {
+                speed: -2,
+                pauseOnHover: true,
+                rewind: false
+            },
+            breakpoint: {
+                1200: { perPage: 3 },
+                640: { perPage: 2 }
+            }
+        })
+        splide.mount(window.splide.Extensions)
+    </script>
+</body>
+
+</html>

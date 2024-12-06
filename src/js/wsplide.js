@@ -1,31 +1,30 @@
-
 import Splide from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
+
 export function wsplide() {
+  new Splide('#splide1', {
+    type: "loop",
+    autoWidth: true,
+    gap: 30,
+    pagination: false,
+    focus: 'center',
+    arrows: false,
+    autoScroll: {
+      speed: 1.5,
 
-    const wsplide1 = new Splide('#wsplide',{
-        type:'loop',
-        drag:false,
-        focus:'center',
-        gap:30,
-        autoWidth:true,
-        height: '20%', // 슬라이더 높이 설정
-        arrows:false,
-        pagination:false,
-        autoScroll:{
-            speed:1.5,
-            pauseOnHover:true,
-            rewind:false
-        },
-        clones: 2, // 슬라이드 복제
+    },
+  }).mount({ AutoScroll });
 
-        breakpoint:{
-            1200:{perPage:3},
-            640:{perPage:2}
-        }
-    });
+  new Splide('#splide2', {
+    direction: 'rtl',
+    type: "loop",
+    autoWidth: true,
+    focus: 'center',
+    gap: 30,
+    autoScroll: {
+      speed: 5,
 
-    wsplide1.mount({ AutoScroll });
-
+    },
+  }).mount({ AutoScroll });
 }
