@@ -1,22 +1,33 @@
 .title {
+  z-index: 99;
+}
+.title span {
   display: inline-block;
-  font-size: 5vw;
+  font-size: 4vw;
   line-height: 1.6;
   font-family: var(--mainEng-font);
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--subColor100-color);
   -webkit-text-stroke: 1px #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  transition: 1s;
   color: transparent;
+  background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  background-size: 0 100%;
+  cursor: pointer;
+}
+.title span:hover {
+  background-size: 100% 100%;
 }
 .title em {
   display: block;
   font-family: var(--mainKorT-font);
-  font-weight: 200;
   letter-spacing: 1px;
-  font-size: 22px;
-  -webkit-text-stroke: 0px #fff;
-  color: rgb(255, 255, 255);
+  font-size: 1.2vw;
+  -webkit-text-stroke: none;
+  line-height: 1.5;
 }
 
 .project_title {
@@ -36,7 +47,7 @@
   white-space: nowrap;
 }
 
-.uxui_title {
+.graphic_title {
   position: sticky;
   left: 50%;
   transform: translateX(-50%);

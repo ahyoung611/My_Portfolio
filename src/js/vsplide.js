@@ -19,7 +19,7 @@ export function vsplide() {
             pauseOnHover: true,
             rewind: false,
         },
-        clones: 2, // 슬라이드 복제
+       
     });
 
     splide1.mount({ AutoScroll });
@@ -41,7 +41,7 @@ export function vsplide() {
             pauseOnHover: true,
             rewind: false,
         },
-        clones: 2, // 슬라이드 복제
+        // clones: 2, // 슬라이드 복제
     });
 
     splide2.mount({ AutoScroll }); // 여기에 확장 포함

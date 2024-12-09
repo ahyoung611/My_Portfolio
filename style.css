@@ -9,7 +9,7 @@
 @import url(./src/css/pages/home.css);
 @import url(./src/css/pages/project.css);
 @import url(./src/css/pages/work.css);
-@import url(./src/css/pages/uxui.css);
+@import url(./src/css/pages/graphic.css);
 @import url(./src/css/pages/about.css);
 @import url(./src/css/pages/footer.css);
 
@@ -26,5 +26,4 @@ section {
     overflow: hidden;
     min-height: 100vh;
     contain: paint;
-
 }

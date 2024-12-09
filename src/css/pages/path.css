@@ -24,6 +24,7 @@
 .jellyfish {
   position: absolute;
   animation: bounce-top 1s infinite;
+  z-index: 99;
 }
 
 .jellyfish2 {
@@ -37,8 +38,9 @@
 }
 
 .jellyfish4 {
-  left: 5%;
-  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
 }
 
 .jellyfish5 {

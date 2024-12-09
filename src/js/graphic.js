@@ -2,11 +2,11 @@
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-export function uxui() {
+export function graphic() {
 
   gsap.registerPlugin(ScrollTrigger);
-  const horizontal = document.querySelector('#uxui')
-  const articles = gsap.utils.toArray('.uxui__item')
+  const horizontal = document.querySelector('#graphic')
+  const articles = gsap.utils.toArray('.graphic__item')
 
   gsap.to(articles, {
     xPercent: -100 * (articles.length - 1),

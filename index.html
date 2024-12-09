@@ -22,7 +22,7 @@
           <li><a class="on" href="#home">home</a></li>
           <li><a href="#project">project</a></li>
           <li><a href="#work">work</a></li>
-          <li><a href="#uxui">uxui</a></li>
+          <li><a href="#graphic">graphic</a></li>
           <li><a href="#about">about</a></li>
         </ul>
       </nav>
@@ -35,7 +35,7 @@
   <div class="container">
     <main id="main" role="main">
       <!-- home -->
-      <section id="home" data-bg="linear-gradient(to top right, #7ED0FB, #2A8AC2)">
+      <section id="home" data-bg="linear-gradient(to top right, #BAE5FD, #2A8AC2)">
         <div class="path-box">
           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1148.17 859.95">
             <path class="path"
@@ -86,7 +86,7 @@
           <img src="./src/assets/images/jellyfish2.png" alt="jellyfish2">
         </div>
         <div class="title project_title">
-          project <em>콘텐츠 기획과 시각적 아이덴티티를 활용하여 제작한 작업물입니다.</em>
+          <span>project</span><em>콘텐츠 기획과 시각적 아이덴티티를 활용하여 제작한 작업물입니다.</em>
         </div>
         <div class="tabs">
           <ul class="tab-menu">
@@ -191,15 +191,18 @@
           <div class="bubble bubble2 x19"></div>
         </div>
       </section>
-      <!-- uxui -->
-      <section id="work" data-bg="linear-gradient(to top left, #046BA9, #7ED0FB)">
+      <!-- work -->
+      <section id="work" data-bg="linear-gradient(to top right, #024A7B, #7ED0FB)">
         <div class="jellyfish jellyfish3">
           <img src="./src/assets/images/jellyfish3.png" alt="jellyfish3">
         </div>
 
         <div class="work_left">
-          <div class="title work_title">
-            CODINGWORKS <em>코딩 작업을 통해 기술적 구현을 포함한 다양한 작업물입니다.</em>
+          <div class="title work_title" data-title="CODINGWORKS" data-date=""
+            data-details="코딩 작업을 통해 기술적 구현을 포함한 다양한 작업물입니다.">
+            <span>CODINGWORKS</span>
+            <em></em>
+            <em>코딩 작업을 통해 기술적 구현을 포함한 다양한 작업물입니다.</em>
           </div>
         </div>
 
@@ -209,48 +212,81 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-acebed.png" alt="work1"
-                      data-description="acebed <em>2024.10.24</em> <em>Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-acebed.png" alt="work1" data-title="Acebed" data-date="2024.10.24"
+                      data-details="Position Attachment, Slide 활용">
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work1 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-yes24.png" alt="work2"
-                      data-description="yes24 <em>2024.10.21</em> <em>Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-yes24.png" alt="work2" data-title="yes24" data-date="2024.10.21"
+                      data-details="Position Attachment, Slide 활용">
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work2 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-청와대.png" alt="work3"
-                      data-description="청와대 <em>2024.10.10</em> <em>Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-청와대.png" alt="work3" data-title="청와대"
+                      data-date="2024.10.10" data-details="Attachment, Slide 활용">
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work3 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-mamonde.png" alt="work4"
-                      data-description="mamonde <em>2024.10.07</em> <em>Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-mamonde.png" alt="work4" data-title="mamonde"
+                      data-date="2024.10.07" data-details="Position Attachment, Slide 활용">
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work4 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-Innisfree.png" alt="work5"
-                      data-description="Innisfree <em>2024.09.25</em> <em>Accordion Menu, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-Innisfree.png" alt="work5" data-title="Innisfree"
+                      data-date="2024.09.25" data-details="Menu, Slide 활용">
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work5 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-lush.png" alt="work6"
-                      data-description="lush <em>2024.09.23</em> <em>Tab, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-lush.png" alt="work6" data-title="lush" data-date="2024.09.23"
+                      data-details="Tab, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work6 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-롯데칠성음료.png" alt="work7"
-                      data-description="롯데칠성음료 <em>2024.09.19</em> <em> getAttribute, Transform, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-롯데칠성음료.png" alt="work7" data-title="롯데칠성음료"
+                      data-date="2024.09.19" data-details="getAttribute, Transform, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work7 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-mugo.png" alt="work8"
-                      data-description="mugo-box <em>2024.09.10</em> <em> getAttribute, Transform, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-mugo.png" alt="work8" data-title="mugo-box" data-date="2024.09.10"
+                      data-details="getAttribute, Transform, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work8 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-wodam.png" alt="work9"
-                      data-description="wodam<em>2024.09.09</em> <em> animate 활용<em/>">
+                    <img src="./src/assets/work/work-wodam.png" alt="work9" data-title="wodam" data-date="2024.09.09"
+                      data-details="animate 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work9 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-wannerbro.png" alt="work10"
-                      data-description="wanner-bros<em>2024.09.03</em> <em> animate 활용<em/>">
+                    <img src="./src/assets/work/work-wannerbro.png" alt="work10" data-title="wanner-bros"
+                      data-date="2024.09.03" data-details="animate 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work10 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-gentlemonster.png" alt="work11"
-                      data-description="gentlemonster<em>2024.08.27</em> <em> Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-gentlemonster.png" alt="work11" data-title="gentlemonster"
+                      data-date="2024.08.27" data-details="Position Attachment, Slide 활용">
+                            <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work11 -->
                 </ul>
               </div>
@@ -261,48 +297,81 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-apple.png" alt="work12"
-                      data-description="apple <em>2024.08.22</em> <em>Class Control 활용<em/>">
+                    <img src="./src/assets/work/work-apple.png" alt="work12" data-title="apple" data-date="2024.08.22"
+                      data-details="Class Control 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work12 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-nintendo.png" alt="work12"
-                      data-description="nintendo <em>2024.08.17</em> <em>Translate 활용<em/>">
-                  </li><!-- work12 -->
+                    <img src="./src/assets/work/work-nintendo.png" alt="work13" data-title="nintendo"
+                      data-date="2024.08.17" data-details="Translate 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/pc-icon.png" alt=""></li>
+                      </ul>
+                  </li><!-- work13 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-3ce.png" alt="work14"
-                      data-description="3ce <em>2024.08.12</em> <em>Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-3ce.png" alt="work14" data-title="3ce" data-date="2024.08.12"
+                      data-details="Position Attachment, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work14 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-monsterwork.png" alt="work15"
-                      data-description="monsterwork <em>2024.08.08</em> <em>Float 활용<em/>">
+                    <img src="./src/assets/work/work-monsterwork.png" alt="work15" data-title="monsterwork"
+                      data-date="2024.08.08" data-details="Float 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work15 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-samsonite.png" alt="work16"
-                      data-description="samsonite <em>2024.08.06</em> <em>Accordion Menu, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-samsonite.png" alt="work16" data-title="samsonite"
+                      data-date="2024.08.06" data-details="Accordion Menu, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work16 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-지구오락실.png" alt="work17"
-                      data-description="지구오락실 <em>2024.08.02</em> <em>Tab, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-지구오락실.png" alt="work17" data-title="지구오락실"
+                      data-date="2024.08.02" data-details="Tab, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work17 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-shift.png" alt="work18"
-                      data-description="shift <em>2024.07.19</em> <em> Transform, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-shift.png" alt="work18" data-title="shift" data-date="2024.07.19"
+                      data-details="Transform, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work18 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-samdasu.png" alt="work19"
-                      data-description="samdasu <em>2024.07.12</em> <em> Skew 활용<em/>">
+                    <img src="./src/assets/work/work-samdasu.png" alt="work19" data-title="samdasu"
+                      data-date="2024.07.12" data-details="Skew 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work19 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-죠스떡볶이.png" alt="work20"
-                      data-description="죠스떡볶이<em>2024.07.09</em> <em> animate 활용<em/>">
+                    <img src="./src/assets/work/work-죠스떡볶이.png" alt="work20" data-title="죠스떡볶이"
+                      data-date="2024.07.09" data-details="animate 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work20 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-sanlio.png" alt="work21"
-                      data-description="sanlio<em>2024.07.08</em> <em>Transform, Hover 활용<em/>">
+                    <img src="./src/assets/work/work-sanlio.png" alt="work21" data-title="sanlio" data-date="2024.07.08"
+                      data-details="Transform, Hover 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work21-->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-kakao.png" alt="work22"
-                      data-description="kakao<em>2024.07.04</em> <em> Position Attachment, Slide 활용<em/>">
+                    <img src="./src/assets/work/work-kakao.png" alt="work22" data-title="kakao" data-date="2024.07.04"
+                      data-details="Position Attachment, Slide 활용">
+                      <ul class="web-icon">
+                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                      </ul>
                   </li><!-- work22 -->
                 </ul>
               </div>
@@ -332,49 +401,49 @@
           <div class="bubble bubble2 x19"></div>
         </div>
       </section>
-      <!-- uxui -->
-      <section id="uxui" data-bg="linear-gradient(to bottom right, #035B91, #024A7B)">
+      <!-- graphic -->
+      <section id="graphic" data-bg="linear-gradient(to bottom right, #035B91, #024A7B)">
         <div class="jellyfish jellyfish4">
           <img src="./src/assets/images/jellyfish4.png" alt="jellyfish4">
         </div>
-        <div class="title uxui_title">
-          graphic design <em>포토샵과 일러스트를 활용하여 제작한 그래픽디자인입니다.</em>
+        <div class="title graphic_title">
+          <span>graphic design</span> <em>포토샵과 일러스트를 활용하여 제작한 그래픽디자인입니다.</em>
         </div>
-        <div class="uxui__wrap">
+        <div class="graphic__wrap">
           <!-- acebed 1-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>01</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-prada-poster.jpg" alt="uxui1"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-prada-poster.jpg" alt="graphic1"></a>
             <div class="desc-box">
-              <h3 class="item_title">poster design</h3>
+              <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.12</span>
               <p class="desc">photoshop 활용</p>
             </div>
           </article>
           <!-- acebed 2-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>02</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-cafelatte-poster.jpg" alt="uxui2"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-cafelatte-poster.jpg" alt="graphic2"></a>
             <div class="desc-box">
-              <h3 class="item_title">poster design</h3>
+              <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.11</span>
               <p class="desc">photoshop 활용</p>
             </div>
           </article>
           <!-- 청와대 3-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>03</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-nightcity-poster.jpg" alt="uxui3"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-nightcity-poster.jpg" alt="graphic3"></a>
             <div class="desc-box">
-              <h3 class="item_title">poster design</h3>
+              <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.11</span>
               <p class="desc">photoshop 활용</p>
             </div>
           </article>
           <!-- 청와대 4-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>04</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-sale-cardnews.png" alt="uxui4"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-sale-cardnews.png" alt="graphic4"></a>
             <div class="desc-box">
               <h3 class="item_title">cardnews <br> design</h3>
               <span class="date">2024.10</span>
@@ -382,19 +451,19 @@
             </div>
           </article>
           <!-- Innisfree 5-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>05</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/AI-Aland-poster.png" alt="uxui5"></a>
+            <a href="#"><img src="./src/assets/graphic/AI-Aland-poster.png" alt="graphic5"></a>
             <div class="desc-box">
-              <h3 class="item_title">poster design</h3>
+              <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.10</span>
               <p class="desc"> Illustrator 활용</p>
             </div>
           </article>
           <!-- Lush 6-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>06</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/AI-fleamarket-poster.png" alt="uxui6"></a>
+            <a href="#"><img src="./src/assets/graphic/AI-fleamarket-poster.png" alt="graphic6"></a>
             <div class="desc-box">
               <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.09</span>
@@ -402,29 +471,29 @@
             </div>
           </article>
           <!-- 롯데칠성음료 7-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>07</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/AI-festival-poster.png" alt="uxui7"></a>
+            <a href="#"><img src="./src/assets/graphic/AI-festival-poster.png" alt="graphic7"></a>
             <div class="desc-box">
-              <h3 class="item_title">poster design</h3>
+              <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.09</span>
               <p class="desc"> Illustrator 활용</p>
             </div>
           </article>
           <!-- Mugo box 8-->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>08</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-zero-poster.png" alt="uxui8"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-zero-poster.png" alt="graphic8"></a>
             <div class="desc-box">
-              <h3 class="item_title">poster design</h3>
+              <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.09.10</span>
               <p class="desc">photoshop 활용</p>
             </div>
           </article>
           <!-- wodamlighting 9 -->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>09</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/AI-3d-cardnews.png" alt="uxui9"></a>
+            <a href="#"><img src="./src/assets/graphic/AI-3d-cardnews.png" alt="graphic9"></a>
             <div class="desc-box">
               <h3 class="item_title">cardnews <br> design</h3>
               <span class="date">2024.08</span>
@@ -432,9 +501,9 @@
             </div>
           </article>
           <!-- wannerbros 10 -->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>10</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/AI-cardnews.png" alt="uxui10"></a>
+            <a href="#"><img src="./src/assets/graphic/AI-cardnews.png" alt="graphic10"></a>
             <div class="desc-box">
               <h3 class="item_title">cardnews <br> design</h3>
               <span class="date">2024.07</span>
@@ -442,9 +511,9 @@
             </div>
           </article>
           <!-- Gentle 11 -->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>11</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-cafe-poster.png" alt="uxui2"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-cafe-poster.png" alt="graphic2"></a>
             <div class="desc-box">
               <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.07</span>
@@ -452,9 +521,9 @@
             </div>
           </article>
           <!-- Apple 12 -->
-          <article class="uxui__item">
+          <article class="graphic__item">
             <span class="num"><em>12</em>/12</span>
-            <a href="#"><img src="./src/assets/graphic/PS-haribo-poster.png" alt="uxui9"></a>
+            <a href="#"><img src="./src/assets/graphic/PS-haribo-poster.png" alt="graphic9"></a>
             <div class="desc-box">
               <h3 class="item_title">poster <br> design</h3>
               <span class="date">2024.06</span>
@@ -462,6 +531,21 @@
             </div>
           </article>
         </div>
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+              <defs>
+                  <path id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+              </defs>
+              <g class="parallax">
+                  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(126, 208, 251,0.7" />
+                  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(126, 208, 251,0.5)" />
+                  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(126, 208, 251,0.3)" />
+                  <use xlink:href="#gentle-wave" x="48" y="7" fill="#bae5fd" />
+              </g>
+          </svg>
+      </div>
         <div class="bubble_cont">
           <div class="bubble x1"></div>
           <div class="bubble x2"></div>
@@ -491,7 +575,7 @@
           <div class="txt">
             <div>
               <div class="title">
-                about <em>노력과 성장을 통해 매 순간 진화하는 웹퍼블리셔입니다.</em>
+                <span>about</span> <em>노력과 성장을 통해 매 순간 진화하는 웹퍼블리셔입니다.</em>
               </div>
               <ul class="cate">
                 <li class="item01">I AM</li>
@@ -507,64 +591,68 @@
           <ul class="cont" data-aos="fade-up">
             <li class="cont01">
               <h2 class="about_title">i am<span>자기소개</span></h2>
-              <div class="img">
+              <div class="about-line">
                 <img src="./src/assets/images/about-slideline.png" alt="">
               </div>
               <ul class="txt_container">
-                <li class="iam1">
+                <li class="iam">
                   <p class="num">1</p>
-                  <p>점점커지는 <span>light</span></p>
-                  <p>작은 불빛도 모이면 큰 빛을 만들어내듯, 저는 포기하지 않고 꾸준히 노력하며 신뢰를 쌓아가는 사람입니다.</p>
+                  <p class="iam-title">점점커지는 <span>light</span></p>
+                  <p class="iam-detail">작은 불빛도 모이면 큰 빛을 만들어내듯, 저는 포기하지 않고 꾸준히 노력하며 신뢰를 쌓아가는 사람입니다.</p>
                 </li>
-                <li class="iam2">
+                <li class="iam">
                   <p class="num">2</p>
-                  <p>끝이없는 <span>deep sea</span></p>
-                  <p>넓고 깊은 바다처럼 무한한 가능성을 탐구하며, 철저한 계획과 도전 정신으로 더 나은 성과를 만들어가고 있습니다.</p>
+                  <p class="iam-title">끝이없는 <span>deep sea</span></p>
+                  <p class="iam-detail">넓고 깊은 바다처럼 무한한 가능성을 탐구하며, 철저한 계획과 도전 정신으로 더 나은 성과를 만들어가고 있습니다.</p>
                 </li>
-                <li class="iam3">
+                <li class="iam">
                   <p class="num">3</p>
-                  <p>계속되는 <span>grow</span></p>
-                  <p>성장은 멈추지 않는 과정입니다. 저는 배우고 성장하며, 매일 더 나은 내일을 만들어가고자 노력하고 있습니다.</p>
+                  <p class="iam-title">계속되는 <span>Growth</span></p>
+                  <p class="iam-detail">성장은 멈추지 않는 과정입니다. 저는 배우고 성장하며, 매일 더 나은 내일을 만들어가고자 노력하고 있습니다.</p>
                 </li>
               </ul>
             </li>
             <li class="cont02">
               <h2 class="about_title">Career/Education <span>경력/학력</span></h2>
-              <div class="img">
+              <div class="about-line">
                 <img src="./src/assets/images/about-slideline.png" alt="">
               </div>
               <ul class="txt_container">
-                <li class="Career">
-                  <em>2024.06 ~ 2024.12.09</em> <span>mbc아카데미 UXUI 웹퍼블리셔 프론트앤드 과정</span>
+                <li class="Career about-detail">
+                  <em>2024.06 ~ 2024.12</em> <span>MBC아카데미 웹 웹퍼블리셔 프론트앤드 과정</span>
                 </li>
                 <li class="Career">
                   <em>2023.04 ~ 2024.04</em> <span>제주MBC FD</span>
                 </li>
                 <li class="Career">
-                  <em>2020 ~ 2012</em> <span>제주대학교 관광경영전공</span>
+                  <em>2022.10 ~ 2023.04</em> 
+                  <span>제주 다이나믹메이즈</span>
                 </li>
                 <li class="Career">
-                  <em>2017 ~ 2019</em> <span>제주한라대학교 중국어전공</span>
+                  <em>2020.03 ~ 2022.02</em> <span>제주대학교 관광경영전공</span>
+                </li>
+                <li class="Career">
+                  <em>2017.03 ~ 2019.02</em> <span>제주한라대학교 중국어전공</span>
                 </li>
               </ul>
             </li>
             <li class="cont03">
               <h2 class="about_title">license <span>자격증</span></h2>
-              <div class="img">
+              <div class="about-line">
                 <img src="./src/assets/images/about-slideline.png" alt="">
               </div>
               <ul class="txt_container">
-                <li class="license"><em>2024.12</em><span>웹디자인기능사 실기</span></li>
-                <li class="license"><em>2024.08</em><span>GTQi 일러스트 1급</span></li>
-                <li class="license"><em>2023.12</em><span>GTQid 인디자인 1급</span></li>
-                <li class="license"><em>2023.09</em><span>GTQ 포토샵 1급</span></li>
-                <li class="license"><em>2022.10</em><span>컴퓨터활용능력 2급</span></li>
+                <li class="license"><em>2024.12.04</em><span>웹디자인기능사 실기</span></li>
+                <li class="license"><em>2024.08.16</em><span>GTQi 일러스트 1급</span></li>
+                <li class="license"><em>2023.11.25</em><span>GTQid 인디자인 1급</span></li>
+                <li class="license"><em>2023.08.26</em><span>GTQ 포토샵 1급</span></li>
+                <li class="license"><em>2022.10.07</em><span>컴퓨터활용능력 2급</span></li>
                 <li class="license"><em>2021.03</em><span>운전면허 2종 보통</span></li>
               </ul>
             </li>
             <li class="cont04">
               <h2 class="about_title">skills <span>보유역량</span></h2>
-              <div class="img">
+              <div class="about-line">
                 <img src="./src/assets/images/about-slideline.png" alt="">
               </div>
               <ul class="txt_container skill">
@@ -575,6 +663,9 @@
                 <li class="skill"><img src="./src/assets/images/html-icon.png" alt="html-icon"></li>
                 <li class="skill"><img src="./src/assets/images/css-icon.png" alt="css-icon"></li>
                 <li class="skill"><img src="./src/assets/images/js-icon.png" alt="js-icon"></li>
+                <li class="skill"><img src="./src/assets/images/jquery-icon.png" alt="js-icon"></li>
+                <li class="skill"><img src="./src/assets/images/github-icon.png" alt="js-icon"></li>
+                <li class="skill"><img src="./src/assets/images/sass-icon.png" alt="js-icon"></li>
               </ul>
             </li>
           </ul>
@@ -603,36 +694,51 @@
       </section>
     </main>
     <footer id="footer" role="contentinfo">
-      <div class="title footer_title">
-        contact
-      </div>
-      
-      <div class="stage">
-        <div class="textField">
-          <div class="big"></div>
-          <div class="cusor"></div>
-        </div>
-      </div>
-<div class="slide-container ">
-  
+   
+      <div class="wsplide ">
         <div class="splide ltl" id="splide1">
           <div class="splide__track splide__track-1">
             <ul class="splide__list">
-              <li class="splide__slide">About</li>
-              <li class="splide__slide">Me</li>
-              <li class="splide__slide"><img src="src/img/arrow1.svg" alt=""></li>
-              <li class="splide__slide">About</li>
-              <li class="splide__slide">Me</li>
-              <li class="splide__slide"><img src="src/img/arrow1.svg" alt=""></li>
-              <li class="splide__slide">About</li>
-              <li class="splide__slide">Me</li>
-              <li class="splide__slide"><img src="src/img/arrow1.svg" alt=""></li>
-  
+              <li class="splide__slide">contact me</li>
+              <li class="splide__slide"><img src="./src/assets/images/phone.png" alt="phone"></li>
+              <li class="splide__slide">contact me</li>
+              <li class="splide__slide"><img src="./src/assets/images/mail.png" alt="mail"></li>
+              <li class="splide__slide">contact me</li>
+              <li class="splide__slide"><img src="./src/assets/images/github.png" alt="github"></li>
             </ul>
           </div>
         </div>
-         
-</div>
+        <div class="splide ltl" id="splide2">
+          <div class="splide__track splide__track-1">
+            <ul class="splide__list">
+              <li class="splide__slide">도전과 성장</li>
+              <li class="splide__slide">끊임없는</li>
+              <li class="splide__slide">자기개발</li>
+              <li class="splide__slide">적극적이고</li>
+              <li class="splide__slide">열정적인 인재</li>
+              <li class="splide__slide">김아영입니다!</li>
+              <li class="splide__slide">감사합니다.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <ul class="contact">
+        <li>
+          <p><img src="./src/assets/images/phone.png" alt="phone"></p>
+          <p>010-4496-2707</p>
+        </li>
+        <li>
+          <p><img src="./src/assets/images/mail.png" alt="mail"></p>
+         <p>wlq0611.naver.com</p>
+        </li>
+        <li>
+          <p><img src="./src/assets/images/github.png" alt="github"></p>
+          <p>https://github.com/ahyoung611/ahyoung_portfolio.git</p>
+        </li>
+      </ul>
+
       <div class="bubble_cont">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>

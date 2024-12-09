@@ -3,99 +3,102 @@
     overflow: hidden;
     height: 50vh;
     background: linear-gradient(to bottom, #4385AF, #024A7B, #003058);
-    border: 1px solid #f00;
-
-    // .stage {
-    //     width: 100%;
-    //     height: 100%;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     flex-direction: column;
-    //     font-size: 2rem;
-    //     text-align: center;
-    //     white-space: nowrap;
-    //     border: 1px solid #000;
-
-    //     .desc {
-    //         perspective: 400px;
-
-    //         div {
-    //             position: absolute;
-    //             top: 50%;
-    //             left: 50%;
-    //             transform: translate(-50%, -50%);
-    //         }
-    //     }
-    // }
-
-    .stage {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-
-        .textField {
-            display: flex;
-            justify-content: center;
-
-            .big {
-                font-size: 1.5rem;
-                color: rgb(255, 255, 255);
-                // text-decoration: underline;
-            }
-
-            .cusor {
-                width: 3px;
-                height: 1.5rem;
-                background: rgb(255, 255, 255);
-                position: relative;
-                left: 10px;
-                top: -3px;
-                opacity: 1;
-                animation: blink 1s step-end infinite; /* 깜빡이는 애니메이션 */
-            }
-
-            /* 깜빡임 효과 */
-            @keyframes blink {
-                50% {
-                    opacity: 0;
-                }
-            }
-        }
-
-    }
+    z-index: -2;
 
     .wsplide {
-        .splide__track {
-            border: 1px solid #000;
-    
-            .splide__list {
-                display: flex;
-    
-                img {
-                    width: 4vw;
-                }
-    
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        .splide {
+            position: absolute;
+            width: 100%;
+
+            &#splide1 {
+                top: 0;
+                right: 0;
+
                 .splide__slide {
-                    color: #fff;
-                    padding: 10px;
-                    font-size: 2vw;
-                    display: flex;
-                    align-items: center;
-                    flex-shrink: 0;
-                    padding: 10px 20px;
-    
+                    font-family: var(--mainEng-font);
+                    font-size: 2.5vw;
+
+                }
+            }
+
+            &#splide2 {
+                bottom: 10px;
+                left: 0;
+
+                .splide__slide {
+                    font-family: var(--mainKorL-font);
+                    font-size: 1.5vw;
+
                     &.is-active {
-                        color: rgb(255, 196, 0);
+                        color: var(--white);
                     }
                 }
             }
         }
+
+        .splide__track {
+
+            .splide__list {
+
+                img {
+                    width: 2vw;
+                    filter: invert(1);
+                }
+
+                .splide__slide {
+                    display: flex;
+                    align-items: center;
+                    flex-shrink: 0;
+                    padding: 20px;
+                    -webkit-text-stroke: rgba(255,255,255,.5) 1px;
+                    color: transparent;
+                    text-transform: uppercase;
+
+                    &.is-active {
+                        color: var(--white);
+                    }
+                }
+            }
+
+
+        }
     }
 
-    
+    .contact {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
 
+        li {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            display: inline-block;
+            font-family: var(--mainEng-font);
+            font-weight: 300;
+            letter-spacing: 1px;
+            font-size: 1vw;
+            line-height: 1.5;
+            text-transform: capitalize;
+
+            img {
+                width: 30px;
+                filter: invert(1);
+                padding: 10px;
+            }
+
+        }
+
+
+    }
 
 }
