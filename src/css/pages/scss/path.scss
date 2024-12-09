@@ -12,7 +12,6 @@
 }
 
 .jellyfish1 {
-    border: 1px solid rgba(0,0,0,0);
     height: 60px;
     width: 60px;
     background-image: url(/src/assets/images/jellyfish1.png);
@@ -45,8 +44,13 @@
 }
 
 .jellyfish5{
-    left: 40%;
-    top: 68%;
+    left: 54%;
+    top: 0%;
+
+    img{
+        width: 300px;
+        object-fit: cover;
+    }
 }
 
 @keyframes bounce-top {

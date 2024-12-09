@@ -2,17 +2,14 @@
   position: relative;
   overflow: hidden;
   height: 50vh;
-  background: linear-gradient(to bottom, #4385AF, #024A7B, #003058);
-  z-index: -2;
 }
 #footer .wsplide {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  z-index: 1;
 }
 #footer .wsplide .splide {
   position: absolute;
   width: 100%;
+  background-image: linear-gradient(-225deg, #024A7B 0%, #4385AF 48%, #003058 100%);
 }
 #footer .wsplide .splide#splide1 {
   top: 0;
@@ -20,10 +17,10 @@
 }
 #footer .wsplide .splide#splide1 .splide__slide {
   font-family: var(--mainEng-font);
-  font-size: 2.5vw;
+  font-size: 1.5vw;
 }
 #footer .wsplide .splide#splide2 {
-  bottom: 10px;
+  bottom: 0;
   left: 0;
 }
 #footer .wsplide .splide#splide2 .splide__slide {
@@ -34,14 +31,13 @@
   color: var(--white);
 }
 #footer .wsplide .splide__track .splide__list img {
-  width: 2vw;
-  filter: invert(1);
+  width: 3vw;
 }
 #footer .wsplide .splide__track .splide__list .splide__slide {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  padding: 20px;
+  padding: 5px;
   -webkit-text-stroke: rgba(255, 255, 255, 0.5) 1px;
   color: transparent;
   text-transform: uppercase;
@@ -50,28 +46,38 @@
   color: var(--white);
 }
 #footer .contact {
-  position: absolute;
-  left: 50%;
+  position: relative;
+  width: 60%;
   top: 50%;
-  transform: translate(-50%, -50%);
-}
-#footer .contact li {
-  padding: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  text-align: center;
 }
-#footer .contact p {
-  display: inline-block;
-  font-family: var(--mainEng-font);
-  font-weight: 300;
-  letter-spacing: 1px;
-  font-size: 1vw;
-  line-height: 1.5;
-  text-transform: capitalize;
+#footer .contact li {
+  position: relative;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.35s;
 }
-#footer .contact p img {
-  width: 30px;
+#footer .contact li:hover p {
+  opacity: 1;
+  bottom: -30px;
+  transition: 0.35s;
+}
+#footer .contact li img {
+  width: 50px;
   filter: invert(1);
   padding: 10px;
+}
+#footer .contact li p {
+  position: absolute;
+  bottom: -100px;
+  opacity: 0;
 }

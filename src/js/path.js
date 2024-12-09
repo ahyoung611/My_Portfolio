@@ -1,10 +1,9 @@
 import { gsap } from "gsap/dist/gsap";
 
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/dist/MotionPathPlugin";
 
 export function path() {
-    gsap.registerPlugin(MotionPathPlugin, ScrollTrigger)
+    gsap.registerPlugin(MotionPathPlugin)
 
     // 비스크롤 무한 반복 애니메이션
     gsap.to('.jellyfish1', {
@@ -18,7 +17,6 @@ export function path() {
         motionPath: {
             path: '.path',       // SVG 경로 선택자
             align: '.path',      // 경로에 정렬
-            // autoRotate: true,    // 경로에 따라 회전
             alignOrigin: [0.5, 0.5] // 중심 정렬
         },
     
