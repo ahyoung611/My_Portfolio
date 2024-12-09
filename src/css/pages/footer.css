@@ -2,14 +2,13 @@
   position: relative;
   overflow: hidden;
   height: 50vh;
-}
-#footer .wsplide {
-  z-index: 1;
+  background-color: #003058;
 }
 #footer .wsplide .splide {
   position: absolute;
   width: 100%;
-  background-image: linear-gradient(-225deg, #024A7B 0%, #4385AF 48%, #003058 100%);
+  background-image: linear-gradient(-225deg, #024A7B 0%, #4385AF 48%, #024A7B 100%);
+  padding: 20px 0;
 }
 #footer .wsplide .splide#splide1 {
   top: 0;
