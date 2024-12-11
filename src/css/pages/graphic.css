@@ -11,9 +11,8 @@
 #graphic .graphic__wrap {
   display: flex;
   align-items: center;
-  width: 300%;
   gap: 100px;
-  margin-top: 180px;
+  margin-top: 230px;
   padding-left: 120px;
 }
 #graphic article.graphic__item {
@@ -146,5 +145,21 @@
   }
   100% {
     transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  #graphic .graphic__wrap {
+    width: 270%;
+  }
+}
+@media (min-width: 768px) {
+  #graphic .graphic__wrap {
+    width: 250%;
+  }
+}
+@media (min-width: 1024px) {
+  #graphic .graphic__wrap {
+    width: 200%;
   }
 }

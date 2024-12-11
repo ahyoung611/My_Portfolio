@@ -1,5 +1,5 @@
 .title {
-  z-index: 99;
+  z-index: 50;
 
   span {
     display: inline-block;
@@ -31,20 +31,6 @@
   }
 }
 
-.project_title {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-
-}
-
-.footer_title {
-  position: absolute;
-}
-
-
 @media (max-width:767px) {
   .title {
     span {
@@ -64,6 +50,7 @@
   .title {
     span {
       font-size: 4rem;
+      white-space: nowrap;
     }
 
     em {

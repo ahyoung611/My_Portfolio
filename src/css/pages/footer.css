@@ -8,7 +8,6 @@
 #footer .wsplide {
   width: 100%;
   background-color: #fff;
-  padding: 20px 0;
   position: relative;
   top: 0;
   right: 0;
@@ -18,7 +17,6 @@
 }
 #footer .wsplide #splide1 .splide__slide {
   font-family: var(--mainKorM-font);
-  font-size: 1.5rem;
 }
 #footer .wsplide #splide1 .splide__track .splide__list .splide__slide {
   display: flex;
@@ -42,7 +40,7 @@
   /* 원형 이미지 */
   background-repeat: repeat;
   background-size: 60px 50px;
-  animation: moveBackground 25s linear infinite;
+  animation: moveBackground 10s linear infinite;
   filter: invert(1);
 }
 @keyframes moveBackground {
@@ -55,7 +53,6 @@
 }
 #footer .contact {
   position: relative;
-  width: 60%;
   top: 35%;
   left: 50%;
   transform: translateX(-50%);
@@ -76,7 +73,7 @@
 }
 #footer .contact li:hover p {
   opacity: 1;
-  bottom: -30px;
+  bottom: -40px;
   transition: 0.35s;
 }
 #footer .contact li img {
@@ -85,7 +82,38 @@
   padding: 10px;
 }
 #footer .contact li p {
+  font-family: var(--mainEng-font);
   position: absolute;
   bottom: -100px;
   opacity: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  #footer .wsplide {
+    padding: 10px 0;
+  }
+  #footer .wsplide #splide1 .splide__slide {
+    font-size: 1.2rem;
+  }
+  #footer .contact {
+    width: 90%;
+  }
+  #footer .contact p {
+    width: 130%;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis;
+  }
+}
+@media (min-width: 768px) {
+  #footer .wsplide {
+    padding: 20px 0;
+  }
+  #footer .wsplide #splide1 .splide__slide {
+    font-size: 1.5rem;
+  }
+  #footer .contact {
+    width: 60%;
+  }
 }
