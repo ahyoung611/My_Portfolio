@@ -1,53 +1,62 @@
+@charset "UTF-8";
 #footer {
   position: relative;
   overflow: hidden;
-  height: 50vh;
-  background-color: #003058;
+  height: 40vh;
+  background-color: #090a1b;
 }
-#footer .wsplide .splide {
-  position: absolute;
+#footer .wsplide {
   width: 100%;
-  background-image: linear-gradient(-225deg, #024A7B 0%, #4385AF 48%, #024A7B 100%);
+  background-color: #fff;
   padding: 20px 0;
-}
-#footer .wsplide .splide#splide1 {
+  position: relative;
   top: 0;
   right: 0;
 }
-#footer .wsplide .splide#splide1 .splide__slide {
-  font-family: var(--mainEng-font);
-  font-size: 1.5vw;
+#footer .wsplide:hover .background-image {
+  animation-play-state: paused;
 }
-#footer .wsplide .splide#splide2 {
-  bottom: 0;
-  left: 0;
+#footer .wsplide #splide1 .splide__slide {
+  font-family: var(--mainKorM-font);
+  font-size: 1.5rem;
 }
-#footer .wsplide .splide#splide2 .splide__slide {
-  font-family: var(--mainKorL-font);
-  font-size: 1.5vw;
-}
-#footer .wsplide .splide#splide2 .splide__slide.is-active {
-  color: var(--white);
-}
-#footer .wsplide .splide__track .splide__list img {
-  width: 3vw;
-}
-#footer .wsplide .splide__track .splide__list .splide__slide {
+#footer .wsplide #splide1 .splide__track .splide__list .splide__slide {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   padding: 5px;
-  -webkit-text-stroke: rgba(255, 255, 255, 0.5) 1px;
-  color: transparent;
+  color: rgba(11, 12, 31, 0.5);
   text-transform: uppercase;
 }
-#footer .wsplide .splide__track .splide__list .splide__slide.is-active {
-  color: var(--white);
+#footer .wsplide #splide1 .splide__track .splide__list .splide__slide.is-active {
+  color: #0B0C1F;
+  font-family: var(--mainKorB-font);
+}
+#footer .wsplide .background-image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  height: 50px;
+  background-image: url("/src/assets/images/circle.png");
+  /* 원형 이미지 */
+  background-repeat: repeat;
+  background-size: 60px 50px;
+  animation: moveBackground 25s linear infinite;
+  filter: invert(1);
+}
+@keyframes moveBackground {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 #footer .contact {
   position: relative;
   width: 60%;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

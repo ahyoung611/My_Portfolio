@@ -1,35 +1,43 @@
-
 #project {
-    display: flex;
-    justify-content: space-between;
+    .project-box {
+        position: relative;
+        top: 250px;
+        height: 70vh;
+        display: flex;
+        justify-content: space-between;
+
+        >div {
+            position: relative;
+            // width: 33.333%;
+            overflow: hidden;
+            text-transform: capitalize;
+        }
+    }
 
     .tabs {
-        position: relative;
-        width: 33.333%;
+        font-family: var(--mainEng-font);
 
         .tab-menu {
             position: absolute;
-            top: 45%;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
 
             li {
                 a {
                     display: block;
                     width: 200px;
                     padding: 20px;
-                    font-size: 38px;
-                    // color: rgba(255, 255, 255, .5);
-                    -webkit-text-stroke: .5px #ffffff;
-                    color: transparent;
+                    font-size: 1.5rem;
+                    color: rgba(255, 255, 255, .5);
                     letter-spacing: 1px;
                     transition: 0.5s;
-                    text-transform: capitalize;
+
                     cursor: pointer;
                     white-space: nowrap;
 
                     &.on {
-                        font-size: 48px;
+                        font-size: 2rem;
                         color: #ffffff;
                         font-weight: bold;
                     }
@@ -39,18 +47,74 @@
     }
 
     .hSwiper {
-        position: relative;
-        width: 33.333%;
-        height: 100vh;
-        overflow: hidden;
 
         .project {
             position: absolute;
-            bottom: 15%;
+            bottom: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 450px;
+            transform: translate(-50%, 50%);
+            width: 90%;
             overflow: hidden;
+
+            figure {
+
+                &::after{
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0,0,0,.2);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                figcaption {
+                    position: absolute;
+                    width: 100%;
+                    left: 0%;
+                    bottom: 0%;
+                    padding: 20px;
+                    z-index: 10;
+
+                    h2 {
+                        font-family: var(--mainEng-font);
+                        font-size: 2rem;
+                        font-weight: 600;
+                        line-height: 1.5;
+                        letter-spacing: 1px;
+                        text-transform: capitalize;
+                    }
+
+                    .project_desc {
+                        padding: 20px 0;
+
+                        li {
+                            font-family: var(--mainEng-font);
+                            display: inline-block;
+                            font-size: .8rem;
+                            font-weight: 600;
+                            padding: 10px 20px;
+                            background-color: rgba(255, 255, 255, .5);
+                            color: var(--mainColor100-color);
+                            border-radius: 50px;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        line-height: 54px;
+                        letter-spacing: 1px;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                    }
+                }
+            }
 
             img {
                 width: 100%;
@@ -59,56 +123,132 @@
         }
     }
 
-    #vslide{
-        width: 33.333%;
-        display: flex;
+    #vslide {
         align-items: center;
         justify-content: center;
+
         .vSwiper {
-            height: 50vh;
-            overflow: hidden;
-    
+            height: 100%;
+
             .swiper-slide {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-    
+
                 h2 {
-                    font-family: NotoSansKR-Medium;
-                    font-size: 52px;
-                    font-weight: 500;
-                    line-height: 54px;
+                    font-family: var(--mainEng-font);
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    line-height: 1.5;
                     letter-spacing: 1px;
                     text-transform: capitalize;
-                    margin-top: 100px;
-                    -webkit-text-stroke: 1px #fff;
-                    color: transparent;
                 }
-    
+
                 .project_desc {
-    
+                    padding: 20px 0;
+
                     li {
+                        font-family: var(--mainEng-font);
                         display: inline-block;
-                        font-size: 24px;
+                        font-size: 1rem;
                         font-weight: 600;
-                        padding: 10px 0;
+                        padding: 10px 20px;
+                        background-color: rgba(255, 255, 255, .2);
+                        border-radius: 50px;
+                        color: rgba(255, 255, 255, .7);
+                        transition: .35s;
+                        text-transform: capitalize;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: var(--mainColor100-color);
+                        }
                     }
                 }
-    
+
                 h3 {
-                    font-size: 28px;
+                    font-size: 1.5rem;
                     font-weight: 500;
                     line-height: 54px;
                     letter-spacing: 1px;
                 }
-    
+
                 p {
-                    font-size: 20px;
+                    font-size: 1rem;
                     font-weight: 400;
                     line-height: 1.5;
                 }
             }
         }
+    }
+
+
+
+
+
+}
+
+@media (max-width:767px) {
+    .project-box {
+        width: 100%;
+
+        .hSwiper {
+            width: 95%;
+        }
+
+        .tabs {
+            display: none;
+        }
+
+        #vslide {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .project-box {
+
+        >div {
+            width: 50%;
+            border: 1px solid #f00;
+        }
+
+        .tabs {
+            display: none;
+        }
+
+        .hSwiper{
+            .project{
+                figure{
+                    figcaption{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        #vslide {
+            display: flex;
+        }
+
+
+
+    }
+
+}
+
+@media (min-width:1024px) {
+    .project-box {
+
+        >div {
+            width: 33.333%;
+        }
+
+        .tabs {
+            display: block;
+        }
+
     }
 
 }

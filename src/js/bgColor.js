@@ -6,20 +6,21 @@ export function bgColor() {
     gsap.registerPlugin(ScrollTrigger);
 
     document.querySelectorAll('section').forEach(item => {
-        let color = item.getAttribute('data-bg')
+        const color = item.getAttribute('data-bg')
         ScrollTrigger.create({
             trigger: item,
-            start: "top 30%",  // 섹션이 거의 화면에 다 보였을 때
-            end: "bottom 5%", // 섹션이 거의 화면에서 벗어날 때
+            start: "top 30%",
+            end: "bottom 40%",
             markers: true, //스크롤 틔리거 마커 표시
+            scrub: true,
 
             onEnter: () => gsap.to('body', {
                 background: color,
-                duration: .5
+                duration: .5,
             }),
             onEnterBack: () => gsap.to('body', {
                 background: color,
-                duration: .5
+                duration: .5,
             })
 
         })

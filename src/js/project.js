@@ -1,52 +1,59 @@
 import Swiper from "swiper/bundle";
-import "swiper/css/bundle"
+import "swiper/css/bundle";
 
 export function project() {
-    var hswiper = new Swiper(".hSwiper", {
-        pagination: {
-            el: ".swiper-pagination",
-        },
+    const hswiper = new Swiper(".hSwiper", {
+        loop: true, // 자연스러운 반복 설정
         autoplay: {
-            delay: 3000, // 3초마다 슬라이드 전환
-            disableOnInteraction: false, // 사용자 상호작용 이후에도 자동 재생 유지
-        },
-        speed: 800, // 슬라이드 전환 애니메이션 속도 (0.8초)
-    });
-    
-    var vswiper = new Swiper(".vSwiper", {
-        direction: "vertical",
-        autoplay: {
-            delay: 3000, // 3초마다 슬라이드
+            delay: 4000,
             disableOnInteraction: false,
         },
-        speed: 800, // 슬라이드 전환 애니메이션 속도 (0.8초)
+        speed: 1000, // 동일한 speed 값
     });
-    
-    const sElems = document.querySelectorAll('#project .tab-menu li a')
-    
-    sElems.forEach(function (sElem, idx) {
-    
-        sElem.addEventListener('click', function (e) {
-            e.preventDefault()
-    
-            sElems.forEach(function (item) {
-                item.classList.remove('on')
-            })
-    
-            sElem.classList.add('on')
-            hswiper.slideTo(idx, 500)
-            vswiper.slideTo(idx, 500)
-        })
-    })
-    
-    hswiper.on('slideChange', function () {
-        let activeIdx = hswiper.activeIndex
-    
-        sElems.forEach(function (item) {
-            item.classList.remove('on')
-        })
-    
-        sElems[activeIdx].classList.add('on')
-    })
 
+    const vswiper = new Swiper(".vSwiper", {
+        loop: true, // 자연스러운 반복 설정
+        direction: "vertical",
+        autoplay: {
+            delay: 4000, // 동일한 delay 값
+            disableOnInteraction: false,
+        },
+        speed: 1000, // 동일한 speed 값
+    });
+
+    const sElems = document.querySelectorAll('.project-box .tab-menu li a');
+
+    sElems.forEach(function (sElem, idx) {
+        sElem.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            sElems.forEach(function (item) {
+                item.classList.remove('on');
+            });
+
+            sElem.classList.add('on');
+            hswiper.slideToLoop(idx, 500); // loop 상태에서 인덱스 이동
+            vswiper.slideToLoop(idx, 500); // loop 상태에서 인덱스 이동
+        });
+    });
+
+    hswiper.on('slideChange', function () {
+        let activeIdx = hswiper.realIndex; // 실제 슬라이드의 인덱스 가져오기
+
+        sElems.forEach(function (item) {
+            item.classList.remove('on');
+        });
+
+        sElems[activeIdx].classList.add('on');
+    });
+
+    vswiper.on('slideChange', function () {
+        let activeIdx = vswiper.realIndex; // 실제 슬라이드의 인덱스 가져오기
+
+        sElems.forEach(function (item) {
+            item.classList.remove('on');
+        });
+
+        sElems[activeIdx].classList.add('on');
+    });
 }

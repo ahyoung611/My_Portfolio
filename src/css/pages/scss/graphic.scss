@@ -1,9 +1,17 @@
 #graphic {
 
+  .graphic_title {
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+    text-align: center;
+  }
+
   .graphic__wrap {
     display: flex;
     align-items: center;
-    width: 200%;
+    width: 300%;
     gap: 100px;
     margin-top: 180px;
     padding-left: 120px;
@@ -11,12 +19,8 @@
 
   article {
     &.graphic__item {
-
-      max-width: 300px;
       flex-shrink: 0;
-      // width: 28vw;
-      // aspect-ratio: 1/1;
-      color: #000;
+      aspect-ratio: 1/1;
       cursor: pointer;
       border: 2px solid rgba(255, 255, 255, .5);
       padding: 15px;
@@ -64,7 +68,9 @@
       }
 
       img {
-        width: 100%;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
         transition: .35s;
       }
 
@@ -133,14 +139,16 @@
     }
   }
 
+  //wave --------------------------------------------
+
   .waves {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 15vh;
-    /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
+
   }
 
   /* Animation */

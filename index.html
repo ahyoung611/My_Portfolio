@@ -35,7 +35,7 @@
   <div class="container">
     <main id="main" role="main">
       <!-- home -->
-      <section id="home" data-bg="linear-gradient(to top right, #BAE5FD, #2A8AC2)">
+      <section id="home" data-bg="#4682B4">
         <div class="path-box">
           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1148.17 859.95">
             <path class="path"
@@ -81,91 +81,142 @@
         </div>
       </section>
       <!-- project -->
-      <section id="project" data-bg="linear-gradient(to bottom, #2A8AC3, #046BA9)">
+      <section id="project" data-bg="#1D4E89">
         <div class="jellyfish jellyfish2">
           <img src="./src/assets/images/jellyfish2.png" alt="jellyfish2">
         </div>
         <div class="title project_title">
           <span>project</span><em>콘텐츠 기획과 시각적 아이덴티티를 활용하여 제작한 작업물입니다.</em>
         </div>
-        <div class="tabs">
-          <ul class="tab-menu">
-            <li><a href="#" class="on">symbol design</a></li>
-            <li><a href="#">web renewal</a></li>
-            <li><a href="#">app project</a></li>
-            <li><a href="#">portfolio</a></li>
-          </ul>
-        </div>
-        <div class="swiper hSwiper">
-          <div class="swiper-wrapper hslide-wrap">
-            <div class="swiper-slide hslide hslide1 on">
-              <div class="project">
-                <img src="./src/assets/work/work-3ce.png" alt="project1">
-              </div>
-            </div>
-            <div class="swiper-slide hslide hslide2">
-              <div class="project">
-                <img src="./src/assets/work/work-acebed.png" alt="project1">
-              </div>
-            </div>
-            <div class="swiper-slide hslide hslide3">
-              <div class="project">
-                <img src="./src/assets/work/work-apple.png" alt="project1">
-              </div>
-            </div>
-            <div class="swiper-slide hslide hslide4">
-              <div class="project">
-                <img src="./src/assets/work/work-gentlemonster.png" alt="project1">
-              </div>
-            </div>
-          </div>
-          <!-- <div class="swiper-pagination"></div> -->
-        </div>
-        <div id="vslide">
-          <div class="swiper vSwiper">
-            <ul class="swiper-wrapper vslide-wrap">
-              <li class="swiper-slide on">
-                <h2>jellyfish</h2>
-                <ul class="project_desc">
-                  <li><a href="#">process</a></li>
-                </ul>
-                <h3>‘나’를 표현하는 심볼디자인</h3>
-                <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
-                  그것을 시각적으로 형상화한 심볼디자인입니다.</p>
-              </li>
-              <li class="swiper-slide">
-                <h2>cube escape</h2>
-                <ul class="project_desc">
-                  <li><a href="#">process</a></li>
-                  <li><a href="#">storyboard</a></li>
-                </ul>
-                <h3>‘나’를 표현하는 심볼디자인</h3>
-                <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
-                  그것을 시각적으로 형상화한 심볼디자인입니다.</p>
-              </li>
-              <li class="swiper-slide">
-                <h2>artepick</h2>
-                <ul class="project_desc">
-                  <li><a href="#">process</a></li>
-                  <li><a href="#">wireframe</a></li>
-                  <li><a href="#">storyboard</a></li>
-                </ul>
-                <h3>‘나’를 표현하는 심볼디자인</h3>
-                <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
-                  그것을 시각적으로 형상화한 심볼디자인입니다.</p>
-              </li>
-              <li class="swiper-slide">
-                <h2>Growth story</h2>
-                <ul class="project_desc">
-                  <li><a href="#">process</a></li>
-                  <li><a href="#">wireframe</a></li>
-                  <li><a href="#">storyboard</a></li>
-                </ul>
-                <h3>‘나’를 표현하는 심볼디자인</h3>
-                <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
-                  그것을 시각적으로 형상화한 심볼디자인입니다.</p>
-              </li>
+        <div class="project-box">
+          <div class="tabs">
+            <ul class="tab-menu">
+              <li><a href="#" class="on">symbol design</a></li>
+              <li><a href="#">web renewal</a></li>
+              <li><a href="#">app project</a></li>
+              <li><a href="#">portfolio</a></li>
             </ul>
+          </div>
+          <div class="swiper hSwiper">
+            <div class="swiper-wrapper hslide-wrap">
+              <div class="swiper-slide hslide hslide1 on">
+                <div class="project">
+                  <figure>
+                    <img src="./src/assets/work/work-3ce.png" alt="project1">
+                    <figcaption>
+                      <h2>jellyfish</h2>
+                      <ul class="project_desc">
+                        <li><a href="#">process</a></li>
+                      </ul>
+                      <h3>‘나’를 표현하는 심볼디자인</h3>
+                      <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                        그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide hslide hslide2">
+                <div class="project">
+                  <figure>
+                    <img src="./src/assets/work/work-acebed.png" alt="project2">
+                    <figcaption>
+                      <h2>cube escape</h2>
+                      <ul class="project_desc">
+                        <li><a href="#">process</a></li>
+                        <li><a href="#">storyboard</a></li>
+                      </ul>
+                      <h3>‘나’를 표현하는 심볼디자인</h3>
+                      <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                        그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide hslide hslide3">
+                <div class="project">
+                  <figure>
+                    <img src="./src/assets/work/work-apple.png" alt="project3">
+                    <figcaption>
+                      <h2>artepick</h2>
+                      <ul class="project_desc">
+                        <li><a href="#">process</a></li>
+                        <li><a href="#">wireframe</a></li>
+                        <li><a href="#">storyboard</a></li>
+                      </ul>
+                      <h3>‘나’를 표현하는 심볼디자인</h3>
+                      <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                        그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="swiper-slide hslide hslide4">
+                <div class="project">
+                  <figure>
+                    <img src="./src/assets/work/work-gentlemonster.png" alt="project4">
+                    <figcaption>
+                      <h2>Growth story</h2>
+                      <ul class="project_desc">
+                        <li><a href="#">process</a></li>
+                        <li><a href="#">wireframe</a></li>
+                        <li><a href="#">storyboard</a></li>
+                      </ul>
+                      <h3>‘나’를 표현하는 심볼디자인</h3>
+                      <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                        그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+          <div id="vslide">
+            <div class="swiper vSwiper">
+              <ul class="swiper-wrapper vslide-wrap">
+                <li class="swiper-slide on">
+                  <h2>jellyfish</h2>
+                  <ul class="project_desc">
+                    <li><a href="#">process</a></li>
+                  </ul>
+                  <h3>‘나’를 표현하는 심볼디자인</h3>
+                  <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                    그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                </li>
+                <li class="swiper-slide">
+                  <h2>cube escape</h2>
+                  <ul class="project_desc">
+                    <li><a href="#">process</a></li>
+                    <li><a href="#">storyboard</a></li>
+                  </ul>
+                  <h3>‘나’를 표현하는 심볼디자인</h3>
+                  <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                    그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                </li>
+                <li class="swiper-slide">
+                  <h2>artepick</h2>
+                  <ul class="project_desc">
+                    <li><a href="#">process</a></li>
+                    <li><a href="#">wireframe</a></li>
+                    <li><a href="#">storyboard</a></li>
+                  </ul>
+                  <h3>‘나’를 표현하는 심볼디자인</h3>
+                  <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                    그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                </li>
+                <li class="swiper-slide">
+                  <h2>Growth story</h2>
+                  <ul class="project_desc">
+                    <li><a href="#">process</a></li>
+                    <li><a href="#">wireframe</a></li>
+                    <li><a href="#">storyboard</a></li>
+                  </ul>
+                  <h3>‘나’를 표현하는 심볼디자인</h3>
+                  <p>나 자신을 향한 깊은 시선을 통해 자아를 성찰하고, <br>
+                    그것을 시각적으로 형상화한 심볼디자인입니다.</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -192,7 +243,7 @@
         </div>
       </section>
       <!-- work -->
-      <section id="work" data-bg="linear-gradient(to top right, #024A7B, #7ED0FB)">
+      <section id="work" data-bg="#003058">
         <div class="jellyfish jellyfish3">
           <img src="./src/assets/images/jellyfish3.png" alt="jellyfish3">
         </div>
@@ -226,8 +277,8 @@
                     </ul>
                   </li><!-- work2 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-청와대.png" alt="work3" data-title="청와대"
-                      data-date="2024.10.10" data-details="Attachment, Slide 활용">
+                    <img src="./src/assets/work/work-청와대.png" alt="work3" data-title="청와대" data-date="2024.10.10"
+                      data-details="Attachment, Slide 활용">
                     <ul class="web-icon">
                       <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
                     </ul>
@@ -249,42 +300,42 @@
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-lush.png" alt="work6" data-title="lush" data-date="2024.09.23"
                       data-details="Tab, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work6 -->
                   <li class="splide__slide">
-                    <img src="./src/assets/work/work-롯데칠성음료.png" alt="work7" data-title="롯데칠성음료"
+                    <img src="./src/assets/work/work-LotteChilsung.png" alt="work7" data-title="롯데칠성음료"
                       data-date="2024.09.19" data-details="getAttribute, Transform, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work7 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-mugo.png" alt="work8" data-title="mugo-box" data-date="2024.09.10"
                       data-details="getAttribute, Transform, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work8 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-wodam.png" alt="work9" data-title="wodam" data-date="2024.09.09"
                       data-details="animate 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work9 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-wannerbro.png" alt="work10" data-title="wanner-bros"
                       data-date="2024.09.03" data-details="animate 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work10 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-gentlemonster.png" alt="work11" data-title="gentlemonster"
                       data-date="2024.08.27" data-details="Position Attachment, Slide 활용">
-                            <ul class="web-icon">
+                    <ul class="web-icon">
                       <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
                     </ul>
                   </li><!-- work11 -->
@@ -299,79 +350,79 @@
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-apple.png" alt="work12" data-title="apple" data-date="2024.08.22"
                       data-details="Class Control 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work12 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-nintendo.png" alt="work13" data-title="nintendo"
                       data-date="2024.08.17" data-details="Translate 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/pc-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/pc-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work13 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-3ce.png" alt="work14" data-title="3ce" data-date="2024.08.12"
                       data-details="Position Attachment, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work14 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-monsterwork.png" alt="work15" data-title="monsterwork"
                       data-date="2024.08.08" data-details="Float 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work15 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-samsonite.png" alt="work16" data-title="samsonite"
                       data-date="2024.08.06" data-details="Accordion Menu, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work16 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-지구오락실.png" alt="work17" data-title="지구오락실"
                       data-date="2024.08.02" data-details="Tab, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work17 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-shift.png" alt="work18" data-title="shift" data-date="2024.07.19"
                       data-details="Transform, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work18 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-samdasu.png" alt="work19" data-title="samdasu"
                       data-date="2024.07.12" data-details="Skew 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work19 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-죠스떡볶이.png" alt="work20" data-title="죠스떡볶이"
                       data-date="2024.07.09" data-details="animate 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work20 -->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-sanlio.png" alt="work21" data-title="sanlio" data-date="2024.07.08"
                       data-details="Transform, Hover 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work21-->
                   <li class="splide__slide">
                     <img src="./src/assets/work/work-kakao.png" alt="work22" data-title="kakao" data-date="2024.07.04"
                       data-details="Position Attachment, Slide 활용">
-                      <ul class="web-icon">
-                        <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
-                      </ul>
+                    <ul class="web-icon">
+                      <li><img src="./src/assets/images/multiple-icon.png" alt=""></li>
+                    </ul>
                   </li><!-- work22 -->
                 </ul>
               </div>
@@ -402,7 +453,7 @@
         </div>
       </section>
       <!-- graphic -->
-      <section id="graphic" data-bg="linear-gradient(to bottom right, #035B91, #024A7B)">
+      <section id="graphic" data-bg="#1B243C">
         <div class="jellyfish jellyfish4">
           <img src="./src/assets/images/jellyfish4.png" alt="jellyfish4">
         </div>
@@ -533,19 +584,18 @@
         </div>
         <div>
           <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-              viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-              <defs>
-                  <path id="gentle-wave"
-                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-              </defs>
-              <g class="parallax">
-                  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(126, 208, 251,0.7" />
-                  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(126, 208, 251,0.5)" />
-                  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(126, 208, 251,0.3)" />
-                  <use xlink:href="#gentle-wave" x="48" y="7" fill="#bae5fd" />
-              </g>
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+              <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(70, 130, 180,0.2)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(70, 130, 180,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(70, 130, 180,0.8)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#4682B4" />
+            </g>
           </svg>
-      </div>
+        </div>
         <div class="bubble_cont">
           <div class="bubble x1"></div>
           <div class="bubble x2"></div>
@@ -569,7 +619,7 @@
         </div>
       </section>
       <!-- about -->
-      <section id="about" data-bg="linear-gradient(to top left, #7ED0FB, #003058)">
+      <section id="about" data-bg="#0B0C1F">
 
         <div class="about_wrap">
           <div class="txt">
@@ -588,12 +638,9 @@
               <img src="./src/assets/images/jellyfish5.png" alt="jellyfish5">
             </div>
           </div>
-          <ul class="cont" data-aos="fade-up">
-            <li class="cont01">
+          <ul class="cont-box" data-aos="fade-up">
+            <li class="cont cont01">
               <h2 class="about_title">i am<span>자기소개</span></h2>
-              <div class="about-line">
-                <img src="./src/assets/images/about-slideline.png" alt="">
-              </div>
               <ul class="txt_container">
                 <li class="iam">
                   <p class="num">1</p>
@@ -612,20 +659,17 @@
                 </li>
               </ul>
             </li>
-            <li class="cont02">
+            <li class="cont cont02">
               <h2 class="about_title">Career/Education <span>경력/학력</span></h2>
-              <div class="about-line">
-                <img src="./src/assets/images/about-slideline.png" alt="">
-              </div>
               <ul class="txt_container">
                 <li class="Career about-detail">
-                  <em>2024.06 ~ 2024.12</em> <span>MBC아카데미 웹 웹퍼블리셔 프론트앤드 과정</span>
+                  <em>2024.06 ~ 2024.12</em> <span>MBC아카데미 웹퍼블리셔 프론트앤드 과정</span>
                 </li>
                 <li class="Career">
                   <em>2023.04 ~ 2024.04</em> <span>제주MBC FD</span>
                 </li>
                 <li class="Career">
-                  <em>2022.10 ~ 2023.04</em> 
+                  <em>2022.10 ~ 2023.04</em>
                   <span>제주 다이나믹메이즈</span>
                 </li>
                 <li class="Career">
@@ -636,11 +680,8 @@
                 </li>
               </ul>
             </li>
-            <li class="cont03">
+            <li class="cont cont03">
               <h2 class="about_title">license <span>자격증</span></h2>
-              <div class="about-line">
-                <img src="./src/assets/images/about-slideline.png" alt="">
-              </div>
               <ul class="txt_container">
                 <li class="license"><em>2024.12.04</em><span>웹디자인기능사 실기</span></li>
                 <li class="license"><em>2024.08.16</em><span>GTQi 일러스트 1급</span></li>
@@ -650,11 +691,8 @@
                 <li class="license"><em>2021.03</em><span>운전면허 2종 보통</span></li>
               </ul>
             </li>
-            <li class="cont04">
+            <li class="cont cont04">
               <h2 class="about_title">skills <span>보유역량</span></h2>
-              <div class="about-line">
-                <img src="./src/assets/images/about-slideline.png" alt="">
-              </div>
               <ul class="txt_container skill">
                 <li><img src="./src/assets/images/ps-icon.png" alt="ps-icon"></li>
                 <li class="skill"><img src="./src/assets/images/ai-icon.png" alt="ai-icon"></li>
@@ -694,21 +732,25 @@
       </section>
     </main>
     <footer id="footer" role="contentinfo">
-   
-      <div class="wsplide ">
-        <div class="splide ltl" id="splide1">
+
+      <div class="wsplide">
+        <div class="background-image"></div>
+        <div class="splide" id="splide1">
           <div class="splide__track splide__track-1">
             <ul class="splide__list">
-              <li class="splide__slide">도전과 성장</li>
-              <li class="splide__slide">끊임없는 자기개발</li>
-              <li class="splide__slide">적극적이고</li>
-              <li class="splide__slide">열정적인 인재</li>
-              <li class="splide__slide">김아영입니다</li>
-              <li class="splide__slide">감사합니다</li>
+              <li class="splide__slide">도전 정신</li>
+              <li class="splide__slide">성취감을 통한 성장</li>
+              <li class="splide__slide">자기개발</li>
+              <li class="splide__slide">적극적</li>
+              <li class="splide__slide">열정적</li>
+              <li class="splide__slide">장기적인 발전</li>
+              <li class="splide__slide">끊임없는 노력</li>
+              <li class="splide__slide">책임감</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="bubble_cont">
         <div class="bubble x1"></div>
         <div class="bubble x2"></div>
@@ -733,19 +775,19 @@
 
       <ul class="contact">
         <li>
-            <img src="./src/assets/images/phone.png" alt="phone">
-            <p>010-4496-2707</p>
-        
+          <img src="./src/assets/images/phone.png" alt="phone">
+          <p>010-4496-2707</p>
+
         </li>
         <li>
           <img src="./src/assets/images/mail.png" alt="mail">
           <p>wlq0611.naver.com</p>
-     
+
         </li>
         <li>
-            <img src="./src/assets/images/github.png" alt="github">
-            <p>https://github.com/ahyoung611/ahyoung_portfolio.git</p>
-        
+          <img src="./src/assets/images/github.png" alt="github">
+          <p>https://github.com/ahyoung611/ahyoung_portfolio.git</p>
+
         </li>
       </ul>
 

@@ -1,62 +1,108 @@
-#project {
+#project .project-box {
+  position: relative;
+  top: 250px;
+  height: 70vh;
   display: flex;
   justify-content: space-between;
 }
-#project .tabs {
+#project .project-box > div {
   position: relative;
-  width: 33.333%;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+#project .tabs {
+  font-family: var(--mainEng-font);
 }
 #project .tabs .tab-menu {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 }
 #project .tabs .tab-menu li a {
   display: block;
   width: 200px;
   padding: 20px;
-  font-size: 38px;
-  -webkit-text-stroke: 0.5px #ffffff;
-  color: transparent;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 1px;
   transition: 0.5s;
-  text-transform: capitalize;
   cursor: pointer;
   white-space: nowrap;
 }
 #project .tabs .tab-menu li a.on {
-  font-size: 48px;
+  font-size: 2rem;
   color: #ffffff;
   font-weight: bold;
 }
-#project .hSwiper {
-  position: relative;
-  width: 33.333%;
-  height: 100vh;
-  overflow: hidden;
-}
 #project .hSwiper .project {
   position: absolute;
-  bottom: 15%;
+  bottom: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 450px;
+  transform: translate(-50%, 50%);
+  width: 90%;
   overflow: hidden;
+}
+#project .hSwiper .project figure::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#project .hSwiper .project figure figcaption {
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
+  padding: 20px;
+  z-index: 10;
+}
+#project .hSwiper .project figure figcaption h2 {
+  font-family: var(--mainEng-font);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+#project .hSwiper .project figure figcaption .project_desc {
+  padding: 20px 0;
+}
+#project .hSwiper .project figure figcaption .project_desc li {
+  font-family: var(--mainEng-font);
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: var(--mainColor100-color);
+  border-radius: 50px;
+  text-transform: capitalize;
+}
+#project .hSwiper .project figure figcaption h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 54px;
+  letter-spacing: 1px;
+}
+#project .hSwiper .project figure figcaption p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 #project .hSwiper .project img {
   width: 100%;
   object-fit: cover;
 }
 #project #vslide {
-  width: 33.333%;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 #project #vslide .vSwiper {
-  height: 50vh;
-  overflow: hidden;
+  height: 100%;
 }
 #project #vslide .vSwiper .swiper-slide {
   display: flex;
@@ -64,30 +110,78 @@
   flex-direction: column;
 }
 #project #vslide .vSwiper .swiper-slide h2 {
-  font-family: NotoSansKR-Medium;
-  font-size: 52px;
-  font-weight: 500;
-  line-height: 54px;
+  font-family: var(--mainEng-font);
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.5;
   letter-spacing: 1px;
   text-transform: capitalize;
-  margin-top: 100px;
-  -webkit-text-stroke: 1px #fff;
-  color: transparent;
+}
+#project #vslide .vSwiper .swiper-slide .project_desc {
+  padding: 20px 0;
 }
 #project #vslide .vSwiper .swiper-slide .project_desc li {
+  font-family: var(--mainEng-font);
   display: inline-block;
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 600;
-  padding: 10px 0;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 0.35s;
+  text-transform: capitalize;
+}
+#project #vslide .vSwiper .swiper-slide .project_desc li:hover {
+  background-color: #fff;
+  color: var(--mainColor100-color);
 }
 #project #vslide .vSwiper .swiper-slide h3 {
-  font-size: 28px;
+  font-size: 1.5rem;
   font-weight: 500;
   line-height: 54px;
   letter-spacing: 1px;
 }
 #project #vslide .vSwiper .swiper-slide p {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .project-box {
+    width: 100%;
+  }
+  .project-box .hSwiper {
+    width: 95%;
+  }
+  .project-box .tabs {
+    display: none;
+  }
+  .project-box #vslide {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .project-box > div {
+    width: 50%;
+    border: 1px solid #f00;
+  }
+  .project-box .tabs {
+    display: none;
+  }
+  .project-box .hSwiper .project figure figcaption {
+    display: none;
+  }
+  .project-box #vslide {
+    display: flex;
+  }
+}
+@media (min-width: 1024px) {
+  .project-box > div {
+    width: 33.333%;
+  }
+  .project-box .tabs {
+    display: block;
+  }
 }

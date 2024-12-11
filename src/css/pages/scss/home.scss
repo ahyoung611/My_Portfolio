@@ -15,7 +15,6 @@
 
     h2 {
         font-family: var(--mainEng-font);
-        font-size: 3rem;
         font-weight: 600;
         letter-spacing: 1px;
         color: #fff;    
@@ -61,7 +60,9 @@
 @media (max-width:767px) {
     #home {
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
+            padding: 10px;
+            line-height: 1.5;
         }
         p{
             font-size: 1rem;
@@ -86,7 +87,7 @@
 @media (min-width:1024px) {
     #home{
         h2 {
-            font-size: 3.5rem;
+            font-size: 3rem;
         }
 
         p{

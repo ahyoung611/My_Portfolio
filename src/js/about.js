@@ -54,4 +54,19 @@ export function about() {
     }
   });
 
+  const aboutConts = document.querySelectorAll('#about .cont');
+
+  let visibleCount = 0;
+
+  aboutConts.forEach((cont) => {
+    ScrollTrigger.create({
+      trigger: cont,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => cont.classList.add('on'), // 화면에 진입 시 'on' 클래스 추가
+      onEnterBack: () => cont.classList.add('on'), // 화면 뒤로 재진입 시 'on' 클래스 추가
+      onLeave: () => cont.classList.remove('on'), // 화면을 벗어나면 'on' 클래스 제거
+      onLeaveBack: () => cont.classList.remove('on') // 위 방향으로 벗어나면 'on' 클래스 제거
+    });
+  });
 }

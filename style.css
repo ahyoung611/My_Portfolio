@@ -20,6 +20,9 @@
 @import '@splidejs/splide/css';
 
 
+body {
+    will-change: background-color;
+}
 
 section {
     position: relative;

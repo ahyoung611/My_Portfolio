@@ -1,29 +1,23 @@
 #work {
     display: flex;
 
+    .work_left {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
     .container {
         position: absolute;
-        left: 55%;
-        display: flex;
-        // width: 40%;
-        width: 770px;
-        height: 100vh;
-        justify-content: space-between;
-        /* 컨테이너 높이를 화면 높이로 설정 */
 
         .splide-wrapper {
-            width: 45%;
-            height: 100%;
             overflow: hidden;
             background-color: rgba(255, 255, 255, .4);
 
             .splide {
-                height: 35%;
 
                 .splide__track {
                     overflow: visible;
-                    padding: 20px 0;
-
 
                     .splide__slide {
                         position: relative;
@@ -40,8 +34,8 @@
                                 filter: grayscale(0%);
                             }
 
-                            .web-icon{
-                                img{
+                            .web-icon {
+                                img {
                                     filter: grayscale(0%);
                                 }
                             }
@@ -50,7 +44,6 @@
 
                         img {
                             display: inline-block;
-                            // width: 90%;
                             height: 100%;
                             filter: grayscale(100%);
                             transition: .35s;
@@ -70,7 +63,7 @@
                                 height: 35px;
                                 object-fit: cover;
                                 filter: grayscale(0%) invert(1);
-                               
+
                             }
                         }
 
@@ -78,17 +71,134 @@
                 }
             }
         }
-
-
-
-
-
     }
 
-    .work_left {
-        position: relative;
-        width: 55%;
-        height: 100vh;
-    }
 
+}
+
+/* max-width: 767px */
+@media (max-width: 767px) {
+    #work {
+
+        .work_left {
+            width: 100%;
+
+            .work_title {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .splide-wrapper {
+                width: 100%;
+                height: 30vh;
+
+                .splide {
+
+                    .splide__track{
+                        padding: 10px 0;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #work {
+
+        .work_left {
+            width: 100%;
+
+            .work_title {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .splide-wrapper {
+                width: 100%;
+                height: 30vh;
+
+                .splide {
+                    border: 1px solid #f00;
+
+                    .splide__track{
+                        padding: 10px 0;
+                    }
+
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1300px) {
+    #work {
+
+        .work_left {
+            width: 45%;
+
+            .work_title {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+        }
+
+        .container {
+            right: 3%;
+            width: 45%;
+            height: 100vh;
+            flex-direction: row;
+
+            .splide-wrapper {
+                width: 45%;
+                height: 100%;
+
+                .splide {
+                    width: 90%;
+                    margin: auto;
+
+                    .splide__track{
+                        padding: 20px 0;
+                    }
+                }
+            }
+        }
+    }
 }
