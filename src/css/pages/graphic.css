@@ -1,6 +1,13 @@
 #graphic {
   /* Animation */
 }
+#graphic .graphic_title {
+  position: sticky;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  text-align: center;
+}
 #graphic .graphic__wrap {
   display: flex;
   align-items: center;
@@ -10,9 +17,8 @@
   padding-left: 120px;
 }
 #graphic article.graphic__item {
-  max-width: 300px;
   flex-shrink: 0;
-  color: #000;
+  aspect-ratio: 1/1;
   cursor: pointer;
   border: 2px solid rgba(255, 255, 255, 0.5);
   padding: 15px;
@@ -46,7 +52,9 @@
   transition: 0.5s;
 }
 #graphic article.graphic__item img {
-  width: 100%;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   transition: 0.35s;
 }
 #graphic article.graphic__item .num {
@@ -110,7 +118,6 @@
   bottom: 0;
   width: 100%;
   height: 15vh;
-  /*Fix for safari gap*/
   min-height: 100px;
   max-height: 150px;
 }
