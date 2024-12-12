@@ -31,12 +31,6 @@
   text-transform: uppercase;
   line-height: 1.2;
 }
-#header .header_inner .header_logo em {
-  text-transform: capitalize;
-  font-size: 13px;
-  display: block;
-  color: var(--mainColor100-color);
-}
 #header .header_inner .header_logo li {
   display: none;
 }

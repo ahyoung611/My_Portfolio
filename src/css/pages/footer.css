@@ -40,7 +40,7 @@
   /* 원형 이미지 */
   background-repeat: repeat;
   background-size: 60px 50px;
-  animation: moveBackground 10s linear infinite;
+  animation: moveBackground 25s linear infinite;
   filter: invert(1);
 }
 @keyframes moveBackground {
@@ -107,6 +107,17 @@
   }
 }
 @media (min-width: 768px) {
+  #footer .wsplide {
+    padding: 15px 0;
+  }
+  #footer .wsplide #splide1 .splide__slide {
+    font-size: 1.3rem;
+  }
+  #footer .contact {
+    width: 80%;
+  }
+}
+@media (min-width: 1024px) {
   #footer .wsplide {
     padding: 20px 0;
   }

@@ -21,7 +21,7 @@ export function work() {
     function resetTitle() {
         titleSpan.textContent = 'CODINGWORKS';
         dateEm.textContent = '';
-        detailsEm.textContent = '코딩 작업을 통해 기술적 구현을 포함한 다양한 작업물입니다.';
+        detailsEm.innerHTML = '코딩 작업을 통해 기술적 구현을 포함한 다양한 작업물입니다. <br> 흘러가는 이미지에 마우스를 올려보세요!';
     }
 
     images.forEach(img => {
@@ -90,4 +90,41 @@ export function work() {
     createSliders();
 
     window.addEventListener('resize', createSliders);
+
+   document.addEventListener('click', function (event) {
+    const togglebtnO = event.target.closest('.togglebtnO');
+    if (togglebtnO) {
+        const togglebtnI = togglebtnO.querySelector('.togglebtnI');
+        const left = parseInt(window.getComputedStyle(togglebtnI).left);
+
+        if (left === 70) {
+            togglebtnO.style.borderColor = 'rgba(255,255,255,.5)';
+            togglebtnI.style.background = 'rgba(255,255,255,.5)';
+            toggleActionStart(togglebtnI, 'TO_LEFT');
+
+        } else if (left === 0) {
+            togglebtnO.style.borderColor = '#fff';
+            togglebtnI.style.background = '#fff';
+            toggleActionStart(togglebtnI, 'TO_RIGHT');
+        }
+    }
+});
+
+// 토글 버튼 이동 모션 함수
+function toggleActionStart(toggleBtn, LR) {
+    // 0.01초 단위로 실행
+    const intervalID = setInterval(function () {
+        // 버튼 이동
+        let left = parseInt(window.getComputedStyle(toggleBtn).left);
+        console.log(left);
+        left += (LR === 'TO_RIGHT') ? 5 : -5;
+        if (left >= 0 && left <= 70) {
+            toggleBtn.style.left = `${left}px`;
+        }
+    }, 10);
+
+    setTimeout(function () {
+        clearInterval(intervalID);
+    }, 201);
+}
 }
