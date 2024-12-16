@@ -3,27 +3,29 @@
     justify-content: center;
     align-items: center;
     text-align: center; 
+    color: #fff;
 
     .stage {
-        height: 150px;
+        height: 280px;
         display: flex;
         justify-content: center;
         align-items: center;
         visibility: hidden;
-        // border: 1px solid #000;
     }
 
     h2 {
         font-family: var(--mainEng-font);
-        font-weight: 600;
-        letter-spacing: 1px;
-        color: #fff;    
+        font-weight: 700;
+        letter-spacing: 1px; 
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;   
+        text-transform: uppercase;
     
     }
 
     h2 span {
-        display: inline-block; /* SplitText가 생성한 텍스트 조각의 기본 스타일 */
-        color: inherit; /* 부모 요소의 color를 상속 */
+        display: inline-block;
+        color: inherit; 
     }
 
     .dots {
@@ -36,7 +38,7 @@
         justify-content: center;
 
         .dot {
-            background-color: var(--subColor200-color);
+            background-color: rgba(255,255,255,.8);
             border-radius: 50%;
             margin: 10px auto;
         }
@@ -45,13 +47,12 @@
 
     p {
         line-height: 1.5;
-        color: var(--subColor100-color);
-        font-family: var(--mainKorM-font);
+        font-family: var(--mainKorL-font);
         letter-spacing: 1.2px;
 
         em {
-            color: var(--mainColor100-color);
-            font-family: var(--mainKorB-font);
+            color: #30F0E2;
+            font-family: var(--mainKorSB-font);
         }
     }
 }
@@ -87,7 +88,7 @@
 @media (min-width:1024px) {
     #home{
         h2 {
-            font-size: 3rem;
+            font-size: 4rem;
         }
 
         p{

@@ -1,17 +1,18 @@
 #project {
+
+    .project_title {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
     .project-box {
         position: relative;
-        top: 250px;
-        height: 70vh;
-        display: flex;
-        justify-content: space-between;
+        width: 100%;
+        text-transform: capitalize;
 
-        >div {
-            position: relative;
-            // width: 33.333%;
-            overflow: hidden;
-            text-transform: capitalize;
-        }
     }
 
     .tabs {
@@ -19,16 +20,11 @@
 
         .tab-menu {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
 
             li {
                 a {
                     display: block;
-                    width: 200px;
                     padding: 20px;
-                    font-size: 1.5rem;
                     color: rgba(255, 255, 255, .5);
                     letter-spacing: 1px;
                     transition: 0.5s;
@@ -37,8 +33,7 @@
                     white-space: nowrap;
 
                     &.on {
-                        font-size: 2rem;
-                        color: #ffffff;
+                        color: #fff;
                         font-weight: bold;
                     }
                 }
@@ -53,16 +48,16 @@
             bottom: 50%;
             left: 50%;
             transform: translate(-50%, 50%);
-            width: 90%;
+            width: 85%;
             overflow: hidden;
 
             figure {
 
-                &::after{
+                &::after {
                     content: '';
                     width: 100%;
                     height: 100%;
-                    background-color: rgba(0,0,0,.2);
+                    background-color: rgba(0, 0, 0, .2);
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -95,7 +90,7 @@
                             font-weight: 600;
                             padding: 10px 20px;
                             background-color: rgba(255, 255, 255, .5);
-                            color: var(--mainColor100-color);
+                            color: var( --mainColor-color);
                             border-radius: 50px;
                             text-transform: capitalize;
                         }
@@ -124,11 +119,10 @@
     }
 
     #vslide {
-        align-items: center;
-        justify-content: center;
 
         .vSwiper {
             height: 100%;
+            margin: 0;
 
             .swiper-slide {
                 display: flex;
@@ -137,7 +131,7 @@
 
                 h2 {
                     font-family: var(--mainEng-font);
-                    font-size: 2.5rem;
+                    color: #30F0E2;
                     font-weight: 600;
                     line-height: 1.5;
                     letter-spacing: 1px;
@@ -150,7 +144,6 @@
                     li {
                         font-family: var(--mainEng-font);
                         display: inline-block;
-                        font-size: 1rem;
                         font-weight: 600;
                         padding: 10px 20px;
                         background-color: rgba(255, 255, 255, .2);
@@ -160,21 +153,18 @@
                         text-transform: capitalize;
 
                         &:hover {
-                            background-color: #fff;
-                            color: var(--mainColor100-color);
+                            color: var( --mainColor-color);
                         }
                     }
                 }
 
                 h3 {
-                    font-size: 1.5rem;
                     font-weight: 500;
                     line-height: 54px;
                     letter-spacing: 1px;
                 }
 
                 p {
-                    font-size: 1rem;
                     font-weight: 400;
                     line-height: 1.5;
                 }
@@ -191,13 +181,37 @@
 @media (max-width:767px) {
     .project-box {
         width: 100%;
+        height: 50vh;
+        justify-content: center;
+        top: 380px;
 
         .hSwiper {
             width: 95%;
+            height: 100%;
         }
 
         .tabs {
-            display: none;
+
+            .tab-menu {
+                top: -25%;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+
+                li {
+                    width: 100px;
+
+                    &:nth-child(even) {
+                        position: relative;
+                        top: 50px;
+                    }
+
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+
+            }
         }
 
         #vslide {
@@ -208,20 +222,34 @@
 
 @media (min-width:768px) {
     .project-box {
-
-        >div {
-            width: 50%;
-            border: 1px solid #f00;
-        }
+        top: 340px;
+        height: 50vh;
+        display: flex;
 
         .tabs {
-            display: none;
+
+            .tab-menu {
+                top: -80px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+
+                li {
+
+                    a {
+                        font-size: 1rem;
+                    }
+                }
+
+            }
         }
 
-        .hSwiper{
-            .project{
-                figure{
-                    figcaption{
+        .hSwiper {
+            width: 50%;
+
+            .project {
+                figure {
+                    figcaption {
                         display: none;
                     }
                 }
@@ -229,10 +257,32 @@
         }
 
         #vslide {
+            width: 50%;
             display: flex;
+            overflow: hidden;
+
+            .swiper-slide {
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                .project_desc {
+
+                    li {
+                        font-size: .8rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    font-size: .8rem;
+                }
+            }
         }
-
-
 
     }
 
@@ -240,13 +290,39 @@
 
 @media (min-width:1024px) {
     .project-box {
-
-        >div {
-            width: 33.333%;
-        }
+        top: 300px;
+        height: 55vh;
 
         .tabs {
+            position: relative;
             display: block;
+            width: 30%;
+
+            .tab-menu {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                flex-direction: column;
+
+                li {
+                    a {
+                        width: 200px;
+                        font-size: 1.5rem;
+
+                        &.on {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hSwiper {
+            width: 30%;
+        }
+
+        #vslide {
+            width: 30%;
         }
 
     }

@@ -1,10 +1,150 @@
+@charset "UTF-8";
 #work {
   display: flex;
 }
 #work .work_left {
   position: relative;
-  width: 100%;
   height: 100vh;
+}
+#work .work_left .title {
+  position: relative;
+  width: 85%;
+}
+#work .work_left .title span {
+  margin-bottom: 50px;
+}
+#work .work_left .title .details {
+  padding: 10px;
+  height: 100px;
+  text-transform: capitalize;
+}
+#work .work_left .title .date {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35%;
+  display: inline-block;
+  font-family: var(--mainNum-font);
+}
+#work .work_left .title .date::after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+#work .work_left .title .date::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+}
+#work .work_left .togglebtnO {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5%;
+  width: 120px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50px;
+  padding: 5px;
+  text-align: left;
+}
+#work .work_left .togglebtnO::after {
+  display: var(--after-display, block);
+  content: "전체보기";
+  position: absolute;
+  font-size: 15px;
+  left: 50px;
+  color: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 1s;
+}
+#work .work_left .togglebtnO::before {
+  display: var(--before-display, none);
+  content: "슬라이드보기";
+  position: absolute;
+  font-size: 15px;
+  left: 13px;
+  color: #30F0E2;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 1s;
+}
+#work .work_left .togglebtnO .togglebtnI {
+  position: relative;
+  left: 0px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+}
+#work .work_list {
+  opacity: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+  top: 0;
+  background-color: #0B0C1F;
+  z-index: 99;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+#work .work_list ul {
+  width: 45%;
+  margin-left: 80px;
+}
+#work .work_list ul li {
+  width: 80%;
+  position: relative;
+  padding: 20px;
+}
+#work .work_list ul li:hover {
+  color: #30F0E2;
+}
+#work .work_list ul li:hover::after {
+  width: 100%;
+}
+#work .work_list ul li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #30F0E2;
+  transition: 0.5s;
+}
+#work .work_list ul li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#work .work_list ul li a .num {
+  font-size: 1.3rem;
+  font-family: var(--mainNum-font);
+  letter-spacing: 2px;
+}
+#work .work_list ul li a .name {
+  font-size: 1.5rem;
+  font-family: var(--mainEng-font);
+  text-transform: capitalize;
+  font-weight: 500;
 }
 #work .container {
   position: absolute;
@@ -64,6 +204,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-bottom: 80px;
   }
   #work .container {
     width: 100%;
@@ -76,9 +217,8 @@
     width: 100%;
     height: 30vh;
   }
-  #work .container .splide-wrapper .splide {
-    width: 40%;
-    border: 1px solid #f00;
+  #work .container .splide-wrapper .splide .splide__track {
+    padding: 10px 0;
   }
   #work .container .splide-wrapper .splide img {
     width: 100%;
@@ -94,6 +234,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    padding-bottom: 80px;
   }
   #work .container {
     width: 100%;
@@ -106,10 +247,6 @@
     width: 100%;
     height: 30vh;
   }
-  #work .container .splide-wrapper .splide {
-    width: 18%;
-    border: 1px solid #f00;
-  }
   #work .container .splide-wrapper .splide .splide__track {
     padding: 10px 0;
   }
@@ -119,29 +256,19 @@
 }
 @media (min-width: 1300px) {
   #work .work_left {
-    width: 45%;
-  }
-  #work .work_left .work_title {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    width: 50%;
   }
   #work .container {
     right: 3%;
-    width: 50%;
+    width: 45%;
     height: 100vh;
     flex-direction: row;
-    border: 1px solid #f00;
   }
   #work .container .splide-wrapper {
-    width: 45%;
+    width: 44%;
     height: 100%;
   }
   #work .container .splide-wrapper .splide {
-    width: 90%;
-    height: 35%;
     margin: auto;
   }
   #work .container .splide-wrapper .splide .splide__track {

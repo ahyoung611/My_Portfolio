@@ -7,7 +7,6 @@
     .wsplide {
         width: 100%;
         background-color: #fff;
-        padding: 20px 0;
         position: relative;
         top: 0;
         right: 0;
@@ -21,7 +20,6 @@
         #splide1 {
             .splide__slide {
                 font-family: var(--mainKorM-font);
-                font-size: 1.5rem;
             }
 
             .splide__track {
@@ -75,7 +73,6 @@
 
     .contact {
         position: relative;
-        width: 60%;
         top: 35%;
         left: 50%;
         transform: translateX(-50%);
@@ -97,7 +94,7 @@
             &:hover {
                 p {
                     opacity: 1;
-                    bottom: -30px;
+                    bottom: -40px;
                     transition: .35s;
                 }
             }
@@ -109,13 +106,74 @@
             }
 
             p {
+                font-family: var(--mainEng-font);
                 position: absolute;
                 bottom: -100px;
                 opacity: 0;
+                font-size: 1rem;
             }
 
 
         }
     }
 
+}
+
+@media (max-width:767px) {
+    #footer {
+        .wsplide {
+            padding: 10px 0;
+
+            #splide1 {
+                .splide__slide {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .contact {
+            width: 90%;
+
+            p {
+                width: 130%;
+                overflow: hidden;
+                white-space: wrap;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+@media (min-width:768px) {
+    #footer {
+        .wsplide {
+            padding: 15px 0;
+
+            #splide1 {
+                .splide__slide {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        .contact {
+            width: 80%;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    #footer {
+        .wsplide {
+            #splide1 {
+                .splide__slide {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .contact {
+            width: 60%;
+        }
+    }
 }

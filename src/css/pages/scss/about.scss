@@ -1,13 +1,11 @@
 #about {
-    height: 400vh;
     overflow: visible;
+
+    
 
     .about_wrap {
         position: relative;
-        display: flex;
         margin: auto;
-        width: 95%;
-        height: auto;
 
         & * {
             word-break: keep-all
@@ -16,12 +14,7 @@
         /* left_tit */
         .txt {
             position: sticky;
-            left: 100px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50%;
-            height: 100%;
-            display: flex;
+            z-index: 50;
 
             ul {
                 margin-top: 30px;
@@ -78,11 +71,9 @@
 
         /* right_cont */
         .cont-box {
-            width: 50%;
 
             .cont {
                 position: relative;
-                height: 100vh;
 
                 // 체크 테두리
                 &::after {
@@ -121,12 +112,10 @@
                     left: 18%;
                     top: 25%;
                     font-family: var(--mainEng-font);
-                    font-size: 50px;
                     text-transform: capitalize;
                     font-style: italic;
                     font-weight: 700;
                     white-space: nowrap;
-                    padding: 10px 30px 10px 10px;
                     z-index: 1;
 
 
@@ -145,7 +134,8 @@
                         bottom: 0;
                         width: 0%;
                         height: 25px;
-                        background-color: rgba(70, 130, 180, 1);
+                        background-color: rgba(48, 240, 226,.5);
+                        
                         z-index: -1;
                         transition: .35s;
                     }
@@ -153,15 +143,11 @@
                 }
 
                 .txt_container {
-                    width: 70%;
                     position: absolute;
-                    left: 22%;
-                    top: 35%;
 
                     li {
                         position: relative;
                         font-family: var(--mainKorT-font);
-                        font-size: 1.2vw;
                         font-weight: 300;
                         line-height: 1.5;
                         margin: 20px 0;
@@ -173,7 +159,6 @@
 
                         span {
                             font-family: var(--mainKorL-font);
-                            // padding-left: 50px;
                             margin: 10px 0;
                             color: var(--white);
                         }
@@ -185,7 +170,7 @@
                     li {
                         margin: 20px 0;
                     }
-    
+
                     .num {
                         position: absolute;
                         top: -30px;
@@ -197,12 +182,11 @@
                         opacity: .3;
                         line-height: 1;
                     }
-    
+
                     .iam-title {
                         font-family: var(--mainKorM-font);
-                        font-size: 1.5vw;
                         color: var(--subColor100-color);
-    
+
                         span {
                             font-family: var(--mainEng-font);
                             font-weight: 600;
@@ -210,38 +194,236 @@
                             color: var(--white);
                         }
                     }
-    
+
                     .iam-detail {
-                        font-size: 1.2vw;
                         padding: 10px 0;
                     }
-    
+
                 }
-    
+
                 &.cont04 {
                     .txt_container {
                         li {
                             margin: 0;
                         }
-    
+
                         &.skill {
-                            width: 500px;
                             display: flex;
                             flex-wrap: wrap;
                             gap: 20px;
-                            padding-top: 50px;
-     
-                            img {
-                                width: 70px;
-                            }
                         }
                     }
                 }
             }
 
-           
+
 
         }
     }
 
+}
+
+@media (max-width:767px) {
+    #about {
+        .about_wrap {
+            width: 100%;
+
+            .txt {
+                top: 0;
+                width: 100%;
+                height: 30vh;
+                background-color: #0B0C1F;
+                text-align: center;
+
+                .title {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                .cate {
+                    display: none;
+                }
+            }
+
+            .cont-box {
+                width: 100%;
+
+                .cont {
+                    height: 70vh;
+
+                    &:not(:nth-child(4)) {
+                        border-bottom: 1px dashed rgba(255, 255, 255, .5);
+                    }
+
+                    .about_title {
+                        left: 50%;
+                        transform: translateX(-50%);
+                        font-size: 2rem;
+                        padding: 10px 0;
+
+                        span {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .txt_container {
+                        width: 70%;
+                        left: 50%;
+                        transform: translateX(-50%);
+
+                        li {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    &.cont01 {
+
+                        .about_title {
+                            top: 5%;
+                        }
+
+                        .txt_container {
+                            top: 20%;
+                            transform: translateX(-47%);
+
+                            .iam-title {
+                                font-size: 1.2rem;
+                            }
+
+                            .iam-detail {
+                                font-size: 1rem;
+                            }
+                        }
+
+
+
+                    }
+
+                    &.cont02 {
+                        .about_title {
+                            top: 10%;
+                        }
+
+                        .txt_container {
+                            top: 25%;
+                        }
+                    }
+
+                    &.cont03 {
+                        .about_title {
+                            top: 5%;
+                        }
+
+                        .txt_container {
+                            top: 20%;
+                        }
+                    }
+
+                    &.cont04 {
+                        .about_title {
+                            top: 30%;
+                        }
+
+                        .txt_container {
+                            top: 45%;
+
+                            &.skill {
+                                width: 300px;
+
+                                img {
+                                    width: 60px;
+                                }
+                            }
+                        }
+                    }
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (min-width:768px) {
+    #about {
+        height: 400vh;
+
+        .about_wrap {
+            display: flex;
+            width: 95%;
+            height: auto;
+
+            .txt {
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                padding-left: 100px;
+                width: 50%;
+                height: 100%;
+            }
+
+            .cont-box {
+                width: 50%;
+
+                .cont {
+                    height: 100vh;
+
+                    .about_title {
+                        left: 18%;
+                        top: 25%;
+                        font-size: 2.5rem;
+                        padding: 10px 30px 10px 10px;
+
+                        span {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .txt_container {
+                        width: 70%;
+                        left: 22%;
+                        top: 35%;
+
+                        li {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    &.cont01 {
+
+                        .iam-title {
+                            font-size: 1.3rem;
+                        }
+
+                        .iam-detail {
+                            font-size: 1rem;
+                        }
+
+                    }
+
+                    &.cont04 {
+                        .txt_container {
+
+                            &.skill {
+                                width: 500px;
+                                padding-top: 50px;
+
+                                img {
+                                    width: 70px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
 }

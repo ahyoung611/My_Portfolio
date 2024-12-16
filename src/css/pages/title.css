@@ -1,19 +1,19 @@
 .title {
-  z-index: 99;
+  z-index: 50;
 }
 .title span {
   display: inline-block;
   line-height: 1.6;
   font-family: var(--mainEng-font);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px #fff;
+  -webkit-text-stroke: 1px #30F0E2;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-repeat: no-repeat;
   transition: 1s;
   color: transparent;
-  background-image: linear-gradient(-225deg, rgb(93, 159, 255) 0%, #B8DCFF 48%, #6BBBFF 100%);
+  background-image: linear-gradient(-225deg, #30F0E2 0%, #c8f5ed 48%, #5DF2D6 100%);
   background-size: 0 100%;
   cursor: pointer;
 }
@@ -22,22 +22,10 @@
 }
 .title em {
   display: block;
-  font-family: var(--mainKorT-font);
+  font-family: var(--mainKorL-font);
   letter-spacing: 1px;
   -webkit-text-stroke: none;
   line-height: 1.5;
-}
-
-.project_title {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.footer_title {
-  position: absolute;
 }
 
 @media (max-width: 767px) {
@@ -53,9 +41,9 @@
 @media (min-width: 768px) {
   .title span {
     font-size: 4rem;
+    white-space: nowrap;
   }
   .title em {
     font-size: 1.1rem;
-    white-space: nowrap;
   }
 }

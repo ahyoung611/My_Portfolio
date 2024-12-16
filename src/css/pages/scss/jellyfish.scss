@@ -1,0 +1,196 @@
+.jellyfish {
+    position: absolute;
+    opacity: .9;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.jellyfish2 {
+    animation: jellyfish-ani 1s infinite;
+}
+
+.jellyfish3 {
+    left: 45%;
+    animation: jellyfish3-ani 10s infinite cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.jellyfish4 {
+    left: 1%;
+    animation: jellyfish4-ani 15s infinite alternate ease;
+}
+
+.jellyfish5 {
+    right: 0%;
+    animation: jellyfish-ani 1s infinite;
+}
+
+@keyframes jellyfish-ani {
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+
+    }
+
+    40% {
+        transform: translateY(-25px);
+        animation-timing-function: ease-in;
+    }
+
+    65% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-in;
+    }
+
+
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+}
+
+@media (max-width:767px) {
+    .jellyfish {
+        img {
+            width: 130px;
+        }
+    }
+
+    .jellyfish2 {
+        left: 35%;
+        bottom: 0%;
+    }
+
+
+    .jellyfish3 {
+        top: 20%;
+    }
+
+    .jellyfish4 {
+        bottom: 2%;
+    }
+
+    .jellyfish5 {
+        bottom: -30%;
+    }
+
+
+
+    @keyframes jellyfish3-ani {
+        from {
+            transform: translateY(0);
+            opacity: .5;
+        }
+
+        50% {
+
+            transform: translateY(100px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: .5;
+        }
+    }
+
+    @keyframes jellyfish4-ani {
+        from {
+            left: 1%;
+        }
+
+        to {
+            left: calc(100% - 100px);
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .jellyfish {
+        img {
+            width: 180px;
+        }
+    }
+
+    .jellyfish2 {
+        right: 10%;
+        top: 10%;
+    }
+
+    .jellyfish3 {
+        top: 10%;
+    }
+
+    .jellyfish4 {
+        bottom: 0%;
+    }
+
+    .jellyfish5 {
+        top: -25%;
+    }
+
+    @keyframes jellyfish3-ani {
+        from {
+            transform: translateY(0);
+            opacity: .5;
+        }
+
+        50% {
+
+            transform: translateY(100px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: .5;
+        }
+    }
+
+    @keyframes jellyfish4-ani {
+        from {
+            left: 1%;
+        }
+
+        to {
+            left: calc(100% - 200px);
+        }
+    }
+
+}
+
+@media (min-width:1024px) {
+    
+    .jellyfish2 {
+        right: 25%;
+        top: 15%;
+    }
+
+    .jellyfish3 {
+        top: 30%;
+    }
+
+    .jellyfish5 {
+        top: 0%;
+    }
+
+
+    @keyframes jellyfish3-ani {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        50% {
+
+            transform: translateX(100px);
+            opacity: .5;
+        }
+
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}

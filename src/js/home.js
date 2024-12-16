@@ -30,7 +30,7 @@ export function home() {
 
         tl.to('.stage', { autoAlpha: 1 }) // Stage가 나타남
             .from(chars, {
-                color: '#003058',
+                webkitTextStroke: '1px #fff',
                 opacity: 0,
                 y: gsap.utils.wrap([-100, 100]),
                 stagger: {
@@ -40,7 +40,7 @@ export function home() {
             });
 
         tl.to(words, {
-            y: (i) => (i === 1 || i === 2 || i === 5 ? -50 : 0),
+            y: (i) => (i === 1 || i === 2 ? 30 : 0),
             stagger: {
                 each: 0.05,
                 from: 'start',
@@ -49,11 +49,11 @@ export function home() {
             duration: 1,
             onStart: () => {
                 chars.forEach((char, i) => {
-                    if (i === 3 || i === 9 || i === 17) {
-                        char.style.color = '#003058';
+                    if (i === 0 || i === 9 || i === 15) {
+                        char.style.webkitTextStroke = '1px #30F0E2'; 
                         char.style.fontWeight = 'bold';
                     } else {
-                        char.style.color = '#fff';
+                        char.style.strokeColor = '#fff';
                     }
                 });
             },

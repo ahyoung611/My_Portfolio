@@ -1,20 +1,15 @@
 :root {
-    --mainEng-font: "Noto Sans";
+    --mainEng-font: "Roboto";
     --mainKorT-font: 'Pretendard-Thin';
-    --mainNum-font: "EB Garamond";
+    --mainNum-font: "Anton";
 
     --mainKorL-font: 'Pretendard-Light';
     --mainKorM-font: 'Pretendard-Medium';
     --mainKorSB-font: 'Pretendard-SemiBold';
     --mainKorB-font: 'Pretendard-Bold';
 
-    --mainColor100-color: #003058;
-    --mainColor200-color: #046BA9;
-
-    --subColor100-color: #f0f9ff;
-    --subColor200-color: #bae5fd;
-    --subColor300-color: #7ED0FB;
-    --subColor400-color: #0380C6;
+    --mainColor-color: #30F0E2;
+    --white: #fff;
 
    --font-size-EngT1-P: 50px;
    --font-size-EngT1-M: 45px;
@@ -30,8 +25,6 @@
 
    --font-size-Num1-P: 70px;
    --font-size-Num1-M: 65px;
-
-    --white: #fff;
 
     font-family: var(--mainEng-font), var(--mainKorR-font), var(--mainNum-font);
     font-size: 20px;

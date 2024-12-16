@@ -41,7 +41,19 @@ export function header() {
                 overwite: 'auto'
 
             })
-        })
+            // 메뉴 토글
+            const headerNav = document.querySelector('.header_nav');
+            const headerNavMobile = document.querySelector('.header_nav_mobile');
+
+            if (headerNav) {
+                headerNav.classList.toggle('show'); // show 클래스를 토글
+            }
+
+            // .header_nav_mobile의 opacity를 토글
+            if (headerNavMobile) {
+                headerNavMobile.classList.toggle('active');
+            }
+        });
     });
 
 
@@ -65,4 +77,6 @@ export function header() {
         links.forEach(el => el.classList.remove('on'))
         link.classList.add('on')
     }
+
+    
 }
