@@ -3,32 +3,167 @@
 
     .work_left {
         position: relative;
-        width: 100%;
         height: 100vh;
 
+        .title {
+            position: relative;
+            width: 85%;
+
+            span {
+                margin-bottom: 50px;
+            }
+
+            .details {
+                padding: 10px;
+                text-transform: capitalize;
+            }
+
+            .date {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 35%;
+                display: inline-block;
+                font-family: var(--mainNum-font);
+
+                &::after {
+                    content: '';
+                    width: 30px;
+                    height: 1px;
+                    position: absolute;
+                    left: -50px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #fff;
+                }
+
+                &::before {
+                    content: '';
+                    width: 30px;
+                    height: 1px;
+                    position: absolute;
+                    right: -50px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: #fff;
+                }
+            }
+        }
 
         .togglebtnO {
             cursor: pointer;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 30%;
-            width: 100px;
+            bottom: 5%;
+            width: 130px;
             height: 30px;
             border: 2px solid rgba(255, 255, 255, .5);
             border-radius: 50px;
             padding: 5px;
+            text-align: left;
+
+            &::after {
+                display: var(--after-display, block);
+                content: '전체보기';
+                position: absolute;
+                font-size: 15px;
+                left: 50px;
+                color: rgba(255, 255, 255, .5);
+                top: 50%;
+                transform: translateY(-50%);
+                transition: 1s;
+            }
+
+            &::before {
+                display: var(--before-display, none);
+                content: '슬라이드보기';
+                position: absolute;
+                font-size: 15px;
+                left: 13px;
+                color: #30F0E2;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: 1s;
+            }
 
             .togglebtnI {
+                position: relative;
+                left: 0px;
                 cursor: pointer;
                 background: rgba(255, 255, 255, .5);
                 width: 30px;
                 height: 30px;
                 border: none;
                 border-radius: 15px;
-                position: relative;
-                left: 0px;
             }
+        }
+    }
+
+    .work_list {
+        opacity: 0;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        transform: translateX(100%);
+        top: 0;
+        background-color: #0B0C1F;
+        z-index: 99;
+        align-items: center;
+        justify-content: space-between;
+        transition: .5s;
+
+        ul {
+            width: 45%;
+            margin-left: 80px;
+
+            li {
+                width: 80%;
+                position: relative;
+                padding: 20px;
+
+                &:hover {
+                    color: #30F0E2;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    width: 0%;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-color: #30F0E2;
+                    transition: .5s;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+
+                    .num {
+                        font-size: 1.3rem;
+                        font-family: var(--mainNum-font);
+                        letter-spacing: 2px;
+                    }
+
+                    .name {
+                        font-size: 1.5rem;
+                        font-family: var(--mainEng-font);
+                        text-transform: capitalize;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+
         }
     }
 
@@ -109,12 +244,22 @@
             width: 100%;
 
             .work_title {
+                width: 100%;
                 position: absolute;
                 left: 50%;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
+                padding-bottom: 80px;
 
+                em{
+                    width: auto;
+                }
+
+                .details{
+                    font-size:.9rem;
+                    white-space: nowrap;
+                }
             }
         }
 
@@ -157,6 +302,7 @@
                 top: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
+                padding-bottom: 80px;
 
             }
         }
@@ -187,19 +333,16 @@
     }
 }
 
-
 @media (min-width: 1300px) {
     #work {
 
         .work_left {
             width: 50%;
 
-            .work_title {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
+            .work_title{
+                .details{
+                    height: 100px;
+                }
             }
         }
 

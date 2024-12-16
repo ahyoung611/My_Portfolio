@@ -23,8 +23,10 @@
       cursor: pointer;
       border: 2px solid rgba(255, 255, 255, .5);
       padding: 15px;
+      transition: .35s;
 
       &:hover {
+        border: 2px solid rgba(48, 240, 226,1);
         a {
           &::after {
             opacity: 1;
@@ -42,7 +44,7 @@
         .num {
 
           em {
-            color: rgba(255, 255, 255, 1);
+            color: rgba(48, 240, 226,1);
           }
         }
       }
@@ -61,7 +63,6 @@
           left: 0;
           top: 0;
           background-color: rgba(0, 0, 0, .7);
-          // background-color: rgba(0, 48, 88,.7);
           transition: .5s;
         }
       }
@@ -78,8 +79,8 @@
         right: 0px;
         top: -45px;
         font-family: var(--mainNum-font);
-        font-size: 38px;
-        color: rgba(255, 255, 255, .5);
+        font-size: 32px;
+        color: rgba(255, 255, 255, .2);
         font-weight: 600;
         z-index: 99;
       }
@@ -189,26 +190,20 @@
 
 }
 
-@media (max-width:767px) {
-  #graphic {
-    .graphic__wrap {
-      width: 270%;
-    }
+@media (max-width: 767px) {
+  #graphic .graphic__wrap {
+    width: calc(100vw * 2.7); /* 뷰포트 너비의 270% */
   }
 }
 
-@media (min-width:768px) {
-  #graphic {
-    .graphic__wrap {
-      width: 250%;
-    }
+@media (min-width: 768px) {
+  #graphic .graphic__wrap {
+    width: calc(100vw * 2.5); /* 뷰포트 너비의 250% */
   }
 }
 
-@media (min-width:1024px) {
-  #graphic {
-    .graphic__wrap {
-      width: 200%;
-    }
+@media (min-width: 1024px) {
+  #graphic .graphic__wrap {
+    width: calc(100vw * 2); /* 뷰포트 너비의 200% */
   }
 }

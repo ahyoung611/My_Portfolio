@@ -1,7 +1,6 @@
 
 import { menu } from "./src/js/menu.js";
 import { header } from "./src/js/header.js";
-import { link } from "./src/js/link.js";
 import { home } from "./src/js/home.js";
 import{ project } from "./src/js/project.js"
 import{ work } from "./src/js/work.js"
@@ -15,7 +14,6 @@ import{ path } from "./src/js/path.js"
 window.addEventListener('DOMContentLoaded',function(){
     menu()
     header()
-    link()
     home()
     work()
     project()

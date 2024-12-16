@@ -10,7 +10,7 @@
 
     .project-box {
         position: relative;
-        width: 100%;
+        margin: auto;
         text-transform: capitalize;
 
     }
@@ -33,7 +33,7 @@
                     white-space: nowrap;
 
                     &.on {
-                        color: #ffffff;
+                        color: #fff;
                         font-weight: bold;
                     }
                 }
@@ -51,70 +51,12 @@
             width: 85%;
             overflow: hidden;
 
-            figure {
-
-                &::after {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, .2);
-                    position: absolute;
-                    left: 0;
-                    top: 0;
-                }
-
-                figcaption {
-                    position: absolute;
-                    width: 100%;
-                    left: 0%;
-                    bottom: 0%;
-                    padding: 20px;
-                    z-index: 10;
-
-                    h2 {
-                        font-family: var(--mainEng-font);
-                        font-size: 2rem;
-                        font-weight: 600;
-                        line-height: 1.5;
-                        letter-spacing: 1px;
-                        text-transform: capitalize;
-                    }
-
-                    .project_desc {
-                        padding: 20px 0;
-
-                        li {
-                            font-family: var(--mainEng-font);
-                            display: inline-block;
-                            font-size: .8rem;
-                            font-weight: 600;
-                            padding: 10px 20px;
-                            background-color: rgba(255, 255, 255, .5);
-                            color: var(--mainColor100-color);
-                            border-radius: 50px;
-                            text-transform: capitalize;
-                        }
-                    }
-
-                    h3 {
-                        font-size: 1.3rem;
-                        font-weight: 500;
-                        line-height: 54px;
-                        letter-spacing: 1px;
-                    }
-
-                    p {
-                        font-size: 1rem;
-                        font-weight: 400;
-                        line-height: 1.5;
-                    }
-                }
-            }
-
             img {
                 width: 100%;
                 object-fit: cover;
             }
+
+          
         }
     }
 
@@ -131,6 +73,9 @@
 
                 h2 {
                     font-family: var(--mainEng-font);
+                    // color: #30F0E2;
+                    -webkit-text-stroke: 1px #ffffff;
+                    -webkit-text-fill-color: transparent;
                     font-weight: 600;
                     line-height: 1.5;
                     letter-spacing: 1px;
@@ -152,8 +97,7 @@
                         text-transform: capitalize;
 
                         &:hover {
-                            background-color: #fff;
-                            color: var(--mainColor100-color);
+                            color: var( --mainColor-color);
                         }
                     }
                 }
@@ -186,14 +130,13 @@
         top: 380px;
 
         .hSwiper {
-            width: 95%;
-            height: 100%;
+            display: none;
         }
 
         .tabs {
 
             .tab-menu {
-                top: -25%;
+                top: -33%;
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
@@ -215,21 +158,52 @@
         }
 
         #vslide {
-            display: none;
+            width: 90%;
+            margin: auto;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid var(--mainColor-color);
+            border-radius: 50px;
+            margin-top: 30px;
+
+            .swiper-slide {
+
+                h2 {
+                    font-size: 3rem;
+                }
+
+                .project_desc {
+
+                    li {
+                        font-size: .8rem;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.3rem;
+                }
+
+                p {
+                    font-size: .8rem;
+                }
+            }
         }
     }
 }
 
 @media (min-width:768px) {
     .project-box {
-        top: 340px;
+        top: 360px;
+        width: 90%;
         height: 50vh;
         display: flex;
 
         .tabs {
 
             .tab-menu {
-                top: -80px;
+                top: -60px;
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
@@ -264,7 +238,7 @@
             .swiper-slide {
 
                 h2 {
-                    font-size: 2rem;
+                    font-size: 3rem;
                 }
 
                 .project_desc {
@@ -307,10 +281,10 @@
                 li {
                     a {
                         width: 200px;
-                        font-size: 1.5rem;
+                        font-size: 1.3rem;
 
                         &.on {
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                         }
                     }
                 }

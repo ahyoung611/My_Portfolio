@@ -7,7 +7,7 @@
 }
 #project .project-box {
   position: relative;
-  width: 100%;
+  margin: auto;
   text-transform: capitalize;
 }
 #project .tabs {
@@ -26,7 +26,7 @@
   white-space: nowrap;
 }
 #project .tabs .tab-menu li a.on {
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
 }
 #project .hSwiper .project {
@@ -36,56 +36,6 @@
   transform: translate(-50%, 50%);
   width: 85%;
   overflow: hidden;
-}
-#project .hSwiper .project figure::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-#project .hSwiper .project figure figcaption {
-  position: absolute;
-  width: 100%;
-  left: 0%;
-  bottom: 0%;
-  padding: 20px;
-  z-index: 10;
-}
-#project .hSwiper .project figure figcaption h2 {
-  font-family: var(--mainEng-font);
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.5;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-}
-#project .hSwiper .project figure figcaption .project_desc {
-  padding: 20px 0;
-}
-#project .hSwiper .project figure figcaption .project_desc li {
-  font-family: var(--mainEng-font);
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: var(--mainColor100-color);
-  border-radius: 50px;
-  text-transform: capitalize;
-}
-#project .hSwiper .project figure figcaption h3 {
-  font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 54px;
-  letter-spacing: 1px;
-}
-#project .hSwiper .project figure figcaption p {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
 }
 #project .hSwiper .project img {
   width: 100%;
@@ -102,6 +52,8 @@
 }
 #project #vslide .vSwiper .swiper-slide h2 {
   font-family: var(--mainEng-font);
+  -webkit-text-stroke: 1px #ffffff;
+  -webkit-text-fill-color: transparent;
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -122,8 +74,7 @@
   text-transform: capitalize;
 }
 #project #vslide .vSwiper .swiper-slide .project_desc li:hover {
-  background-color: #fff;
-  color: var(--mainColor100-color);
+  color: var(--mainColor-color);
 }
 #project #vslide .vSwiper .swiper-slide h3 {
   font-weight: 500;
@@ -143,11 +94,10 @@
     top: 380px;
   }
   .project-box .hSwiper {
-    width: 95%;
-    height: 100%;
+    display: none;
   }
   .project-box .tabs .tab-menu {
-    top: -25%;
+    top: -33%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -163,17 +113,38 @@
     font-size: 1rem;
   }
   .project-box #vslide {
-    display: none;
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid var(--mainColor-color);
+    border-radius: 50px;
+    margin-top: 30px;
+  }
+  .project-box #vslide .swiper-slide h2 {
+    font-size: 3rem;
+  }
+  .project-box #vslide .swiper-slide .project_desc li {
+    font-size: 0.8rem;
+  }
+  .project-box #vslide .swiper-slide h3 {
+    font-size: 1.3rem;
+  }
+  .project-box #vslide .swiper-slide p {
+    font-size: 0.8rem;
   }
 }
 @media (min-width: 768px) {
   .project-box {
-    top: 340px;
+    top: 360px;
+    width: 90%;
     height: 50vh;
     display: flex;
   }
   .project-box .tabs .tab-menu {
-    top: -80px;
+    top: -60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -193,7 +164,7 @@
     overflow: hidden;
   }
   .project-box #vslide .swiper-slide h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .project-box #vslide .swiper-slide .project_desc li {
     font-size: 0.8rem;
@@ -223,10 +194,10 @@
   }
   .project-box .tabs .tab-menu li a {
     width: 200px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .project-box .tabs .tab-menu li a.on {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .project-box .hSwiper {
     width: 30%;

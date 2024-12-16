@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #1A1E23;
+            font-family: 'Lato', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        nav .line {
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            margin: 10px 0 0 0;
+            background: #FF1847;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 40px 0 0;
+            opacity: 0.4;
+            transition: all 0.4s ease;
+        }
+
+        nav ul li:hover {
+            opacity: 0.7;
+        }
+
+        nav ul li.active {
+            opacity: 1;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            display: block;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header  id="header" role="banner">
+        <nav class="header_nav" role="navigation" aria-label="메인메뉴">
+            <ul>
+                <li class="active"><a href="#home">home</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#work">work</a></li>
+                <li><a href="#graphic">graphic</a></li>
+                <li><a href="#about">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nav = document.querySelector('nav');
+            const line = document.createElement('div');
+            line.classList.add('line');
+            nav.appendChild(line);
+
+            let active = nav.querySelector('.active');
+            let pos = 0;
+            let wid = 0;
+
+            if (active) {
+                pos = active.getBoundingClientRect().left - nav.getBoundingClientRect().left;
+                wid = active.offsetWidth;
+                line.style.left = `${pos}px`;
+                line.style.width = `${wid}px`;
+            }
+
+            const navItems = nav.querySelectorAll('ul li a');
+
+            navItems.forEach((item) => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+
+                    if (!parent.classList.contains('active') && !nav.classList.contains('animate')) {
+                        nav.classList.add('animate');
+
+                        nav.querySelectorAll('ul li').forEach((li) => li.classList.remove('active'));
+
+                        const position = parent.getBoundingClientRect().left - nav.getBoundingClientRect().left;
+                        const width = parent.offsetWidth;
+
+                        if (position >= pos) {
+                            line.style.transition = 'width 0.3s';
+                            line.style.width = `${position - pos + width}px`;
+
+                            setTimeout(() => {
+                                line.style.transition = 'width 0.15s, left 0.15s';
+                                line.style.width = `${width}px`;
+                                line.style.left = `${position}px`;
+
+                                setTimeout(() => {
+                                    nav.classList.remove('animate');
+                                    parent.classList.add('active');
+                                }, 150);
+                            }, 300);
+                        } else {
+                            line.style.transition = 'width 0.3s, left 0.3s';
+                            line.style.left = `${position}px`;
+                            line.style.width = `${pos - position + wid}px`;
+
+                            setTimeout(() => {
+                                line.style.transition = 'width 0.15s';
+                                line.style.width = `${width}px`;
+
+                                setTimeout(() => {
+                                    nav.classList.remove('animate');
+                                    parent.classList.add('active');
+                                }, 150);
+                            }, 300);
+                        }
+
+                        pos = position;
+                        wid = width;
+                    }
+                });
+            });
+        
+        });
+
+    </script>
+</body>
+
+</html>
