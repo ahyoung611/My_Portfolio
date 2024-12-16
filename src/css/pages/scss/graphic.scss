@@ -190,6 +190,7 @@
 
 }
 
+<<<<<<< HEAD
 @media (max-width: 767px) {
   #graphic .graphic__wrap {
     width: calc(100vw * 2.7); /* 뷰포트 너비의 270% */
@@ -205,5 +206,28 @@
 @media (min-width: 1024px) {
   #graphic .graphic__wrap {
     width: calc(100vw * 2); /* 뷰포트 너비의 200% */
+=======
+@media (max-width:767px) {
+  #graphic {
+    .graphic__wrap {
+      width: 270%;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  #graphic {
+    .graphic__wrap {
+      width: 250%;
+    }
+  }
+}
+
+@media (min-width:1024px) {
+  #graphic {
+    .graphic__wrap {
+      width: 200%;
+    }
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
   }
 }

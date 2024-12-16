@@ -10,7 +10,11 @@
 
     .project-box {
         position: relative;
+<<<<<<< HEAD
         margin: auto;
+=======
+        width: 100%;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
         text-transform: capitalize;
 
     }
@@ -51,6 +55,69 @@
             width: 85%;
             overflow: hidden;
 
+<<<<<<< HEAD
+=======
+            figure {
+
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, .2);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                figcaption {
+                    position: absolute;
+                    width: 100%;
+                    left: 0%;
+                    bottom: 0%;
+                    padding: 20px;
+                    z-index: 10;
+
+                    h2 {
+                        font-family: var(--mainEng-font);
+                        font-size: 2rem;
+                        font-weight: 600;
+                        line-height: 1.5;
+                        letter-spacing: 1px;
+                        text-transform: capitalize;
+                    }
+
+                    .project_desc {
+                        padding: 20px 0;
+
+                        li {
+                            font-family: var(--mainEng-font);
+                            display: inline-block;
+                            font-size: .8rem;
+                            font-weight: 600;
+                            padding: 10px 20px;
+                            background-color: rgba(255, 255, 255, .5);
+                            color: var( --mainColor-color);
+                            border-radius: 50px;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    h3 {
+                        font-size: 1.3rem;
+                        font-weight: 500;
+                        line-height: 54px;
+                        letter-spacing: 1px;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                    }
+                }
+            }
+
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
             img {
                 width: 100%;
                 object-fit: cover;
@@ -73,9 +140,13 @@
 
                 h2 {
                     font-family: var(--mainEng-font);
+<<<<<<< HEAD
                     // color: #30F0E2;
                     -webkit-text-stroke: 1px #ffffff;
                     -webkit-text-fill-color: transparent;
+=======
+                    color: #30F0E2;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                     font-weight: 600;
                     line-height: 1.5;
                     letter-spacing: 1px;
@@ -130,13 +201,22 @@
         top: 380px;
 
         .hSwiper {
+<<<<<<< HEAD
             display: none;
+=======
+            width: 95%;
+            height: 100%;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
         }
 
         .tabs {
 
             .tab-menu {
+<<<<<<< HEAD
                 top: -33%;
+=======
+                top: -25%;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
@@ -195,15 +275,23 @@
 
 @media (min-width:768px) {
     .project-box {
+<<<<<<< HEAD
         top: 360px;
         width: 90%;
+=======
+        top: 340px;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
         height: 50vh;
         display: flex;
 
         .tabs {
 
             .tab-menu {
+<<<<<<< HEAD
                 top: -60px;
+=======
+                top: -80px;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                 left: 50%;
                 transform: translateX(-50%);
                 display: flex;
@@ -238,7 +326,11 @@
             .swiper-slide {
 
                 h2 {
+<<<<<<< HEAD
                     font-size: 3rem;
+=======
+                    font-size: 2rem;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                 }
 
                 .project_desc {
@@ -281,10 +373,17 @@
                 li {
                     a {
                         width: 200px;
+<<<<<<< HEAD
                         font-size: 1.3rem;
 
                         &.on {
                             font-size: 1.8rem;
+=======
+                        font-size: 1.5rem;
+
+                        &.on {
+                            font-size: 2rem;
+>>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                         }
                     }
                 }
