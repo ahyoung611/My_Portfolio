@@ -32,7 +32,6 @@ export function header() {
                 onToggle: () => updateActiveLink(link)
             });
 
-<<<<<<< HEAD
             link.addEventListener('click', function (e) {
                 e.preventDefault();
 
@@ -47,22 +46,6 @@ export function header() {
                 toggleMenu();
             });
         }
-=======
-            })
-            // 메뉴 토글
-            const headerNav = document.querySelector('.header_nav');
-            const headerNavMobile = document.querySelector('.header_nav_mobile');
-
-            if (headerNav) {
-                headerNav.classList.toggle('show'); // show 클래스를 토글
-            }
-
-            // .header_nav_mobile의 opacity를 토글
-            if (headerNavMobile) {
-                headerNavMobile.classList.toggle('active');
-            }
-        });
->>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
     });
 
     // Header 보이기/숨기기 애니메이션 ----------------------
@@ -86,7 +69,6 @@ export function header() {
         activeLink.classList.add('on');
     }
 
-<<<<<<< HEAD
     // 메뉴 토글 처리 -----------------------------------------------
     function toggleMenu() {
         const headerNav = document.querySelector('.header_nav');
@@ -101,7 +83,3 @@ export function header() {
         }
     }
 }
-=======
-    
-}
->>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9

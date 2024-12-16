@@ -106,13 +106,8 @@ export function work() {
         if (togglebtnO) {
             const togglebtnI = togglebtnO.querySelector('.togglebtnI');
             const left = parseInt(window.getComputedStyle(togglebtnI).left);
-<<<<<<< HEAD
             
             if (left === 100) {
-=======
-
-            if (left === 90) {
->>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                 togglebtnO.style.borderColor = 'rgba(255,255,255,.5)';
                 togglebtnI.style.background = 'rgba(255,255,255,.5)';
                 toggleActionStart(togglebtnI, 'TO_LEFT');
@@ -149,15 +144,9 @@ export function work() {
         const intervalID = setInterval(function () {
             // 버튼 이동
             let left = parseInt(window.getComputedStyle(toggleBtn).left);
-<<<<<<< HEAD
             // console.log(left);
             left += (LR === 'TO_RIGHT') ? 5 : -5;
             if (left >= 0 && left <=100) {
-=======
-            console.log(left);
-            left += (LR === 'TO_RIGHT') ? 5 : -5;
-            if (left >= 0 && left <= 90) {
->>>>>>> ac610dbbabaec0f2305c5b1b20f026bcf000a3c9
                 toggleBtn.style.left = `${left}px`;
             }
         }, 10);
