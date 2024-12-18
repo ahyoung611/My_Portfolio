@@ -2,27 +2,27 @@
 @import url(/src/css/base/reset.css);
 @font-face {
   font-family: Metropolis-Light;
-  src: url(./font/Metropolis-Light.woff);
+  src: url(/src/work/acebed/font/Metropolis-Light.woff);
 }
 @font-face {
   font-family: Metropolis-Medium;
-  src: url(./font/Metropolis-Medium.woff);
+  src: url(/src/work/acebed/font/Metropolis-Medium.woff);
 }
 @font-face {
   font-family: Metropolis-Regular;
-  src: url(./font/Metropolis-Regular.woff);
+  src: url(/src/work/acebed/font/Metropolis-Regular.woff);
 }
 @font-face {
   font-family: Metropolis-Bold;
-  src: url(./font/Metropolis-Bold.woff);
+  src: url(/src/work/acebed/font/Metropolis-Bold.woff);
 }
 @font-face {
   font-family: NotoSansKR-Regular;
-  src: url(./font/NotoSansKR--Regular.woff2);
+  src: url(/src/work/acebed/font/NotoSansKR-Regular.woff2);
 }
 @font-face {
   font-family: NotoSansKR-Medium;
-  src: url(./font/NotoSans-Medium.woff);
+  src: url(/src/work/acebed/font/NotoSans-Medium.woff);
 }
 body {
   font-family: Metropolis-Regular;
@@ -79,7 +79,7 @@ header .utill ul {
   gap: 10px;
 }
 header .utill a {
-  font-family: NotoSansKR-DemiLight;
+  font-family: NotoSansKR-Regular;
   position: relative;
   display: block;
   font-size: 15px;
@@ -164,7 +164,7 @@ header nav .gnb .main-menu .sub-menu {
   position: absolute;
 }
 header nav .gnb .main-menu .sub-menu li {
-  font-family: NotoSansKR-DemiLight;
+  font-family: NotoSansKR-Regular;
   padding: 5px 10px;
   font-size: 15px;
   font-weight: 400;
@@ -236,6 +236,7 @@ header nav .gnb.right-gnb .gnb-search .all-menu {
 
 section {
   width: 100%;
+  overflow: hidden;
 }
 section .arrow {
   position: absolute;
@@ -349,48 +350,29 @@ section h2.tit {
   letter-spacing: 2px;
   margin: 150px 0 40px 0;
 }
-section .more-btn {
-  position: absolute;
-  top: 173px;
-  right: 240px;
-  font-size: 16px;
-  letter-spacing: 1px;
-}
-section .more-btn::after {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 1px;
-  background: #666;
-  vertical-align: middle;
-  margin-left: 14px;
-}
 section.sect2 {
   position: relative;
   padding-bottom: 80px;
 }
 section.sect2 .science-wrap {
-  width: calc(100% - 160px);
-  margin: auto;
   position: relative;
+  margin: auto;
+  overflow: hidden;
   height: 800px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-section.sect2 .science-wrap .tabs,
-section.sect2 .science-wrap .v-slide-container {
-  width: calc((100% - 710px) / 2);
+section.sect2 .science-wrap .swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+}
+section.sect2 .science-wrap .swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
 }
 section.sect2 .science-wrap .tabs {
   position: relative;
-  height: 100%;
-}
-section.sect2 .science-wrap .tabs ul.tab-menu {
-  position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: 300px;
+  height: 150px;
 }
 section.sect2 .science-wrap .tabs ul.tab-menu li a {
   display: block;
@@ -409,32 +391,64 @@ section.sect2 .science-wrap .tabs ul.tab-menu li a.on {
   font-weight: bold;
 }
 section.sect2 .science-wrap .h-slide-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  max-width: 710px;
   height: 100%;
-  overflow: hidden;
+  margin: auto;
 }
 section.sect2 .science-wrap .h-slide-container .hslide-wrap {
-  display: flex;
-  align-items: center;
+  position: relative;
   width: 710px;
   height: 100%;
-  position: relative;
-  left: 0%;
 }
-section.sect2 .science-wrap .h-slide-container .hslide-wrap .video {
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75vh;
+  background: url(/src/work/acebed/images/sect2_graybg.png) no-repeat center bottom;
+  z-index: 5;
+}
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide .video {
   position: relative;
-  width: 710px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
   margin: auto;
   overflow: hidden;
 }
-section.sect2 .science-wrap .h-slide-container .hslide-wrap .video video {
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide .video video {
   position: absolute;
   top: 0px;
   left: 50%;
   transform: translate(-50%, 0);
-  height: 800px;
+}
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide .txt {
+  position: absolute;
+  top: auto;
+  left: 5%;
+  z-index: 10;
+  color: #fff;
+}
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide .txt .addtxt1 {
+  font-family: Metropolis-Bold;
+}
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide .txt .txt1 {
+  font-family: NotoSansKR-Medium;
+  letter-spacing: -3px;
+}
+section.sect2 .science-wrap .h-slide-container .hslide-wrap .hslide .txt .txt2 {
+  font-family: NotoSansKR-Regular;
 }
 section.sect2 .science-wrap .v-slide-container {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 385px;
   height: 100%;
   overflow: hidden;
 }
@@ -450,18 +464,17 @@ section.sect2 .science-wrap .v-slide-container .vslide-wrap .vslide {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px;
 }
 section.sect2 .science-wrap .v-slide-container .vslide-wrap .vslide .txt1 {
+  font-size: 2.5rem;
   font-family: NotoSansKR-Medium;
-  font-size: 40px;
   font-weight: 500;
   color: #333;
   line-height: 54px;
   letter-spacing: -3px;
 }
 section.sect2 .science-wrap .v-slide-container .vslide-wrap .vslide .txt2 {
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 30px;
   margin-top: 24px;
   font-weight: 200;
@@ -536,7 +549,6 @@ section.sect3 .art1 .tab .swiper .swiper-slide .desc {
   color: #fff;
   opacity: 0;
   transition: 1s;
-  border: 1px solid #f00;
 }
 section.sect3 .art1 .tab .swiper .swiper-slide .desc.on {
   opacity: 1;
@@ -567,16 +579,51 @@ section.sect3 .art1 .tab .swiper .swiper-slide .desc .txt {
   transition: 0.5s;
 }
 section.sect3 .art1 .tab .swiper .swiper-slide .desc button {
-  border: 1px solid #fff;
+  position: relative;
+  border: none;
   background: none;
   padding: 15px 30px;
   color: #fff;
   margin-top: 50px;
   transition: 0.5s;
+  overflow: hidden;
+}
+section.sect3 .art1 .tab .swiper .swiper-slide .desc button:hover a::after {
+  top: 0;
+  opacity: 1;
 }
 section.sect3 .art1 .tab .swiper .swiper-slide .desc button a {
   font-size: 16px;
   font-weight: 500;
+}
+section.sect3 .art1 .tab .swiper .swiper-slide .desc button a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  z-index: -2;
+}
+section.sect3 .art1 .tab .swiper .swiper-slide .desc button a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: 0.35s;
+  background-color: #0890c0;
+  z-index: -1;
+}
+section.sect3 .art1 .tab .swiper .swiper-slide .desc button a span {
+  display: inline-block;
+  position: relative;
 }
 section.sect3 .art1 .tab .swiper .swiper-slide.on::after {
   content: "";
@@ -622,7 +669,8 @@ section.sect3 .art1 .tab .swiper .swiper-scrollbar-drag {
 }
 section.sect3 .art2 .news-wrap {
   position: relative;
-  width: 100%;
+  width: 1440px;
+  margin: 45px auto 0;
   height: 800px;
   display: flex;
   align-items: center;
@@ -631,8 +679,8 @@ section.sect3 .art2 .news-wrap {
 section.sect3 .art2 .news-wrap .left-tit {
   position: absolute;
   top: 50%;
-  left: 180px;
-  transform: translateY(-50%);
+  left: 0;
+  transform: translate(0, -50%);
   font-size: 26px;
   line-height: 40px;
   color: #333;
@@ -640,8 +688,8 @@ section.sect3 .art2 .news-wrap .left-tit {
 section.sect3 .art2 .news-wrap .tabs {
   position: absolute;
   top: 50%;
-  right: 220px;
-  transform: translateY(-50%);
+  right: 0;
+  transform: translate(0, -50%);
   width: 315px;
 }
 section.sect3 .art2 .news-wrap .tabs li {
@@ -841,19 +889,18 @@ section.sect5 .service .left ul li .txt3 {
 }
 
 footer {
+  position: relative;
   width: 100%;
+  height: 220px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  height: 220px;
-  padding: 60px 80px 62px 80px;
   background: #fff;
-  z-index: 16;
-  border: 1px solid #f00;
 }
 footer .footer-left {
   width: 85%;
+  padding: 60px 80px;
 }
 footer .footer-left ul.footer-link {
   display: flex;
@@ -887,6 +934,7 @@ footer .footer-left .copyright {
 }
 footer .family-site {
   width: 15%;
+  padding: 60px 80px;
 }
 footer .family-site select {
   width: 100%;
@@ -946,8 +994,47 @@ footer .family-site select {
   section.sect1 .arrow.prev {
     display: none;
   }
+  section.sect2 .arrow {
+    display: none;
+  }
+  section.sect2 .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  section.sect2 .h-slide-container {
+    width: 100%;
+  }
+  section.sect2 .h-slide-container .hslide .txt {
+    width: 90%;
+    height: 320px;
+    bottom: 40px;
+  }
+  section.sect2 .h-slide-container .hslide .txt .addtxt1 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  section.sect2 .h-slide-container .hslide .txt .txt1 {
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -3px;
+  }
+  section.sect2 .h-slide-container .hslide .txt .txt2 {
+    font-size: 16px;
+    line-height: 29px;
+    margin-top: 15px;
+  }
+  section.sect2 .tabs {
+    display: none;
+  }
+  section.sect2 .v-slide-container {
+    display: none;
+  }
 }
 @media screen and (min-width: 769px) {
+  .inner {
+    padding: 0 80px;
+  }
   header {
     height: 155px;
   }
@@ -988,6 +1075,45 @@ footer .family-site select {
   section.sect1 .swiper .swiper-slide .bg-m {
     display: none;
   }
+  section.sect2 .arrow {
+    display: none;
+  }
+  section.sect2 .tabs {
+    display: none;
+  }
+  section.sect2 .swiper-pagination .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+  }
+  section.sect2 .h-slide-container {
+    max-width: 710px;
+  }
+  section.sect2 .h-slide-container .hslide .txt {
+    width: 385px;
+    height: auto;
+    bottom: 75px;
+  }
+  section.sect2 .h-slide-container .hslide .txt .addtxt1 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 35px;
+  }
+  section.sect2 .h-slide-container .hslide .txt .txt1 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 54px;
+    word-break: keep-all;
+  }
+  section.sect2 .h-slide-container .hslide .txt .txt2 {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 24px;
+    word-break: keep-all;
+  }
+  section.sect2 .v-slide-container {
+    display: none;
+  }
 }
 @media screen and (min-width: 1500px) {
   header .utill {
@@ -1010,5 +1136,29 @@ footer .family-site select {
   }
   header .gnb.right-gnb .right-menu {
     display: flex;
+  }
+  section.sect2 .arrow {
+    display: block;
+  }
+  section.sect2 .swiper-pagination {
+    display: none;
+  }
+  section.sect2 .science-wrap {
+    width: calc(100% - 320px);
+  }
+  section.sect2 .tabs {
+    display: block;
+  }
+  section.sect2 .h-slide-container {
+    width: calc(100% - 820px);
+  }
+  section.sect2 .h-slide-container .hslide::before {
+    display: none;
+  }
+  section.sect2 .h-slide-container .hslide .txt {
+    display: none;
+  }
+  section.sect2 .v-slide-container {
+    display: block;
   }
 }

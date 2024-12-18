@@ -8,6 +8,7 @@
         .title {
             position: relative;
             width: 85%;
+            z-index: 10;
 
             span {
                 margin-bottom: 50px;
@@ -102,28 +103,24 @@
 
     .work_list {
         opacity: 0;
-        // width: 50%;
-        width: 100%;
         height: 100%;
         position: absolute;
         right: 0;
         transform: translateX(100%);
         top: 0;
         background-color: #0B0C1F;
-        z-index: 99;
         align-items: center;
         justify-content: space-between;
         transition: .5s;
+        z-index: 5;
 
         ul {
-            // width: 45%;
-            width: 45%;
-            margin-left: 80px;
 
             li {
-                width: 80%;
                 position: relative;
                 padding: 20px;
+                // border: 1px solid #f00;
+
 
                 &:hover {
                     color: #30F0E2;
@@ -151,13 +148,11 @@
 
 
                     .num {
-                        font-size: 1.3rem;
                         font-family: var(--mainNum-font);
                         letter-spacing: 2px;
                     }
 
                     .name {
-                        font-size: 1.5rem;
                         font-family: var(--mainEng-font);
                         text-transform: capitalize;
                         font-weight: 500;
@@ -254,13 +249,45 @@
                 text-align: center;
                 padding-bottom: 80px;
 
-                em{
+                em {
                     width: auto;
                 }
 
-                .details{
-                    font-size:.9rem;
+                .details {
+                    font-size: .9rem;
                     white-space: nowrap;
+                }
+            }
+        }
+
+
+        .work_list {
+            width: 100%;
+
+            ul {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                position: absolute;
+
+                &:nth-child(1) {
+                    top: 20px;
+                    left: 15px;
+                }
+
+                &:nth-child(2) {
+                    bottom: 20px;
+                    left: 15px;
+                }
+
+                li {
+                    .num {
+                        font-size: 1rem;
+                    }
+
+                    .name {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -306,6 +333,39 @@
                 text-align: center;
                 padding-bottom: 80px;
             }
+
+        }
+
+        .work_list {
+            width: 100%;
+
+            ul {
+                width: 90%;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                position: absolute;
+
+                &:nth-child(1) {
+                    top: 20px;
+                    left: 40px;
+                }
+
+                &:nth-child(2) {
+                    bottom: 20px;
+                    left: 40px;
+                }
+
+                li {
+                    .num {
+                        font-size: 1rem;
+                    }
+
+                    .name {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
         }
 
         .container {
@@ -340,9 +400,42 @@
         .work_left {
             width: 50%;
 
-            .work_title{
-                .details{
+            .work_title {
+                .details {
                     height: 100px;
+                }
+            }
+        }
+
+        .work_list {
+            width: 50%;
+
+            ul {
+                width: 45%;
+                margin-left: 80px;
+                padding: 20px 0;
+                position: relative;
+
+                &:nth-child(1) {
+                    top: 0px;
+                    left: 0px;
+                }
+
+                &:nth-child(2) {
+                    bottom: 0px;
+                    left: 0px;
+                }
+
+                li {
+                    width: 80%;
+
+                    .num {
+                        font-size: 1.3rem;
+                    }
+
+                    .name {
+                        font-size: 1.5rem;
+                    }
                 }
             }
         }

@@ -1,4 +1,4 @@
-@import '/src/css/base/reset.css';
+@import '/reset.css';
 @font-face {
   font-family: MontserratFont;
   src: url(./font/MontserratFont.d5de368a.woff2);

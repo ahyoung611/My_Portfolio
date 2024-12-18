@@ -1,26 +1,8 @@
-@import url(./font/pretendard.css);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
+@import url(/src/css/base/reset.css);
+@import url(/src/css/base/font/pretendard.css);
 @font-face {
   font-family: "Arial Rounded MT Bold Bold";
-  src: url(./font/ARIALROUNDEDMT.woff);
+  src: url(/src/css/base/font/ARIALROUNDEDMT.woff);
 }
 body {
   color: #333;
@@ -48,14 +30,13 @@ body {
   font-family: "Pretendard SemiBold";
   font-style: normal;
   font-weight: normal;
-  white-space: nowrap;
   line-height: 1.5;
   letter-spacing: 0.5px;
 }
 
 .sub-title2 {
   font-size: 20px;
-  font-family: "Pretendard Regular";
+  font-family: "Pretendard Medium";
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -84,16 +65,15 @@ section.sect1 {
   position: relative;
   height: 100vh;
   background-color: #FF4D4F;
-  background-image: url(./App-images/app-back-bg.png);
+  background-image: url(/src/assets/project/app-back-bg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  padding-left: 30px;
 }
 section.sect1 .pf_bg {
   position: absolute;
-  right: -100px;
-  top: -150px;
 }
 section.sect1 .top {
   width: 100%;
@@ -102,24 +82,22 @@ section.sect1 .top {
   gap: 20px;
   position: absolute;
   top: 0;
-  padding: 30px 50px;
+  padding: 30px 0;
 }
 section.sect1 .top li span {
   padding-left: 10px;
 }
 section.sect1 .main .desc {
   position: absolute;
-  left: 10%;
-  top: 50%;
-  transform: translateY(-50%);
+}
+section.sect1 .main .desc h2 {
+  font-family: "Arial Rounded MT Bold Bold";
 }
 section.sect1 .main .desc p {
   padding-top: 20px;
 }
 section.sect1 .main .app-main {
   position: absolute;
-  left: 45%;
-  top: 8%;
 }
 section.sect1 .bottom {
   width: 100%;
@@ -128,7 +106,7 @@ section.sect1 .bottom {
   gap: 30px;
   position: absolute;
   bottom: 0;
-  padding: 30px 50px;
+  padding: 30px 0;
 }
 section.sect1 .bottom li span {
   padding-left: 10px;
@@ -146,17 +124,10 @@ section.sect2 .desc {
 }
 section.sect2 .desc p {
   line-height: 1.8;
+  white-space: nowrap;
 }
 section.sect3 {
-  height: 100vh;
   background-color: #FFEEEE;
-  padding: 80px 150px;
-}
-section.sect3 .survey {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 80px;
 }
 section.sect3 .survey .survey1 .graph {
   align-items: end;
@@ -236,7 +207,6 @@ section.sect3 .survey .survey3 .graph .circle-list li:nth-child(2)::after {
   background-color: #FFC1C2;
 }
 section.sect3 .survey > li {
-  width: 32%;
   height: 580px;
   border-radius: 10px;
   background-color: #fff;
@@ -313,7 +283,6 @@ section.sect3 .survey > li .key .k-text {
 section.sect4 {
   height: 100vh;
   background-color: #1C1C1E;
-  padding: 80px 300px;
 }
 section.sect4 .sub-title1 {
   color: #fff;
@@ -411,6 +380,9 @@ section.sect5 .desc {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+section.sect5 .desc .sub-title1 {
+  white-space: nowrap;
+}
 section.sect5 .goal {
   width: 70%;
   margin: auto;
@@ -465,11 +437,10 @@ section.sect5 .keywords ul li .body2 {
 section.sect6 {
   height: 100vh;
   text-align: center;
-  padding: 80px 150px;
 }
 section.sect6 .asis {
   color: #B3B3B3;
-  padding: 10px;
+  padding: 30px;
 }
 section.sect6 .asis h2 {
   padding: 10px;
@@ -485,11 +456,14 @@ section.sect6 .asis-box img {
   object-fit: cover;
   padding: 10px;
 }
+section.sect6 .asis-box h2 {
+  padding: 20px 0;
+}
 section.sect6 .asis-box .line {
   position: relative;
   width: 1px;
   margin: 20px auto;
-  height: 100px;
+  height: 130px;
   border: 1px dashed #FFC1C2;
 }
 section.sect6 .asis-box .line::after {
@@ -520,7 +494,6 @@ section.sect6 .asis-box .pink-box {
 section.sect7 {
   height: 100vh;
   text-align: center;
-  padding: 80px 150px;
   background-color: #1C1C1E;
   color: #fff;
 }
@@ -528,6 +501,10 @@ section.sect7 .desc .sub-title2 {
   color: #B3B3B3;
   padding: 20px 0;
   line-height: 1.5;
+}
+section.sect7 .desc .body1 {
+  padding: 50px;
+  color: #B3B3B3;
 }
 section.sect7 .target-box {
   display: flex;
@@ -558,7 +535,7 @@ section.sect7 .target-box div li {
 }
 section.sect7 .target-box div.core-target {
   position: relative;
-  background-image: url(./App-images/target-line1.png);
+  background-image: url(/src/assets/project/target-line1.png);
 }
 section.sect7 .target-box div.core-target p {
   position: absolute;
@@ -579,7 +556,7 @@ section.sect7 .target-box div.core-target li:nth-child(2) {
 }
 section.sect7 .target-box div.sub-target {
   position: relative;
-  background-image: url(./App-images/target-line2.png);
+  background-image: url(/src/assets/project/target-line2.png);
 }
 section.sect7 .target-box div.sub-target p {
   position: absolute;
@@ -603,18 +580,17 @@ section.sect7 .target-box div.sub-target li:nth-child(3) {
   bottom: 40px;
 }
 section.sect8 {
-  height: 100vh;
   padding: 80px 0;
 }
 section.sect8 .desc {
   text-align: center;
 }
-section.sect8 .desc .sub-title2 {
+section.sect8 .desc .body1 {
   color: #6D6E71;
   line-height: 1.5;
   padding: 20px;
 }
-section.sect8 .desc .sub-title2 span {
+section.sect8 .desc .body1 span {
   color: #FF4D4F;
 }
 section.sect8 .persona-box {
@@ -626,11 +602,9 @@ section.sect8 .persona-box {
   gap: 15px;
 }
 section.sect8 .persona-box > div {
-  width: 800px;
   margin: auto;
 }
 section.sect8 .persona-box h2 {
-  width: 450px;
   margin: auto;
   border-radius: 5px 5px 0 0;
   padding: 15px;
@@ -639,7 +613,7 @@ section.sect8 .persona-box h2 {
   text-align: center;
 }
 section.sect8 .persona-box .persona-desc {
-  width: 100%;
+  width: 80%;
   margin: auto;
   border: 1px solid #FF4D4F;
   padding: 20px 50px;
@@ -647,9 +621,6 @@ section.sect8 .persona-box .persona-desc {
 }
 section.sect8 .persona-box .persona-desc .persona-target {
   width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 section.sect8 .persona-box .persona-desc .persona-target img {
   width: 150px;
@@ -676,7 +647,6 @@ section.sect8 .persona-box .persona-desc .spec-box .spec {
 }
 section.sect8 .persona-box .persona-desc .spec-box .detail {
   color: #6D6E71;
-  height: 110px;
 }
 section.sect8 .persona-box .painpoint {
   display: flex;
@@ -689,12 +659,7 @@ section.sect8 .persona-box .painpoint {
   margin-top: 10px;
 }
 section.sect8 .persona-box .painpoint > div {
-  width: 50%;
   padding: 10px 0;
-}
-section.sect8 .persona-box .painpoint .need {
-  border-left: 1px dashed #FF4D4F;
-  padding-left: 20px;
 }
 section.sect8 .persona-box .painpoint p {
   display: inline-block;
@@ -717,6 +682,7 @@ section.sect8 .persona-box .painpoint ul li span {
 section.sect9 {
   height: 100vh;
   padding: 80px 150px;
+  white-space: nowrap;
 }
 section.sect9 .desc {
   text-align: center;
@@ -853,6 +819,7 @@ section.sect9 .opportunites ul li {
   padding: 10px;
 }
 section.sect10 {
+  white-space: nowrap;
   height: 100vh;
   padding: 80px 150px;
   text-align: center;
@@ -1030,47 +997,33 @@ section.sect11 {
   height: 50vh;
   background-color: #FF4D4F;
   color: #fff;
-  padding: 80px 200px;
 }
 section.sect11 h2 {
   color: #fff;
   text-align: center;
 }
 section.sect11 .logo-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 100px;
   height: 100%;
 }
 section.sect11 .logo-box .logo {
-  position: relative;
-  background-image: url(./App-images/check-bg.png);
+  display: inline-block;
+  background-image: url(/src/assets/project/check-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: 400px;
-  height: 220px;
 }
 section.sect11 .logo-box .logo img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 300px;
   object-fit: cover;
+}
+section.sect11 .logo-box .desc .title2 {
+  white-space: nowrap;
 }
 section.sect11 .logo-box .desc p {
   padding-top: 20px;
 }
-section.sect12 {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
 section.sect12 article {
-  padding: 80px 150px;
-  width: 50%;
+  height: 100%;
 }
 section.sect12 article.art1 {
   background-color: #FFEEEE;
@@ -1113,8 +1066,8 @@ section.sect12 article.art1 .typography .pr-font h3 {
 }
 section.sect12 article.art2 .color-box .color {
   width: 400px;
-  height: 150px;
-  margin-bottom: 20px;
+  height: 100px;
+  margin-bottom: 100px;
 }
 section.sect12 article.art2 .color-box .color.main .col1 {
   background-color: #FF4D4F;
@@ -1147,12 +1100,12 @@ section.sect12 article.art2 .color-box .color.neutral .co4 {
   background-color: #fff;
 }
 section.sect12 article.art2 .color-box .color .col {
-  height: 50%;
+  height: 60%;
 }
 section.sect12 article.art2 .color-box .color .col.col1 {
   border-radius: 20px 20px 0 0;
   color: #fff;
-  padding: 30px;
+  padding: 15px;
 }
 section.sect12 article.art2 .color-box .color .col.col2 {
   border-radius: 0 0 20px 20px;
@@ -1173,7 +1126,7 @@ section.sect12 article.art2 .color-box .color .col.col2 ul li.co4 {
   border-radius: 0 0 20px 0;
 }
 section.sect12 article.art2 .icon {
-  margin-top: 50px;
+  margin-top: 80px;
   height: 50%;
 }
 section.sect12 article.art2 .icon > ul > li {
@@ -1207,20 +1160,300 @@ section.sect12 article.art2 .icon .icon-box img {
   border-radius: 5px;
 }
 section.sect12 article.art2 .icon .nav {
-  height: 65px;
+  height: 70px;
 }
 section.sect12 article.art2 .icon .nav .icon-box {
-  width: 380px;
+  width: 350px;
 }
 section.sect12 article.art2 .icon .category {
-  height: 130px;
+  height: 150px;
 }
 section.sect12 article.art2 .icon .category .icon-box {
-  width: 250px;
+  width: 300px;
 }
 section.sect12 article.art2 .icon .sub {
-  height: 130px;
+  height: 150px;
 }
 section.sect12 article.art2 .icon .sub .icon-box {
-  width: 380px;
+  width: 350px;
+}
+
+@media screen and (max-width: 800px) {
+  section.sect1 .sub-title2 {
+    font-size: 3vw;
+  }
+  section.sect1 .pf_bg {
+    text-align: right;
+    right: -100px;
+    top: -50px;
+  }
+  section.sect1 .main .desc {
+    left: 10%;
+    top: 65%;
+  }
+  section.sect1 .main .desc h2 {
+    font-size: 3rem;
+  }
+  section.sect1 .main .app-main {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+    width: 500px;
+  }
+  section.sect2 .desc {
+    width: 100%;
+    padding: 0 20px;
+  }
+  section.sect2 .desc .sub-title1 {
+    font-size: 3vw;
+    white-space: wrap;
+  }
+  section.sect3 {
+    height: 190vh;
+    padding: 80px 20px;
+  }
+  section.sect3 .sub-title1 {
+    font-size: 3vw;
+    white-space: wrap;
+  }
+  section.sect3 .survey > li {
+    width: 100%;
+    margin: 20px 0;
+  }
+  section.sect4 {
+    padding: 80px 20px;
+  }
+  section.sect5 .goal .desc .sub-title1 {
+    font-size: 3vw;
+  }
+  section.sect5 .goal .triangle {
+    bottom: -20px;
+    width: 30px;
+    height: 30px;
+  }
+  section.sect5 .keywords ul li {
+    width: 180px;
+    height: 180px;
+  }
+  section.sect5 .keywords ul li .sub-title1 {
+    font-size: 3.5vw;
+  }
+  section.sect5 .keywords ul li .body2 {
+    font-size: 2.8vw;
+    z-index: 10;
+  }
+  section.sect6 {
+    height: 170vh;
+    padding: 80px 20px;
+  }
+  section.sect6 .asis-box {
+    flex-direction: column;
+  }
+  section.sect7 {
+    height: 140vh;
+    padding: 80px 20px;
+  }
+  section.sect7 .target-box {
+    flex-direction: column;
+    gap: 50px;
+  }
+  section.sect8 {
+    height: 230vh;
+  }
+  section.sect8 .persona-box {
+    flex-direction: column;
+    gap: 50px;
+  }
+  section.sect8 .persona-box > div {
+    width: 90%;
+  }
+  section.sect8 .persona-box h2 {
+    width: 90%;
+  }
+  section.sect8 .persona-box .persona-target img {
+    padding-bottom: 20px;
+  }
+  section.sect8 .persona-box .painpoint {
+    flex-direction: column;
+  }
+  section.sect8 .persona-box .painpoint > div {
+    width: 100%;
+    padding: 20px 50px;
+  }
+  section.sect11 {
+    padding: 80px 20px;
+  }
+  section.sect11 .logo {
+    width: 100%;
+    padding: 30px 0 50px 0;
+    text-align: center;
+  }
+  section.sect11 .desc {
+    width: 82%;
+    margin: auto;
+  }
+  section.sect12 article {
+    padding: 80px 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 801px) {
+  section.sect1 .pf_bg {
+    right: -10px;
+    top: -50px;
+  }
+  section.sect1 .main .desc {
+    left: 10%;
+    top: 65%;
+  }
+  section.sect1 .main .desc h2 {
+    font-size: 3rem;
+  }
+  section.sect1 .main .app-main {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 700px;
+  }
+  section.sect3 {
+    height: 210vh;
+    padding: 80px 100px;
+  }
+  section.sect3 .sub-title1 {
+    font-size: 24px;
+    white-space: wrap;
+  }
+  section.sect3 .survey > li {
+    width: 100%;
+    margin: 20px 0;
+  }
+  section.sect4 {
+    padding: 80px 100px;
+  }
+  section.sect6 {
+    padding: 80px 150px;
+  }
+  section.sect7 {
+    height: 130vh;
+    padding: 80px 20px;
+  }
+  section.sect7 .target-box {
+    flex-direction: column;
+    gap: 50px;
+  }
+  section.sect8 {
+    height: 190vh;
+  }
+  section.sect8 .persona-box {
+    flex-direction: column;
+    gap: 50px;
+  }
+  section.sect8 .persona-box > div {
+    width: 800px;
+  }
+  section.sect8 .persona-box h2 {
+    width: 450px;
+  }
+  section.sect8 .persona-box .persona-target img {
+    padding-bottom: 20px;
+  }
+  section.sect8 .persona-box .painpoint .pain {
+    padding: 10px;
+  }
+  section.sect8 .persona-box .painpoint .need {
+    border-left: 1px dashed #FF4D4F;
+    padding: 10px;
+  }
+  section.sect8 .spec-box .detail {
+    height: 110px;
+  }
+  section.sect11 {
+    padding: 80px 100px;
+  }
+  section.sect11 .logo-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.sect11 .desc {
+    width: calc(100% - 350px);
+  }
+  section.sect12 {
+    display: flex;
+    align-items: center;
+  }
+  section.sect12 article {
+    height: 100vh;
+    padding: 80px 50px;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  section.sect1 .main .desc {
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  section.sect1 .main .desc h2 {
+    font-size: 5rem;
+  }
+  section.sect1 .main .app-main {
+    width: 900px;
+  }
+  section.sect3 {
+    height: 100vh;
+    padding: 80px 120px;
+  }
+  section.sect3 .survey {
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.sect3 .survey > li {
+    width: 32%;
+  }
+  section.sect3 .survey > li .body1 {
+    white-space: wrap;
+  }
+  section.sect4 {
+    padding: 80px 200px;
+  }
+  section.sect7 {
+    height: 100vh;
+    padding: 80px 150px;
+  }
+  section.sect7 .target-box {
+    flex-direction: row;
+  }
+  section.sect8 {
+    height: 100vh;
+    padding: 80px 150px;
+  }
+  section.sect8 .persona-box {
+    flex-direction: row;
+  }
+  section.sect8 .persona-box > div {
+    width: 900px;
+  }
+  section.sect8 .persona-box h2 {
+    width: 450px;
+  }
+  section.sect8 .persona-box .persona-target {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  section.sect8 .spec-box .detail {
+    height: 110px;
+  }
+  section.sect11 {
+    padding: 80px 200px;
+  }
+  section.sect11 .desc {
+    width: 60%;
+  }
+  section.sect12 article {
+    padding: 80px 150px;
+  }
 }

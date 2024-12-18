@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url(./font.css);
-@import url(/src/css/base/reset.css);
+@import url(./src/css/base/reset.css);
 @keyframes dance {
   0% {
     transform: rotate(-3deg);

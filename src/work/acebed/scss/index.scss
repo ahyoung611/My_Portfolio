@@ -1,4 +1,4 @@
-@import url(/reset.css);
+@import url(/src/css/base/reset.css);
 
 @mixin flex-center {
     display: flex;
@@ -25,32 +25,32 @@
 
 @font-face {
     font-family: Metropolis-Light;
-    src: url(./font/Metropolis-Light.woff);
+    src: url(/src/work/acebed/font/Metropolis-Light.woff);
 }
 
 @font-face {
     font-family: Metropolis-Medium;
-    src: url(./font/Metropolis-Medium.woff);
+    src: url(/src/work/acebed/font/Metropolis-Medium.woff);
 }
 
 @font-face {
     font-family: Metropolis-Regular;
-    src: url(./font/Metropolis-Regular.woff);
+    src: url(/src/work/acebed/font/Metropolis-Regular.woff);
 }
 
 @font-face {
     font-family: Metropolis-Bold;
-    src: url(./font/Metropolis-Bold.woff);
+    src: url(/src/work/acebed/font/Metropolis-Bold.woff);
 }
 
 @font-face {
     font-family: NotoSansKR-Regular;
-    src: url(./font/NotoSansKR--Regular.woff2);
+    src: url(/src/work/acebed/font/NotoSansKR-Regular.woff2);
 }
 
 @font-face {
     font-family: NotoSansKR-Medium;
-    src: url(./font/NotoSans-Medium.woff);
+    src: url(/src/work/acebed/font/NotoSans-Medium.woff);
 }
 
 
@@ -113,7 +113,7 @@ header {
         }
 
         a {
-            font-family: NotoSansKR-DemiLight;
+            font-family: NotoSansKR-Regular;
             position: relative;
             display: block;
             font-size: 15px;
@@ -216,7 +216,7 @@ header {
                     position: absolute;
 
                     li {
-                        font-family: NotoSansKR-DemiLight;
+                        font-family: NotoSansKR-Regular;
                         padding: 5px 10px;
                         font-size: 15px;
                         font-weight: 400;
@@ -331,6 +331,7 @@ header {
 
 section {
     width: 100%;
+    overflow: hidden;
 
     .arrow {
         position: absolute;
@@ -479,50 +480,35 @@ section {
         margin: 150px 0 40px 0;
     }
 
-    .more-btn {
-        position: absolute;
-        top: 173px;
-        right: 240px;
-        font-size: 16px;
-        letter-spacing: 1px;
-
-        &::after {
-            content: "";
-            display: inline-block;
-            width: 30px;
-            height: 1px;
-            background: #666;
-            vertical-align: middle;
-            margin-left: 14px;
-        }
-    }
-
     &.sect2 {
         position: relative;
         padding-bottom: 80px;
 
         .science-wrap {
-            width: calc(100% - 160px);
-            margin: auto;
             position: relative;
+            margin: auto;
+            overflow: hidden;
             height: 800px;
-            @include flex-sb();
 
-            .tabs,
-            .v-slide-container {
-                width: calc((100% - 710px)/2);
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                    background: #fff;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background: #fff;
+                }
             }
 
             .tabs {
                 position: relative;
-                height: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 300px;
+                height: 150px;
 
                 ul.tab-menu {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-
                     li {
                         a {
                             display: block;
@@ -546,36 +532,77 @@ section {
             }
 
             .h-slide-container {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                max-width: 710px;
                 height: 100%;
-                overflow: hidden;
+                margin: auto;
 
                 .hslide-wrap {
-                    @include flex();
+                    position: relative;
                     width: 710px;
                     height: 100%;
-                    position: relative;
-                    left: 0%;
 
-
-                    .video {
-                        position: relative;
-                        width: 710px;
-                        height: 800px;
-                        margin: auto;
-                        overflow: hidden;
-
-                        video {
+                    .hslide {
+                        &::before {
+                            content: "";
                             position: absolute;
-                            top: 0px;
-                            left: 50%;
-                            transform: translate(-50%, 0);
-                            height: 800px;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 75vh;
+                            background: url(/src/work/acebed/images/sect2_graybg.png) no-repeat center bottom;
+                            z-index: 5;
+                        }
+
+                        .video {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            margin: auto;
+                            overflow: hidden;
+
+                            video {
+                                position: absolute;
+                                top: 0px;
+                                left: 50%;
+                                transform: translate(-50%, 0);
+                            }
+                        }
+
+                        .txt {
+                            position: absolute;
+                            top: auto;
+                            left: 5%;
+                            z-index: 10;
+                            color: #fff;
+
+                            .addtxt1 {
+                                font-family: Metropolis-Bold;
+
+                            }
+
+                            .txt1 {
+                                font-family: NotoSansKR-Medium;
+                                letter-spacing: -3px;
+                            }
+
+                            .txt2 {
+                                font-family: NotoSansKR-Regular;
+                            }
                         }
                     }
+
                 }
             }
 
             .v-slide-container {
+                position: absolute;
+                top: 0;
+                right: 0px;
+                width: 385px;
                 height: 100%;
                 overflow: hidden;
 
@@ -591,11 +618,10 @@ section {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        padding: 40px;
 
                         .txt1 {
+                            font-size: 2.5rem;
                             font-family: NotoSansKR-Medium;
-                            font-size: 40px;
                             font-weight: 500;
                             color: #333;
                             line-height: 54px;
@@ -603,7 +629,7 @@ section {
                         }
 
                         .txt2 {
-                            font-size: 20px;
+                            font-size: 1.2rem;
                             line-height: 30px;
                             margin-top: 24px;
                             font-weight: 200;
@@ -620,7 +646,6 @@ section {
     }
 
     &.sect3 {
-        // position: relative;
         background-color: rgb(244, 247, 250);
         padding-bottom: 150px;
         overflow: hidden;
@@ -667,7 +692,7 @@ section {
                 position: relative;
             }
 
-            .tabs{
+            .tabs {
                 position: relative;
                 height: 720px;
                 margin-top: 50px;
@@ -696,7 +721,6 @@ section {
                             color: #fff;
                             opacity: 0;
                             transition: 1s;
-                            border: 1px solid #f00;
 
                             &.on {
                                 opacity: 1;
@@ -732,16 +756,59 @@ section {
                             }
 
                             button {
-                                border: 1px solid #fff;
+                                position: relative;
+                                border: none;
                                 background: none;
                                 padding: 15px 30px;
                                 color: #fff;
                                 margin-top: 50px;
                                 transition: .5s;
+                                overflow: hidden;
+
+                                &:hover{
+                                    a{
+                                        &::after{
+                                            top: 0;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
 
                                 a {
                                     font-size: 16px;
                                     font-weight: 500;
+
+                                    &::before {
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        box-sizing: border-box;
+                                        border: 1px solid #fff;
+                                        z-index: -2;
+                                    }
+
+                                    &::after{
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 100%;
+                                        left: 0;
+                                        opacity: 0;
+                                        transition: .35s;
+                                        background-color: #0890c0;
+                                        z-index: -1;
+                                    }
+
+                                    span {
+                                        display: inline-block;
+                                        position: relative;
+                                    }
                                 }
                             }
                         }
@@ -804,16 +871,16 @@ section {
         .art2 {
             .news-wrap {
                 position: relative;
-                width: 100%;
+                width: 1440px;
+                margin: 45px auto 0;
                 height: 800px;
                 @include flex-sb();
-
 
                 .left-tit {
                     position: absolute;
                     top: 50%;
-                    left: 180px;
-                    transform: translateY(-50%);
+                    left: 0;
+                    transform: translate(0, -50%);
                     font-size: 26px;
                     line-height: 40px;
                     color: #333;
@@ -822,8 +889,8 @@ section {
                 .tabs {
                     position: absolute;
                     top: 50%;
-                    right: 220px;
-                    transform: translateY(-50%);
+                    right: 0;
+                    transform: translate(0, -50%);
                     width: 315px;
 
                     li {
@@ -1074,17 +1141,16 @@ section {
 }
 
 footer {
-    width: 100%;
-    @include flex-sb();
     position: relative;
+    width: 100%;
     height: 220px;
-    padding: 60px 80px 62px 80px;
+    overflow: hidden;
+    @include flex-sb();
     background: #fff;
-    z-index: 16;
-    border: 1px solid #f00;
 
     .footer-left {
         width: 85%;
+        padding: 60px 80px;
 
         ul.footer-link {
             @include flex();
@@ -1123,8 +1189,9 @@ footer {
 
     .family-site {
         width: 15%;
+        padding: 60px 80px;
 
-        select{
+        select {
             width: 100%;
             padding: 15px 0;
         }
@@ -1217,10 +1284,67 @@ footer {
 
             }
         }
+
+        &.sect2 {
+
+            .arrow {
+                display: none;
+            }
+
+
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            .h-slide-container {
+                width: 100%;
+
+                .hslide {
+                    .txt {
+                        width: 90%;
+                        height: 320px;
+                        bottom: 40px;
+
+                        .addtxt1 {
+                            font-size: 20px;
+                            line-height: 30px;
+                            margin-bottom: 20px;
+                        }
+
+                        .txt1 {
+                            font-size: 25px;
+                            line-height: 35px;
+                            letter-spacing: -3px;
+                        }
+
+                        .txt2 {
+                            font-size: 16px;
+                            line-height: 29px;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+
+            .tabs {
+                display: none;
+            }
+
+            .v-slide-container {
+                display: none;
+            }
+        }
     }
 }
 
 @media screen and (min-width :769px) {
+    .inner {
+        padding: 0 80px;
+    }
+
     header {
         height: 155px;
 
@@ -1284,6 +1408,61 @@ footer {
                 }
             }
         }
+
+        &.sect2 {
+            .arrow {
+                display: none;
+            }
+
+            .tabs {
+                display: none;
+            }
+
+
+            .swiper-pagination {
+                .swiper-pagination-bullet {
+                    width: 15px;
+                    height: 15px;
+                    background: #fff;
+                }
+            }
+
+            .h-slide-container {
+                max-width: 710px;
+
+                .hslide {
+                    .txt {
+                        width: 385px;
+                        height: auto;
+                        bottom: 75px;
+
+                        .addtxt1 {
+                            font-size: 30px;
+                            font-weight: 900;
+                            margin-bottom: 35px;
+                        }
+
+                        .txt1 {
+                            font-size: 40px;
+                            font-weight: 500;
+                            line-height: 54px;
+                            word-break: keep-all;
+                        }
+
+                        .txt2 {
+                            font-size: 20px;
+                            line-height: 30px;
+                            margin-top: 24px;
+                            word-break: keep-all;
+                        }
+                    }
+                }
+            }
+
+            .v-slide-container {
+                display: none;
+            }
+        }
     }
 }
 
@@ -1324,5 +1503,51 @@ footer {
 
     }
 
+    section {
+
+        &.sect2 {
+            .arrow {
+                display: block;
+            }
+
+            .swiper-pagination {
+                display: none;
+            }
+
+            .science-wrap {
+                width: calc(100% - 320px);
+            }
+
+            .tabs {
+                display: block;
+            }
+
+            .h-slide-container {
+                width: calc(100% - 820px);
+
+                .hslide {
+                    &::before {
+                        display: none;
+                    }
+
+                    .txt {
+                        display: none;
+                    }
+                }
+            }
+
+            .v-slide-container {
+                display: block;
+            }
+        }
+
+        &.sect3 {
+            .art2 {
+
+
+                .openSwiper {}
+            }
+        }
+    }
 
 }

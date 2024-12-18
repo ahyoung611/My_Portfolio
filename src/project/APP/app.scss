@@ -1,34 +1,15 @@
-// @import url(/reset.css);
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
-}
+@import url(/src/css/base/reset.css);
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-li {
-    list-style: none;
-}
-
-img {
-    vertical-align: top;
-}
-
-@import url(./font/pretendard.css);
+@import url(/src/css/base/font/pretendard.css);
 
 @font-face {
     font-family: 'Arial Rounded MT Bold Bold';
-    src: url(./font/ARIALROUNDEDMT.woff);
+    src: url(/src/css/base/font/ARIALROUNDEDMT.woff);
 }
 
 @mixin ar-font {
     font-family: 'Arial Rounded MT Bold Bold';
 }
-
 
 $font-size-T1: 22px;
 $font-size-T2: 34px;
@@ -89,13 +70,12 @@ body {
 
 .sub-title1 {
     @include font-styles($font-size-ST1, $font-family-Ps );
-    white-space: nowrap;
     line-height: 1.5;
     letter-spacing: .5px;
 }
 
 .sub-title2 {
-    @include font-styles($font-size-ST2, $font-family-Pr );
+    @include font-styles($font-size-ST2, $font-family-Pm );
     line-height: 1.5;
 }
 
@@ -109,7 +89,7 @@ body {
     line-height: 1.5;
 }
 
-//-----------------------------------------------------------------------------
+//---------------------------------------------------------
 @mixin flex {
     display: flex;
     align-items: center;
@@ -155,7 +135,7 @@ body {
         );
 }
 
-
+//---------------------------------------------------------
 section {
     overflow: hidden;
 
@@ -164,16 +144,15 @@ section {
         position: relative;
         height: $height-100vh;
         background-color: $main-color-600;
-        background-image: url(./App-images/app-back-bg.png);
+        background-image: url(/src/assets/project/app-back-bg.png);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         color: #fff;
+        padding-left: 30px;
 
-        .pf_bg{
+        .pf_bg {
             position: absolute;
-            right: -100px;
-            top: -150px;
         }
 
         .top {
@@ -182,7 +161,7 @@ section {
             gap: 20px;
             position: absolute;
             top: 0;
-            padding: 30px 50px;
+            padding: 30px 0;
 
             li {
                 span {
@@ -195,9 +174,10 @@ section {
         .main {
             .desc {
                 position: absolute;
-                left: 10%;
-                top: 50%;
-                transform: translateY(-50%);
+
+                h2 {
+                    font-family: 'Arial Rounded MT Bold Bold';
+                }
 
                 p {
                     padding-top: 20px;
@@ -206,8 +186,6 @@ section {
 
             .app-main {
                 position: absolute;
-                left: 45%;
-                top: 8%;
             }
         }
 
@@ -217,7 +195,7 @@ section {
             gap: 30px;
             position: absolute;
             bottom: 0;
-            padding: 30px 50px;
+            padding: 30px 0;
 
             li {
                 span {
@@ -241,6 +219,7 @@ section {
 
             p {
                 line-height: 1.8;
+                white-space: nowrap;
             }
         }
 
@@ -248,14 +227,9 @@ section {
 
     //Research
     &.sect3 {
-        height: $height-100vh;
         background-color: $sub-color-500;
-        padding: 80px 150px;
 
         .survey {
-            @include flex-sb();
-            padding-top: 80px;
-
             .survey1 {
                 .graph {
                     align-items: end;
@@ -373,7 +347,6 @@ section {
             }
 
             >li {
-                width: 32%;
                 height: 580px;
                 border-radius: 10px;
                 background-color: #fff;
@@ -479,7 +452,6 @@ section {
     &.sect4 {
         height: $height-100vh;
         background-color: $sub-color-600;
-        padding: 80px 300px;
 
         .sub-title1 {
             color: #fff;
@@ -589,6 +561,10 @@ section {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            .sub-title1 {
+                white-space: nowrap;
+            }
         }
 
         .goal {
@@ -656,11 +632,10 @@ section {
     &.sect6 {
         height: $height-100vh;
         text-align: center;
-        padding: 80px 150px;
 
         .asis {
             color: $neutral-color-400;
-            padding: 10px;
+            padding: 30px;
 
             h2 {
                 padding: 10px;
@@ -678,11 +653,15 @@ section {
                 padding: 10px;
             }
 
+            h2 {
+                padding: 20px 0;
+            }
+
             .line {
                 position: relative;
                 width: 1px;
                 margin: 20px auto;
-                height: 100px;
+                height: 130px;
                 border: 1px dashed $main-color-400;
             }
 
@@ -720,15 +699,22 @@ section {
     &.sect7 {
         height: $height-100vh;
         text-align: center;
-        padding: 80px 150px;
         background-color: $sub-color-600;
         color: #fff;
 
-        .desc .sub-title2 {
-            color: $neutral-color-400;
-            padding: 20px 0;
-            line-height: 1.5
+        .desc {
+            .sub-title2 {
+                color: $neutral-color-400;
+                padding: 20px 0;
+                line-height: 1.5
+            }
+
+            .body1 {
+                padding: 50px;
+                color: $neutral-color-400;
+            }
         }
+
 
         .target-box {
             @include flex();
@@ -754,7 +740,7 @@ section {
 
                 &.core-target {
                     position: relative;
-                    background-image: url(./App-images/target-line1.png);
+                    background-image: url(/src/assets/project/target-line1.png);
 
                     p {
                         position: absolute;
@@ -780,7 +766,7 @@ section {
 
                 &.sub-target {
                     position: relative;
-                    background-image: url(./App-images/target-line2.png);
+                    background-image: url(/src/assets/project/target-line2.png);
 
                     p {
                         position: absolute;
@@ -815,13 +801,12 @@ section {
 
     //persona
     &.sect8 {
-        height: $height-100vh;
         padding: 80px 0;
 
         .desc {
             text-align: center;
 
-            .sub-title2 {
+            .body1 {
                 color: $neutral-color-500;
                 line-height: 1.5;
                 padding: 20px;
@@ -839,12 +824,10 @@ section {
             gap: 15px;
 
             >div {
-                width: 800px;
                 margin: auto;
             }
 
             h2 {
-                width: 450px;
                 margin: auto;
                 border-radius: 5px 5px 0 0;
                 padding: 15px;
@@ -854,7 +837,7 @@ section {
             }
 
             .persona-desc {
-                width: 100%;
+                width: 80%;
                 margin: auto;
                 border: 1px solid $main-color-600;
                 padding: 20px 50px;
@@ -862,8 +845,6 @@ section {
 
                 .persona-target {
                     width: 100%;
-                    @include flex();
-                    gap: 20px;
 
                     img {
                         width: 150px;
@@ -893,7 +874,7 @@ section {
 
                     .detail {
                         color: $neutral-color-500;
-                        height: 110px
+
                     }
                 }
             }
@@ -904,13 +885,9 @@ section {
                 margin-top: 10px;
 
                 &>div {
-                    width: 50%;
-                    padding: 10px 0;
-                }
+                    // width: 50%;
 
-                .need {
-                    border-left: 1px dashed $main-color-600;
-                    padding-left: 20px;
+                    padding: 10px 0;
                 }
 
                 p {
@@ -943,6 +920,7 @@ section {
     &.sect9 {
         height: $height-100vh;
         padding: 80px 150px;
+        white-space: nowrap;
 
         .desc {
             text-align: center;
@@ -1078,6 +1056,7 @@ section {
 
     //information
     &.sect10 {
+        white-space: nowrap;
         height: $height-100vh;
         padding: 80px 150px;
         text-align: center;
@@ -1285,7 +1264,6 @@ section {
         height: $height-50vh;
         background-color: $main-color-600;
         color: #fff;
-        padding: 80px 200px;
 
         h2 {
             color: #fff;
@@ -1293,29 +1271,24 @@ section {
         }
 
         .logo-box {
-            @include flex();
-            justify-content: center;
-            gap: 100px;
             height: 100%;
 
             .logo {
-                position: relative;
-                background-image: url(./App-images/check-bg.png);
+                display: inline-block;
+                background-image: url(/src/assets/project/check-bg.png);
                 @include background();
-                width: 400px;
-                height: 220px;
 
                 img {
-                    position: absolute;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
                     width: 300px;
                     object-fit: cover;
                 }
             }
 
             .desc {
+                .title2 {
+                    white-space: nowrap;
+                }
+
                 p {
                     padding-top: 20px;
                 }
@@ -1327,12 +1300,8 @@ section {
 
     // Design system 
     &.sect12 {
-        height: $height-100vh;
-        @include flex();
-
         article {
-            padding: 80px 150px;
-            width: 50%;
+            height: 100%;
 
             &.art1 {
                 background-color: $sub-color-500;
@@ -1390,8 +1359,8 @@ section {
                 .color-box {
                     .color {
                         width: 400px;
-                        height: 150px;
-                        margin-bottom: 20px;
+                        height: 100px;
+                        margin-bottom: 100px;
 
                         &.main {
                             .col1 {
@@ -1438,12 +1407,12 @@ section {
                         }
 
                         .col {
-                            height: 50%;
+                            height: 60%;
 
                             &.col1 {
                                 border-radius: 20px 20px 0 0;
                                 color: #fff;
-                                padding: 30px;
+                                padding: 15px;
                             }
 
                             &.col2 {
@@ -1472,7 +1441,7 @@ section {
                 }
 
                 .icon {
-                    margin-top: 50px;
+                    margin-top: 80px;
                     height: 50%;
 
                     &>ul {
@@ -1482,7 +1451,6 @@ section {
                             width: 140px;
                             position: relative;
                             @include flex();
-
                             gap: 50px;
                             white-space: nowrap;
                         }
@@ -1508,26 +1476,26 @@ section {
                     }
 
                     .nav {
-                        height: 65px;
+                        height: 70px;
 
                         .icon-box {
-                            width: 380px;
+                            width: 350px;
                         }
                     }
 
                     .category {
-                        height: 130px;
+                        height: 150px;
 
                         .icon-box {
-                            width: 250px;
+                            width: 300px;
                         }
                     }
 
                     .sub {
-                        height: 130px;
+                        height: 150px;
 
                         .icon-box {
-                            width: 380px;
+                            width: 350px;
                         }
                     }
                 }
@@ -1536,6 +1504,409 @@ section {
     }
 }
 
-@media screen and (max-width:640px) {}
+@media screen and (max-width:800px) {
+    section {
+        &.sect1 {
+            .sub-title2 {
+                font-size: 3vw;
+            }
 
-@media screen and (min-width:641px) {}
+            .pf_bg {
+                text-align: right;
+                right: -100px;
+                top: -50px;
+
+            }
+
+            .main {
+                .desc {
+                    left: 10%;
+                    top: 65%;
+
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
+
+                .app-main {
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 20%;
+                    width: 500px;
+                }
+            }
+        }
+
+        &.sect2 {
+            .desc {
+                width: 100%;
+                padding: 0 20px;
+
+                .sub-title1 {
+                    font-size: 3vw;
+                    white-space: wrap;
+                }
+            }
+        }
+
+        &.sect3 {
+            height: 190vh;
+            padding: 80px 20px;
+
+            .sub-title1 {
+                font-size: 3vw;
+                white-space: wrap;
+            }
+
+            .survey {
+                >li {
+                    width: 100%;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        &.sect4 {
+            padding: 80px 20px;
+        }
+
+        &.sect5 {
+            .goal {
+                .desc {
+                    .sub-title1 {
+                        font-size: 3vw;
+                    }
+                }
+
+                .triangle {
+                    bottom: -20px;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .keywords {
+                ul {
+                    li {
+                        width: 180px;
+                        height: 180px;
+
+                        .sub-title1 {
+                            font-size: 3.5vw;
+                        }
+
+                        .body2 {
+                            font-size: 2.8vw;
+                            z-index: 10;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.sect6 {
+            height: 170vh;
+            padding: 80px 20px;
+
+            .asis-box {
+                flex-direction: column;
+            }
+        }
+
+        &.sect7 {
+            height: 140vh;
+            padding: 80px 20px;
+
+            .target-box {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+
+        &.sect8 {
+            height: 230vh;
+
+            .persona-box {
+                flex-direction: column;
+                gap: 50px;
+
+                >div {
+                    width: 90%;
+                }
+
+                h2 {
+                    width: 90%;
+                }
+
+                .persona-target {
+                    img {
+                        padding-bottom: 20px;
+                    }
+                }
+
+                .painpoint {
+                    flex-direction: column;
+
+                    &>div {
+                        width: 100%;
+                        padding: 20px 50px;
+                    }
+                }
+            }
+
+        }
+
+        &.sect11 {
+            padding: 80px 20px;
+
+            .logo {
+                width: 100%;
+                padding: 30px 0 50px 0;
+                text-align: center;
+            }
+
+            .desc {
+                width: 82%;
+                margin: auto;
+            }
+        }
+
+        &.sect12{
+            article{
+                padding: 80px 20px;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width:801px) {
+    section {
+        &.sect1 {
+            .pf_bg {
+                right: -10px;
+                top: -50px;
+            }
+
+            .main {
+                .desc {
+                    left: 10%;
+                    top: 65%;
+
+                    h2 {
+                        font-size: 3rem;
+                    }
+                }
+
+                .app-main {
+                    right: 5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 700px;
+                }
+            }
+        }
+
+        &.sect3 {
+            height: 210vh;
+            padding: 80px 100px;
+
+            .sub-title1 {
+                font-size: 24px;
+                white-space: wrap;
+            }
+
+            .survey {
+                >li {
+                    width: 100%;
+                    margin: 20px 0;
+                }
+            }
+        }
+
+        &.sect4 {
+            padding: 80px 100px;
+        }
+
+        &.sect6 {
+            padding: 80px 150px;
+        }
+
+        &.sect7 {
+            height: 130vh;
+            padding: 80px 20px;
+
+            .target-box {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+
+        &.sect8 {
+            height: 190vh;
+
+            .persona-box {
+                flex-direction: column;
+                gap: 50px;
+
+                >div {
+                    width: 800px;
+                }
+
+                h2 {
+                    width: 450px;
+                }
+
+                .persona-target {
+                    img {
+                        padding-bottom: 20px;
+                    }
+                }
+
+                .painpoint {
+
+                    .pain {
+                        padding: 10px;
+                    }
+
+                    .need {
+                        border-left: 1px dashed $main-color-600;
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .spec-box {
+                .detail {
+                    height: 110px;
+                }
+            }
+        }
+
+        &.sect11 {
+            padding: 80px 100px;
+
+            .logo-box {
+                @include flex-sb();
+            }
+
+            .desc {
+                width: calc(100% - 350px);
+            }
+        }
+
+        &.sect12{
+             @include flex();
+             
+            article{
+                height: 100vh;
+                padding: 80px 50px;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1300px) {
+    section {
+        &.sect1 {
+
+            .main {
+                .desc {
+                    left: 10%;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    h2 {
+                        font-size: 5rem;
+                    }
+                }
+
+                .app-main {
+                    width: 900px;
+                }
+
+            }
+        }
+
+        &.sect3 {
+            height: $height-100vh;
+            padding: 80px 120px;
+
+
+            .survey {
+                padding-top: 80px;
+                @include flex-sb();
+
+                >li {
+                    width: 32%;
+
+                    .body1 {
+                        white-space: wrap;
+                    }
+                }
+            }
+
+
+        }
+
+        &.sect4 {
+            padding: 80px 200px;
+        }
+
+        &.sect7 {
+            height: 100vh;
+            padding: 80px 150px;
+
+            .target-box {
+                flex-direction: row;
+            }
+        }
+
+        &.sect8 {
+            height: 100vh;
+            padding: 80px 150px;
+
+            .persona-box {
+                flex-direction: row;
+
+                >div {
+                    width: 900px;
+                }
+
+                h2 {
+                    width: 450px;
+                }
+
+                .persona-target {
+                    @include flex();
+                    gap: 20px;
+                }
+
+            }
+
+            .spec-box {
+                .detail {
+                    height: 110px;
+                }
+            }
+        }
+
+        &.sect11 {
+            padding: 80px 200px;
+
+            .desc{
+                width: 60%;
+            }
+
+        }
+
+        &.sect12{
+            article{
+                padding: 80px 150px;
+            }
+        }
+    }
+}

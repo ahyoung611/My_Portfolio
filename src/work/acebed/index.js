@@ -74,7 +74,7 @@ next.forEach(function (nextElem) {
 })
 
 
-//sect2 ----------------------------------------------------------
+//sect2 ------------------------------------------------
 
 var hswiper = new Swiper(".hSwiper", {
     pagination: {
@@ -127,7 +127,7 @@ hswiper.on('slideChange', function () {
 })
 
 
-//sect3 ---------------------------------------------------------
+//sect3 -----------------------------------------
 
 
 var col1swiper = new Swiper(".col1Swiper", {
@@ -159,16 +159,18 @@ var col2swiper = new Swiper(".col2Swiper", {
 });
 
 
-const cElems = document.querySelectorAll('.art1 .tab-menu li a')
+// 초기 상태 설정
+document.querySelector('.col1Swiper').style.display = 'block';
+document.querySelector('.col2Swiper').style.display = 'none';
+
+const cElems = document.querySelectorAll('.art1 .tab-menu li a');
 const csElems1 = document.querySelectorAll('.col1Swiper .swiper-slide');
 const csElems2 = document.querySelectorAll('.col2Swiper .swiper-slide');
-const descElems = document.querySelectorAll('.art1 .desc');
+const descElems1 = document.querySelectorAll('.art1 .col1Swiper .desc');
+const descElems2 = document.querySelectorAll('.art1 .col2Swiper .desc');
 
-// console.log(cElems);
 
 cElems.forEach(function (cElem, idx) {
-    // console.log(liElem, idx);
-
     cElem.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -185,33 +187,39 @@ cElems.forEach(function (cElem, idx) {
             document.querySelector('.col1Swiper').style.display = 'block';
             document.querySelector('.col2Swiper').style.display = 'none';
 
+            // Swiper 업데이트 호출
+            col1swiper.update();
+
             // 첫 번째 Swiper 관련 슬라이드와 설명 업데이트
             csElems1.forEach(function (item) {
                 item.classList.remove('on');
             });
-            descElems.forEach(function (item) {
+            descElems1.forEach(function (item) {
                 item.classList.remove('on');
             });
             csElems1[0].classList.add('on');
-            descElems[0].classList.add('on');
+            descElems1[0].classList.add('on');
         } else if (idx === 1) {
             // 두 번째 Swiper를 첫 번째 슬라이드로 이동하고 표시
             col2swiper.slideTo(0);
             document.querySelector('.col1Swiper').style.display = 'none';
             document.querySelector('.col2Swiper').style.display = 'block';
 
+            // Swiper 업데이트 호출
+            col2swiper.update();
+
             // 두 번째 Swiper 관련 슬라이드와 설명 업데이트
             csElems2.forEach(function (item) {
                 item.classList.remove('on');
             });
-            descElems.forEach(function (item) {
+            descElems2.forEach(function (item) {
                 item.classList.remove('on');
             });
             csElems2[0].classList.add('on');
-            descElems[0].classList.add('on');
+            descElems2[0].classList.add('on');
         }
     });
-})
+});
 
 // col1swiper 슬라이드 변경 시 'on' 클래스 업데이트
 col1swiper.on('slideChange', function(){
@@ -220,12 +228,12 @@ col1swiper.on('slideChange', function(){
     csElems1.forEach(function (item) {
         item.classList.remove('on');
     });
-    descElems.forEach(function(item){
+    descElems1.forEach(function(item){
         item.classList.remove('on');
     });
 
     csElems1[activeIdx].classList.add('on');
-    descElems[activeIdx].classList.add('on'); 
+    descElems1[activeIdx].classList.add('on'); 
 });
 
 // col2swiper 슬라이드 변경 시 'on' 클래스 업데이트
@@ -235,12 +243,12 @@ col2swiper.on('slideChange', function(){
     csElems2.forEach(function (item) {
         item.classList.remove('on');
     });
-    descElems.forEach(function(item){
+    descElems2.forEach(function(item){
         item.classList.remove('on');
     });
 
     csElems2[activeIdx].classList.add('on');
-    descElems[activeIdx].classList.add('on'); 
+    descElems2[activeIdx].classList.add('on'); 
 });
 
 //art2 -------------------------------------
