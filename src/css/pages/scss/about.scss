@@ -29,7 +29,6 @@
                     &.on {
                         padding-left: 40px;
                         color: var( --mainColor-color);
-                        // color: #ffffff;
                         transition: all .3s
                     }
                 }
@@ -133,8 +132,7 @@
                         bottom: 0;
                         width: 0%;
                         height: 25px;
-                        background-color: rgba(48, 240, 226,.5);
-                        
+                        background-color: rgba(48, 240, 226,.5);    
                         z-index: -1;
                         transition: .35s;
                     }
