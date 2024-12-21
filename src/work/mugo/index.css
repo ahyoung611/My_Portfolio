@@ -1,10 +1,6 @@
 @charset "UTF-8";
 @import url(./font.css);
-<<<<<<< HEAD
-@import url(./src/css/base/reset.css);
-=======
 @import url(/src/css/base/reset.css);
->>>>>>> ae0cbef (codeworks 업로드)
 @keyframes dance {
   0% {
     transform: rotate(-3deg);

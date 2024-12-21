@@ -29,7 +29,7 @@ button {
 
 /* ********************************** */
 body {
-    line-height: 2em;
+    line-height: 2rem;
     background: #fff;
     font-family: "Noto Sans KR", sans-serif;
     font-optical-sizing: auto;
@@ -86,7 +86,7 @@ header {
 
 h1 {
     position: absolute;
-    left: 54px;
+    left: 30px;
 }
 
 h1 img {
@@ -95,10 +95,9 @@ h1 img {
 
 /* nav ************************************** */
 nav {
-    width: 30%;
-    font-size: 1vw;
+    font-size: 1rem;
     position: absolute;
-    right: 54PX;
+    right: 30px;
 }
 
 nav ul {
@@ -206,8 +205,6 @@ h2 {
     font-size: 1.5vw;
     padding: 3vw 1vw;
 }
-
-
 
 
 /* sect4 */
@@ -342,9 +339,9 @@ footer ul {
         font-size: 4.5vw;
     }
 
-    header h1 img,
     nav {
-        display: none;
+        /* display: none; */
+        width: 300px;
     }
 
     /* sect2 */
@@ -435,9 +432,8 @@ footer ul {
         font-size: 26px;
     }
 
-    header h1 img,
     nav {
-        display: none;
+        width: 400px;
     }
 
     /* sect2 */
@@ -511,9 +507,8 @@ footer ul {
         height: 95vh;
     }
 
-    header h1 img,
     nav {
-        display: block;
+        width: 30%;
     }
 
     button {

@@ -50,10 +50,10 @@
                     <div class="bag"><img src="./images/sect3-bag.png" alt="2-bag"></div>
                     <div class="summary">
                         <h3>The Robust, Comfortable Backpack</h3>
-                        <p>For the adventurous traveller</p>
-                        <p>Available color</p>
+                        <p class="line">For the adventurous traveller</p>
+                        <p class="colp">Available color</p>
                         <ul class="flex color-b">
-                            <li><a href="#"><img src="./images/sect3-color bg1.png" alt=""></a></li>
+                            <li class="on"><a href="#"><img src="./images/sect3-color bg1.png" alt=""></a></li>
                             <li><a href="#"><img src="./images/sect3-color bg2.png" alt=""></a></li>
                         </ul>
                         <p>When you're busy exploring roads less travelled and can't abide bulging pockets, your best
@@ -80,13 +80,16 @@
                     <div class="summary">
                         <h3>The Smooth, Smart Suitcase</h3>
                         <p class="line">For the extended holidaymaker</p>
-                        <p>Available color</p>
+                        <p class="colp">Available color</p>
                         <ul class="flex  color-b">
-                            <li><a href="#"><img src="./images/sect4-color bg1.png" alt=""></a></li>
+                            <li class="on"><a href="#"><img src="./images/sect4-color bg1.png" alt=""></a></li>
                             <li><a href="#"><img src="./images/sect4-color bg2.png" alt=""></a></li>
                             <li><a href="#"><img src="./images/sect4-color bg3.png" alt=""></a></li>
                         </ul>
-                        <p>Glide – not roll – into that overdue holiday with a suitcase that screams ‘out of office’ thanks to an exterior colour reminiscent of pristine ocean waters. More than just the right shade of blue, the Tri-Tech Spinner boasts smooth Aero-TracTM Suspension Wheels and a smart Click-Pop™ Lock.</p>
+                        <p>Glide – not roll – into that overdue holiday with a suitcase that screams ‘out of office’
+                            thanks to an exterior colour reminiscent of pristine ocean waters. More than just the right
+                            shade of blue, the Tri-Tech Spinner boasts smooth Aero-TracTM Suspension Wheels and a smart
+                            Click-Pop™ Lock.</p>
                         <button>SHOP NOW</button>
                     </div>
                 </article>
@@ -105,13 +108,16 @@
                     <div class="bag"><img src="./images/sect5-bag.png" alt="2-bag"></div>
                     <div class="summary">
                         <h3>The Sleek, Hyper-Organised Briefcase</h3>
-                        <p>For that all-important work trip</p>
-                        <p>Available color</p>
+                        <p class="line">For that all-important work trip</p>
+                        <p class="colp">Available color</p>
                         <ul class="flex color-b">
-                            <li><a href="#"><img src="./images/sect3-color bg1.png" alt=""></a></li>
-                            <li><a href="#"><img src="./images/sect3-color bg2.png" alt=""></a></li>
+                            <li class="on"><a href="#"><img src="./images/sect5-color bg1.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/sect5-color bg2.png" alt=""></a></li>
                         </ul>
-                        <p>The Sefton Baihandle is the ultimate briefcase for work trips. Highlights? A front pocket that gives you quick access to your chargers and stationery and padded compartments that keep that all-important laptop and tablet safely stowed. It’ll look sharp paired with your suit, too.</p>
+                        <p>The Sefton Baihandle is the ultimate briefcase for work trips. Highlights? A front pocket
+                            that gives you quick access to your chargers and stationery and padded compartments that
+                            keep that all-important laptop and tablet safely stowed. It’ll look sharp paired with your
+                            suit, too.</p>
                         <button>SHOP NOW</button>
                     </div>
                 </article>
@@ -131,13 +137,14 @@
                     <div class="summary">
                         <h3>The Safe, Germ-Repelling Crossbody</h3>
                         <p class="line">For the systematic sightseer</p>
-                        <p>Available color</p>
+                        <p class="colp">Available color</p>
                         <ul class="flex  color-b">
-                            <li><a href="#"><img src="./images/sect4-color bg1.png" alt=""></a></li>
-                            <li><a href="#"><img src="./images/sect4-color bg2.png" alt=""></a></li>
-                            <li><a href="#"><img src="./images/sect4-color bg3.png" alt=""></a></li>
+                            <li class="on"><a href="#"><img src="./images/sect6-color bg1.png" alt=""></a></li>
+                            <li><a href="#"><img src="./images/sect6-color bg2.png" alt=""></a></li>
                         </ul>
-                        <p>Whether it be a morning tour of Egyptian ruins or a night stroll around the streets of Tokyo, allow yourself to soak up all the sights while your important essentials stay safely nestled across your body. Bonus – the antibacterial  </p>
+                        <p>Whether it be a morning tour of Egyptian ruins or a night stroll around the streets of Tokyo,
+                            allow yourself to soak up all the sights while your important essentials stay safely nestled
+                            across your body. Bonus – the antibacterial </p>
                         <button>SHOP NOW</button>
                     </div>
                 </article>
@@ -146,6 +153,22 @@
         </main>
     </div>
 
+    <script>
+        document.querySelectorAll('.flex.color-b').forEach(ul => {
+            const listItems = ul.querySelectorAll('li'); // 해당 ul 안의 li만 선택
+
+            listItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    // 현재 ul 안의 li에서만 on 클래스 제거
+                    listItems.forEach(li => li.classList.remove('on'));
+
+                    // 클릭한 li에 on 클래스 추가
+                    item.classList.add('on');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

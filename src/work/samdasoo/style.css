@@ -96,7 +96,7 @@ ul.sub-menu {
 ul.sub-menu li{border-bottom: 1px solid rgba(198, 218, 255, .8);}
 
 ul.sub-menu li a {
-    padding: 5px 10px 5px 20px;
+    padding: 10px 15px 10px 20px;
 }
 
 ul.sub-menu li:hover a {

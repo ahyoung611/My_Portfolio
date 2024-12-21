@@ -161,8 +161,27 @@
 #work .container .splide-wrapper .splide .splide__track .splide__slide:hover img {
   filter: grayscale(0%);
 }
+#work .container .splide-wrapper .splide .splide__track .splide__slide:hover .num {
+  -webkit-text-stroke: 0.5px var(--mainColor-color);
+  color: var(--mainColor-color);
+}
 #work .container .splide-wrapper .splide .splide__track .splide__slide:hover .web-icon img {
   filter: grayscale(0%);
+}
+#work .container .splide-wrapper .splide .splide__track .splide__slide:hover .web-icon.gray img {
+  filter: invert(1);
+}
+#work .container .splide-wrapper .splide .splide__track .splide__slide .num {
+  font-family: var(--mainEng-font);
+  position: absolute;
+  left: -15px;
+  top: -20px;
+  -webkit-text-stroke: 0.5px #fff;
+  color: transparent;
+  z-index: 99;
+  transition: 0.35s;
+  font-size: 2rem;
+  font-weight: 600;
 }
 #work .container .splide-wrapper .splide .splide__track .splide__slide img {
   display: inline-block;
@@ -172,7 +191,7 @@
 }
 #work .container .splide-wrapper .splide .splide__track .splide__slide .web-icon {
   position: absolute;
-  right: 25px;
+  right: 10px;
   top: 10px;
   display: flex;
   gap: 5px;
@@ -327,12 +346,6 @@
   }
   #work .work_list ul li {
     width: 80%;
-  }
-  #work .work_list ul li .num {
-    font-size: 1.3rem;
-  }
-  #work .work_list ul li .name {
-    font-size: 1.5rem;
   }
   #work .container {
     right: 3%;

@@ -74,11 +74,7 @@ next.forEach(function (nextElem) {
 })
 
 
-<<<<<<< HEAD
 //sect2 ------------------------------------------------
-=======
-//sect2 ----------------------------------------------------------
->>>>>>> ae0cbef (codeworks 업로드)
 
 var hswiper = new Swiper(".hSwiper", {
     pagination: {
@@ -131,11 +127,7 @@ hswiper.on('slideChange', function () {
 })
 
 
-<<<<<<< HEAD
 //sect3 -----------------------------------------
-=======
-//sect3 ---------------------------------------------------------
->>>>>>> ae0cbef (codeworks 업로드)
 
 
 var col1swiper = new Swiper(".col1Swiper", {
@@ -167,7 +159,6 @@ var col2swiper = new Swiper(".col2Swiper", {
 });
 
 
-<<<<<<< HEAD
 // 초기 상태 설정
 document.querySelector('.col1Swiper').style.display = 'block';
 document.querySelector('.col2Swiper').style.display = 'none';
@@ -180,18 +171,6 @@ const descElems2 = document.querySelectorAll('.art1 .col2Swiper .desc');
 
 
 cElems.forEach(function (cElem, idx) {
-=======
-const cElems = document.querySelectorAll('.art1 .tab-menu li a')
-const csElems1 = document.querySelectorAll('.col1Swiper .swiper-slide');
-const csElems2 = document.querySelectorAll('.col2Swiper .swiper-slide');
-const descElems = document.querySelectorAll('.art1 .desc');
-
-// console.log(cElems);
-
-cElems.forEach(function (cElem, idx) {
-    // console.log(liElem, idx);
-
->>>>>>> ae0cbef (codeworks 업로드)
     cElem.addEventListener('click', function (e) {
         e.preventDefault();
 
@@ -208,46 +187,31 @@ cElems.forEach(function (cElem, idx) {
             document.querySelector('.col1Swiper').style.display = 'block';
             document.querySelector('.col2Swiper').style.display = 'none';
 
-<<<<<<< HEAD
             // Swiper 업데이트 호출
             col1swiper.update();
 
-=======
->>>>>>> ae0cbef (codeworks 업로드)
             // 첫 번째 Swiper 관련 슬라이드와 설명 업데이트
             csElems1.forEach(function (item) {
                 item.classList.remove('on');
             });
-<<<<<<< HEAD
             descElems1.forEach(function (item) {
                 item.classList.remove('on');
             });
             csElems1[0].classList.add('on');
             descElems1[0].classList.add('on');
-=======
-            descElems.forEach(function (item) {
-                item.classList.remove('on');
-            });
-            csElems1[0].classList.add('on');
-            descElems[0].classList.add('on');
->>>>>>> ae0cbef (codeworks 업로드)
         } else if (idx === 1) {
             // 두 번째 Swiper를 첫 번째 슬라이드로 이동하고 표시
             col2swiper.slideTo(0);
             document.querySelector('.col1Swiper').style.display = 'none';
             document.querySelector('.col2Swiper').style.display = 'block';
 
-<<<<<<< HEAD
             // Swiper 업데이트 호출
             col2swiper.update();
 
-=======
->>>>>>> ae0cbef (codeworks 업로드)
             // 두 번째 Swiper 관련 슬라이드와 설명 업데이트
             csElems2.forEach(function (item) {
                 item.classList.remove('on');
             });
-<<<<<<< HEAD
             descElems2.forEach(function (item) {
                 item.classList.remove('on');
             });
@@ -256,16 +220,6 @@ cElems.forEach(function (cElem, idx) {
         }
     });
 });
-=======
-            descElems.forEach(function (item) {
-                item.classList.remove('on');
-            });
-            csElems2[0].classList.add('on');
-            descElems[0].classList.add('on');
-        }
-    });
-})
->>>>>>> ae0cbef (codeworks 업로드)
 
 // col1swiper 슬라이드 변경 시 'on' 클래스 업데이트
 col1swiper.on('slideChange', function(){
@@ -274,20 +228,12 @@ col1swiper.on('slideChange', function(){
     csElems1.forEach(function (item) {
         item.classList.remove('on');
     });
-<<<<<<< HEAD
     descElems1.forEach(function(item){
-=======
-    descElems.forEach(function(item){
->>>>>>> ae0cbef (codeworks 업로드)
         item.classList.remove('on');
     });
 
     csElems1[activeIdx].classList.add('on');
-<<<<<<< HEAD
     descElems1[activeIdx].classList.add('on'); 
-=======
-    descElems[activeIdx].classList.add('on'); 
->>>>>>> ae0cbef (codeworks 업로드)
 });
 
 // col2swiper 슬라이드 변경 시 'on' 클래스 업데이트
@@ -297,20 +243,12 @@ col2swiper.on('slideChange', function(){
     csElems2.forEach(function (item) {
         item.classList.remove('on');
     });
-<<<<<<< HEAD
     descElems2.forEach(function(item){
-=======
-    descElems.forEach(function(item){
->>>>>>> ae0cbef (codeworks 업로드)
         item.classList.remove('on');
     });
 
     csElems2[activeIdx].classList.add('on');
-<<<<<<< HEAD
     descElems2[activeIdx].classList.add('on'); 
-=======
-    descElems[activeIdx].classList.add('on'); 
->>>>>>> ae0cbef (codeworks 업로드)
 });
 
 //art2 -------------------------------------

@@ -28,7 +28,7 @@
 }
 #about .about_wrap .txt ul li.on {
   padding-left: 40px;
-  color: #ffffff;
+  color: var(--mainColor-color);
   transition: all 0.3s;
 }
 #about .about_wrap .txt ul .item01.on:after {

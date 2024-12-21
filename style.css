@@ -31,5 +31,4 @@ section {
     overflow: hidden;
     min-height: 100vh;
     contain: paint;
-    border: 1px solid #000;
 }

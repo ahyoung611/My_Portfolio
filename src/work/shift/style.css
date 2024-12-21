@@ -79,6 +79,10 @@ ul.menu {
 
 }
 
+ul.menu li a{
+    transition: .35s;
+}
+
 ul.menu li:hover a {
     background: #000f9f;
     color: #fff;
@@ -127,8 +131,6 @@ main .video video {
 .main-visual img {
     width: 600px;
 }
-
-
 
 /* sect1 */
 #sect1 {
@@ -195,6 +197,7 @@ a.close1 {
     right: -118px;
     top: 15px;
     opacity: .5;
+    transition: .35s;
     
 }
 
@@ -226,6 +229,7 @@ a.close2 {
     top: 10px;
     opacity: .5;
     z-index: 99; 
+    transition: .35s;
 }
 
 a.close2:hover{

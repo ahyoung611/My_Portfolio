@@ -1,8 +1,6 @@
 #about {
     overflow: visible;
 
-    
-
     .about_wrap {
         position: relative;
         margin: auto;
@@ -30,7 +28,8 @@
 
                     &.on {
                         padding-left: 40px;
-                        color: #ffffff;
+                        color: var( --mainColor-color);
+                        // color: #ffffff;
                         transition: all .3s
                     }
                 }

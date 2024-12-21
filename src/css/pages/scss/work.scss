@@ -191,12 +191,36 @@
                                 filter: grayscale(0%);
                             }
 
+                            .num {
+                                -webkit-text-stroke: .5px var(--mainColor-color);
+                                color: var(--mainColor-color);
+                            }
+
                             .web-icon {
                                 img {
                                     filter: grayscale(0%);
                                 }
+
+                                &.gray {
+                                    img {
+                                        filter: invert(1);
+                                    }
+                                }
                             }
 
+                        }
+
+                        .num {
+                            font-family: var(--mainEng-font);
+                            position: absolute;
+                            left: -15px;
+                            top: -20px;
+                            -webkit-text-stroke: .5px #fff;
+                            color:transparent;
+                            z-index: 99;
+                            transition: .35s;
+                            font-size: 2rem;
+                            font-weight: 600;
                         }
 
                         img {
@@ -208,7 +232,7 @@
 
                         .web-icon {
                             position: absolute;
-                            right: 25px;
+                            right: 10px;
                             top: 10px;
                             display: flex;
                             gap: 5px;
@@ -428,14 +452,6 @@
 
                 li {
                     width: 80%;
-
-                    .num {
-                        font-size: 1.3rem;
-                    }
-
-                    .name {
-                        font-size: 1.5rem;
-                    }
                 }
             }
         }
