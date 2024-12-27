@@ -28,7 +28,7 @@
 
                     &.on {
                         padding-left: 40px;
-                        color: var( --mainColor-color);
+                        color: var(--mainColor-color);
                         transition: all .3s
                     }
                 }
@@ -107,8 +107,6 @@
 
                 .about_title {
                     position: absolute;
-                    left: 18%;
-                    top: 25%;
                     font-family: var(--mainEng-font);
                     text-transform: capitalize;
                     font-style: italic;
@@ -132,7 +130,7 @@
                         bottom: 0;
                         width: 0%;
                         height: 25px;
-                        background-color: rgba(48, 240, 226,.5);    
+                        background-color: rgba(48, 240, 226, .5);
                         z-index: -1;
                         transition: .35s;
                     }
@@ -165,7 +163,7 @@
 
                 &.cont01 {
                     li {
-                        margin: 20px 0;
+                        margin: 30px 0;
                     }
 
                     .num {
@@ -188,12 +186,17 @@
                             font-family: var(--mainEng-font);
                             font-weight: 600;
                             text-transform: capitalize;
-                            color: var(--white);
+                            // color: var(--white);
+                            color: var(--mainColor-color);
                         }
                     }
 
                     .iam-detail {
-                        padding: 10px 0;
+                        padding: 10px 0px 10px 20px;
+
+                        span {
+                            font-weight: 600;
+                        }
                     }
 
                 }
@@ -256,6 +259,7 @@
 
                     .about_title {
                         left: 50%;
+                        top: 25%;
                         transform: translateX(-50%);
                         font-size: 2rem;
                         padding: 10px 0;
@@ -282,6 +286,7 @@
                         }
 
                         .txt_container {
+                            width: 90%;
                             top: 20%;
                             transform: translateX(-47%);
 
@@ -353,29 +358,30 @@
 
         .about_wrap {
             display: flex;
-            width: 95%;
+            width: 100%;
             height: auto;
 
             .txt {
+                width: 35%;
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
                 padding-left: 100px;
-                width: 50%;
                 height: 100%;
             }
 
             .cont-box {
-                width: 50%;
+                width: 65%;
 
                 .cont {
                     height: 100vh;
 
                     .about_title {
-                        left: 18%;
+                        left: 5%;
                         top: 25%;
                         font-size: 2.5rem;
                         padding: 10px 30px 10px 10px;
+
 
                         span {
                             font-size: 1.5rem;
@@ -384,7 +390,7 @@
 
                     .txt_container {
                         width: 70%;
-                        left: 22%;
+                        left: 10%;
                         top: 35%;
 
                         li {
@@ -393,6 +399,10 @@
                     }
 
                     &.cont01 {
+
+                        .txt_container {
+                            width: 90%;
+                        }
 
                         .iam-title {
                             font-size: 1.3rem;
@@ -416,6 +426,34 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (min-width:1024px){
+    #about {
+
+        .about_wrap {
+
+            .txt {
+                width: 50%;
+            }
+
+            .cont-box {
+                width: 50%;
+
+                .cont {
+                    .about_title {
+                        left: 18%;
+                    }
+
+                    .txt_container {
+                        left: 22%;
                     }
                 }
             }

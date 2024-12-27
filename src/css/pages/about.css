@@ -77,8 +77,6 @@
 }
 #about .about_wrap .cont-box .cont .about_title {
   position: absolute;
-  left: 18%;
-  top: 25%;
   font-family: var(--mainEng-font);
   text-transform: capitalize;
   font-style: italic;
@@ -124,7 +122,7 @@
   color: var(--white);
 }
 #about .about_wrap .cont-box .cont.cont01 li {
-  margin: 20px 0;
+  margin: 30px 0;
 }
 #about .about_wrap .cont-box .cont.cont01 .num {
   position: absolute;
@@ -145,10 +143,13 @@
   font-family: var(--mainEng-font);
   font-weight: 600;
   text-transform: capitalize;
-  color: var(--white);
+  color: var(--mainColor-color);
 }
 #about .about_wrap .cont-box .cont.cont01 .iam-detail {
-  padding: 10px 0;
+  padding: 10px 0px 10px 20px;
+}
+#about .about_wrap .cont-box .cont.cont01 .iam-detail span {
+  font-weight: 600;
 }
 #about .about_wrap .cont-box .cont.cont04 .txt_container li {
   margin: 0;
@@ -190,6 +191,7 @@
   }
   #about .about_wrap .cont-box .cont .about_title {
     left: 50%;
+    top: 25%;
     transform: translateX(-50%);
     font-size: 2rem;
     padding: 10px 0;
@@ -209,6 +211,7 @@
     top: 5%;
   }
   #about .about_wrap .cont-box .cont.cont01 .txt_container {
+    width: 90%;
     top: 20%;
     transform: translateX(-47%);
   }
@@ -252,25 +255,25 @@
   }
   #about .about_wrap {
     display: flex;
-    width: 95%;
+    width: 100%;
     height: auto;
   }
   #about .about_wrap .txt {
+    width: 35%;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     padding-left: 100px;
-    width: 50%;
     height: 100%;
   }
   #about .about_wrap .cont-box {
-    width: 50%;
+    width: 65%;
   }
   #about .about_wrap .cont-box .cont {
     height: 100vh;
   }
   #about .about_wrap .cont-box .cont .about_title {
-    left: 18%;
+    left: 5%;
     top: 25%;
     font-size: 2.5rem;
     padding: 10px 30px 10px 10px;
@@ -280,11 +283,14 @@
   }
   #about .about_wrap .cont-box .cont .txt_container {
     width: 70%;
-    left: 22%;
+    left: 10%;
     top: 35%;
   }
   #about .about_wrap .cont-box .cont .txt_container li {
     font-size: 1rem;
+  }
+  #about .about_wrap .cont-box .cont.cont01 .txt_container {
+    width: 90%;
   }
   #about .about_wrap .cont-box .cont.cont01 .iam-title {
     font-size: 1.3rem;
@@ -298,5 +304,19 @@
   }
   #about .about_wrap .cont-box .cont.cont04 .txt_container.skill img {
     width: 70px;
+  }
+}
+@media (min-width: 1024px) {
+  #about .about_wrap .txt {
+    width: 50%;
+  }
+  #about .about_wrap .cont-box {
+    width: 50%;
+  }
+  #about .about_wrap .cont-box .cont .about_title {
+    left: 18%;
+  }
+  #about .about_wrap .cont-box .cont .txt_container {
+    left: 22%;
   }
 }
