@@ -10,9 +10,6 @@
   margin: auto;
   text-transform: capitalize;
 }
-#project .tabs {
-  font-family: var(--mainEng-font);
-}
 #project .tabs .tab-menu {
   position: absolute;
 }
@@ -51,7 +48,6 @@
   flex-direction: column;
 }
 #project #vslide .vSwiper .swiper-slide h2 {
-  font-family: var(--mainEng-font);
   -webkit-text-stroke: 1px #ffffff;
   -webkit-text-fill-color: transparent;
   font-weight: 600;
@@ -63,7 +59,6 @@
   padding: 20px 0;
 }
 #project #vslide .vSwiper .swiper-slide .project_desc li {
-  font-family: var(--mainEng-font);
   display: inline-block;
   font-weight: 600;
   padding: 10px 20px;

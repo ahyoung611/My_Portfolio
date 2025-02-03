@@ -126,14 +126,16 @@
 }
 #about .about_wrap .cont-box .cont.cont01 .num {
   position: absolute;
-  top: -30px;
-  left: -20px;
+  top: -20px;
+  left: -25px;
   font-family: var(--mainNum-font);
   font-size: var(--font-size-Num1-P);
   font-style: italic;
   font-weight: 700;
   opacity: 0.3;
   line-height: 1;
+  -webkit-text-stroke: 1px #30F0E2;
+  -webkit-text-fill-color: transparent;
 }
 #about .about_wrap .cont-box .cont.cont01 .iam-title {
   font-family: var(--mainKorM-font);

@@ -164,7 +164,7 @@
 }
 #work .container .splide-wrapper .splide .splide__track .splide__slide:hover .num {
   -webkit-text-stroke: 0.5px var(--mainColor-color);
-  color: var(--mainColor-color);
+  -webkit-text-fill-color: var(--mainColor-color);
 }
 #work .container .splide-wrapper .splide .splide__track .splide__slide:hover .web-icon img {
   filter: grayscale(0%);
@@ -173,15 +173,15 @@
   filter: invert(1);
 }
 #work .container .splide-wrapper .splide .splide__track .splide__slide .num {
-  font-family: var(--mainEng-font);
+  font-family: var(--mainNum-font);
   position: absolute;
-  left: -13px;
-  top: -28px;
+  left: -10px;
+  top: -23px;
   -webkit-text-stroke: 0.5px #fff;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
   z-index: 99;
   transition: 0.35s;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 #work .container .splide-wrapper .splide .splide__track .splide__slide img {

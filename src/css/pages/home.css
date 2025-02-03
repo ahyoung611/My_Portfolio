@@ -13,11 +13,10 @@
   visibility: hidden;
 }
 #home h2 {
-  font-family: var(--mainEng-font);
   font-weight: 700;
   letter-spacing: 1px;
   -webkit-text-stroke: 1px #fff;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
   text-transform: uppercase;
 }
 #home h2 span {

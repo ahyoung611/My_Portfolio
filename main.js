@@ -5,6 +5,7 @@ import { home } from "./src/js/home.js";
 import{ project } from "./src/js/project.js"
 import{ work } from "./src/js/work.js"
 import{ graphic } from "./src/js/graphic.js"
+import { fancy } from './src/js/fancy.js'
 import{ about } from "./src/js/about.js"
 import{ footer } from "./src/js/footer.js"
 import{ bgColor } from "./src/js/bgColor.js"
@@ -18,9 +19,9 @@ window.addEventListener('DOMContentLoaded',function(){
     work()
     project()
     graphic()
+    fancy()
     about()
     bgColor()
     path()
-    footer()
-   
+    footer()   
 })

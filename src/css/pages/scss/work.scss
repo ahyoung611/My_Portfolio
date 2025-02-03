@@ -193,7 +193,7 @@
 
                             .num {
                                 -webkit-text-stroke: .5px var(--mainColor-color);
-                                color: var(--mainColor-color);
+                                -webkit-text-fill-color: var(--mainColor-color);
                             }
 
                             .web-icon {
@@ -211,15 +211,15 @@
                         }
 
                         .num {
-                            font-family: var(--mainEng-font);
+                            font-family: var(--mainNum-font);
                             position: absolute;
-                            left: -13px;
-                            top: -28px;
+                            left: -10px;
+                            top: -23px;
                             -webkit-text-stroke: .5px #fff;
-                            color:transparent;
+                            -webkit-text-fill-color:transparent;
                             z-index: 99;
                             transition: .35s;
-                            font-size: 2rem;
+                            font-size: 1.8rem;
                             font-weight: 600;
                         }
 

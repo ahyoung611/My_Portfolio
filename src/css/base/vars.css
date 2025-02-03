@@ -1,5 +1,4 @@
 :root {
-    --mainEng-font: "Roboto";
     --mainKorT-font: 'Pretendard-Thin';
     --mainNum-font: "Anton";
 
@@ -26,7 +25,7 @@
    --font-size-Num1-P: 70px;
    --font-size-Num1-M: 65px;
 
-    font-family: var(--mainEng-font), var(--mainKorR-font), var(--mainNum-font);
+    /* font-family: var(--mainEng-font), var(--mainKorR-font), var(--mainNum-font); */
     font-size: 20px;
     line-height: 1.5;
     font-weight: 400;
@@ -41,4 +40,5 @@
 
 body {
     color: var(--white);
+    font-family: 'Apple SD Gothic Neo', sans-serif;
 }

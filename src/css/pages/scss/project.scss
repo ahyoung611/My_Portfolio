@@ -16,7 +16,6 @@
     }
 
     .tabs {
-        font-family: var(--mainEng-font);
 
         .tab-menu {
             position: absolute;
@@ -72,8 +71,6 @@
                 flex-direction: column;
 
                 h2 {
-                    font-family: var(--mainEng-font);
-                    // color: #30F0E2;
                     -webkit-text-stroke: 1px #ffffff;
                     -webkit-text-fill-color: transparent;
                     font-weight: 600;
@@ -86,7 +83,6 @@
                     padding: 20px 0;
 
                     li {
-                        font-family: var(--mainEng-font);
                         display: inline-block;
                         font-weight: 600;
                         padding: 10px 20px;

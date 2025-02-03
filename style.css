@@ -21,6 +21,7 @@
 @import '@splidejs/splide/css';
 
 
+
 body {
     will-change: background-color;
     user-select: none;
